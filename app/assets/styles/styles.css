@@ -4,14 +4,12 @@
 @import "base/_global";
 @import "modules/_btn";
 @import "modules/_wrapper";
-@import "modules/_page-section";
-@import "modules/_row";
-@import "modules/_generic-content-container";
-@import "modules/_section-title";
-@import "modules/_testimonial";
 @import "modules/_site-footer";
 @import "modules/_site-header";
 @import "modules/_primary-nav";
 @import "modules/_reveal-item";
 @import "modules/_social-icons";
 @import "modules/_bio";
+@import "modules/_projects";
+@import "modules/_feature-card";
+

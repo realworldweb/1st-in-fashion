@@ -1,0 +1,40 @@
+.projects{
+	text-align: center;
+	color: $mainBlue;
+	
+	&__header{
+	font-family: $titleFont;
+	font-weight: 700;
+	font-size: 5rem;
+	line-height: 0;
+	}
+	
+	
+	&__content{
+		display: block;
+		
+		
+		
+		
+		
+		@mixin atMedium{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		
+		
+		div{
+			order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+			text-align: center;
+		
+			
+			
+		}
+		
+		}
+		
+		
+	}
+}
