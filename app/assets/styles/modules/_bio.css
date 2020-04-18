@@ -6,7 +6,7 @@
 	margin-top: 0;
 	
 	@mixin atMedium{
-	margin-top: -200px;
+	margin-top: -400px;
 	width: 90vw;
 		
 		
@@ -45,7 +45,7 @@
 		
 		@mixin atMedium{
 		display: inline;
-		transform: translateY(85%);
+		transform: translateY(150%);
 		padding-left: .6rem;
 		box-shadow: 4px 4px 3px rgba(79,95,118, .4);
 		margin-left: 0;
@@ -56,12 +56,26 @@
 		
 	}
 	
+	&__project{
+		display: none;
+		
+		@mixin atMedium{
+			
+		display: block;
+		transform: translateY(230%);
+		padding-left: .6rem;
+		
+		}
+		
+	}
+	
 	&__header{
 		margin-left:  0;
 		display: inline-block;
 		text-align: center;
 		font-weight: 700;
 		margin-top: -3rem;
+		font-size: 5rem;
 		
 		
 		@mixin atMedium{
@@ -79,6 +93,7 @@
 		margin-left: 3 rem;
 		margin-right: 6rem;
 		padding-left: 1.25rem;
+		font-size: 1.25rem;
 		
 		span{
 			order: 0;
@@ -109,7 +124,7 @@
 		
 		span{
 		
-			max-width: 12rem;
+			max-width: 36rem;
 			
 			
 			
