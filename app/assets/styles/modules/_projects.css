@@ -19,8 +19,20 @@
 		
 		@mixin atMedium{
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-between;
+		
+	div:nth-child(1){
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 80vw;
+		
+		
+	}
+	
+	
 		
 		
 		div{
@@ -28,13 +40,44 @@
 			flex: 0 1 auto;
 			align-self: auto;
 			text-align: center;
-		
-			
-			
+			margin-right: 2rem;
+			max-width: 40vw;
 		}
 		
+		
+		
 		}
 		
+		@mixin atLarge{
+		
+		
+	div:nth-child(1){
+	        order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+			text-align: center;
+			margin-right: 2rem;
+			margin-left: 0;
+			max-width: 29vw;
+		
+		
+	}
+	
+	div{
+	      
+			max-width: 28vw;
+		
+		
+	}
+	
+	
+		
+		
+		
+		
+		
+		
+		}
 		
 	}
 }
