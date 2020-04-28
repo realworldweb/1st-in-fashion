@@ -1,3 +1,4 @@
+/*template  styles*/
 @import "normalize.css";
 @import "base/_variables";
 @import "base/_mixins";
@@ -7,9 +8,13 @@
 @import "modules/_site-footer";
 @import "modules/_site-header";
 @import "modules/_primary-nav";
-@import "modules/_reveal-item";
 @import "modules/_social-icons";
-@import "modules/_bio";
-@import "modules/_projects";
 @import "modules/_feature-card";
+@import "modules/_modal";
 
+/*index styles*/
+@import "modules/index/_bio";
+@import "modules/index/_projects";
+
+/*contact-us styles*/
+@import "modules/contact-us/_form";

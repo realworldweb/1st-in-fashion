@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fse = require('fs-extra')
 
+
+
 const postCSSPlugins = [
   require('postcss-import'),
   require('postcss-mixins'),
@@ -49,7 +51,7 @@ let config = {
 	entry: './app/assets/scripts/App.js',
 	plugins: pages,
 	module: {
-    rules: [
+		rules: [
       cssConfig
     ]
   }

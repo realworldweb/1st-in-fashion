@@ -3,7 +3,7 @@
 	
 	
 	&__icon {
-		background-color: $mainOrange;
+		background-color: $mainGold;
 		position: relative;
 		display: inline-block;
 		width: 33%;
@@ -17,6 +17,9 @@
 		
 		
 		
+		
+		
+		
 		img{
 			display: block;
 			position: absolute;
@@ -27,11 +30,25 @@
 		}
 		
 		
-		
+		svg{
+			display: block;
+			position: absolute;
+			min-width: 42px;
+			min-height: 42px;
+			color: black;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50%);
+			
+		}
 	}
 	
 	
+	&__icon--btn {
+		
+		transform: translateY(-8%);
+		
+		
 	
-	
-	
+}
 }

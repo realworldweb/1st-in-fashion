@@ -35,8 +35,21 @@
 		position: absolute;
 		top: 0;
 		color: $mainGold;
-		font-size: 2rem;
-		line-height: 0;
+		font-size: 1.3rem;
+	    line-height: 0;
+		
+		@mixin atSmall{
+		font-size: 1.7rem;	
+			
+			
+		}
+		
+		@mixin atLarge {
+		font-size: 2rem;	
+			
+			
+		}
+		
 		
 		
 	}
@@ -115,7 +128,7 @@
 		
 		&::after{
 			
-			transform: rotate(-45deg) scaleX(1.25) translateY(-5px) translateX(3px);
+			transform: rotate(-45deg) scaleX(1.25) translateY(-7px) translateX(3px);
 			
 		}
 		
