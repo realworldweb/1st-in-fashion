@@ -13,7 +13,6 @@ class ContactUs{
 
 
 events(){
-	console.log('success')
 	this.sub.addEventListener('blur', () => this.validate())
     this.run.addEventListener('submit', e => {
 	  e.preventDefault()
