@@ -5,7 +5,7 @@ exports.handler = function(event, context, callback) {
   client.transmissions
     .send({
       content: {
-        from: 'chris@css-tricks.com',
+        from: 'email.realworldweb.com',
         subject: 'Hello, World!',
         html:
           "<html><body><p>My cool email.</p></body></html>"
