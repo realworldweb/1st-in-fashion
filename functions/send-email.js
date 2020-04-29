@@ -4,7 +4,7 @@ const client = new SparkPost(process.env.SPARKPOST, { origin: 'https://api.eu.sp
 // If you have a SparkPost EU account you will need to pass a different `origin` via the options parameter:
 // const euClient = new SparkPost('<YOUR API KEY>', { origin: 'https://api.eu.sparkpost.com:443' });
 
-client.transmissions.send({
+exports.handler = function(event, context, callback){client.transmissions.send({
     options: {
       sandbox: true
     },
@@ -24,4 +24,6 @@ client.transmissions.send({
   .catch(err => {
     console.log('Whoops! Something went wrong');
     console.log(err);
-  });
+  })
+  
+}
