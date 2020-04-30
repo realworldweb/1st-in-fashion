@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback){client.transmissions.send({
       sandbox: true
     },
     content: {
-      from: 'example@realworldwebportfolio.com',
+      from: 'example@realworldwebportfolio.co.uk',
       subject: 'Hello, World!',
       html:'<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>'
     },
