@@ -13,6 +13,8 @@ exports.handler = function(event, context, callback){
       body: "This was not a POST request"
     })
 	
+	}
+	
 	client.transmissions.send({
     options: {
 
