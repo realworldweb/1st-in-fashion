@@ -15,14 +15,22 @@ exports.handler = function(event, context, callback){
 	
 	}
 	
+	if (event.body) {
+    body = JSON.parse(event.body)
+  } else {
+    console.log('something went wrong err1')
+  }
+	if(body.body){
+		let contact = body.phone + '' + body.email
+		
 	client.transmissions.send({
     options: {
 
     },
     content: {
       from: 'example@realworldwebportfolio.co.uk',
-      subject: 'Hello, World!',
-      html:'<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>'
+      subject: body.subject,
+      html:'<html><body><p>Name:'+''+body.name+''+'</p><p>Contact:'+''+contact+''+'</p><p>Body:'+''+body.body+''+'</p></body></html>'
     },
     recipients: [
       {address: 'paulrooney60@gmail.com'}
@@ -36,5 +44,8 @@ exports.handler = function(event, context, callback){
     console.log('Whoops! Something went wrong');
     console.log(err);
   })
+	}else{
+	 console.log('something went wrong err2')
+	}
   
 }
