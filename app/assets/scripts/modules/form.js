@@ -74,7 +74,7 @@ compileForm(){
 
 sendrequest(){
 	
-	Axios.post('http://www.realworldwebportfolio.co.uk/.netlify/functions/send-email', postJson ).then(() => {
+	Axios.post('/.netlify/functions/send-email', postJson ).then(() => {
       this.run.remove()
       this.success()
     }).catch(() => {
