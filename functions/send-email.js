@@ -6,7 +6,7 @@ const client = new SparkPost(process.env.SPARKPOST);
 
 exports.handler = function(event, context, callback){client.transmissions.send({
     options: {
-      sandbox: true
+
     },
     content: {
       from: 'example@realworldwebportfolio.co.uk',
