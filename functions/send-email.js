@@ -6,14 +6,7 @@ const client = new SparkPost(process.env.SPARKPOST);
 
 exports.handler = function(event, context, callback){
 	
-	if (event.httpMethod !== "POST") {
-    return callback(null, {
-      statusCode: 200,
-      headers,
-      body: "This was not a POST request"
-    })
 	
-	}
 	
 	if (event.body) {
     body = JSON.parse(event.body)
