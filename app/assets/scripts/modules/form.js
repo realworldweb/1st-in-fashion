@@ -1,5 +1,8 @@
+import Axios from 'axios'
+
 class ContactUs{
 	constructor(){
+		this.container = document.querySelector('.contact-us')
 		this.formEl = document.querySelectorAll('.contact-us__input')
 		this.phone = document.getElementById('phoneinput')
 		this.email = document.getElementById('emailinput')
@@ -52,25 +55,49 @@ compileForm(){
     this.el = this.formEl[count]
 	let name = this.el.getAttribute('name')
 	this.name = this.el.value
-	console.log(this.name);
+	postInfo[name] = this.name
 	count++
 	
 	})
 	
 	if(contactMade === 'made'){
 		
-		console.log('form ready to submit')
-		
+		postJson = JSON.stringify(postInfo)
+		this.sendrequest()
+	
+				
 	}else{
 		this.warning.innerHTML = 'Please check your phone or email'
 	}
 
 }
-	
 
+sendrequest(){
+	
+	Axios.post('http://www.realworldwebportfolio.co.uk/.netlify/functions/send-email', postJson ).then(() => {
+      this.run.remove()
+      this.success()
+    }).catch(() => {
+      this.warning.innerHTML = 'Sorry something went wrong please retry'
+    })
+}
+	
+success(){
+	
+	this.container.insertAdjacentHTML('beforeend', `
+   
+      <h3 class="contact-us__success">Success your message has been sent!</h3>
+	  <h3 class="contact-us__success contact-us__success--smaller">Success your message has been sent!</h3>
+        
+    `)
+	
+	
+}
 
 }
 
+let postJson
+let postInfo = {}
 
 let contactMade
 
