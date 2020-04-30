@@ -6,14 +6,13 @@ let body
 // const euClient = new SparkPost('<YOUR API KEY>', { origin: 'https://api.eu.sparkpost.com:443' });
 
 exports.handler = function(event, context, callback){
-	console.log(event.body)
 if (event.body) {
     body = JSON.parse(event.body)
   } else {
     console.log('something went wrong err1')
   }
 	if(body.body){
-		let contact = body.phone + '' + body.email
+		let contact = body.phone + ' ' + body.email
 		
 	client.transmissions.send({
     options: {
