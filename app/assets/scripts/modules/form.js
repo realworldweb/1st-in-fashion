@@ -87,7 +87,7 @@ success(){
 	this.container.insertAdjacentHTML('beforeend', `
    
       <h3 class="contact-us__success">Success your message has been sent!</h3>
-	  <h3 class="contact-us__success contact-us__success--smaller">Success your message has been sent!</h3>
+	  <h3 class="contact-us__success contact-us__success--smaller">Contact will be made on your phone or email provided</h3>
         
     `)
 	

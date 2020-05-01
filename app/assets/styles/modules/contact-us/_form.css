@@ -151,6 +151,19 @@ padding: 2rem 0;
 			
         }
  }
+ 
+ &__success{
+	 
+	 display: block;
+	 margin: 2rem auto 1rem auto;
+	 font-size: 2.2rem;
+	 
+	 
+	 &--small{
+		font-size: 1.8rem; 
+	 }
+	 
+ }
 
 
 }
