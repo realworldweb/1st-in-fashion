@@ -18,3 +18,9 @@
 
 /*contact-us styles*/
 @import "modules/contact-us/_form";
+
+/*projects main */
+@import "modules/projects-display/projects-display";
+
+/*project profile */
+@import "modules/projects/project-profile";

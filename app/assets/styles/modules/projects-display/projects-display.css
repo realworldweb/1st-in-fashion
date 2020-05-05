@@ -1,0 +1,91 @@
+.projects-display{
+	position: relative;
+	text-align: center;
+	color: $mainBlue;
+	top: 3rem;
+	margin-bottom: 5rem;
+	min-height: 82vh;
+	
+	@mixin atMedium{
+	
+	top: 5rem;
+		
+	}
+	
+
+	
+	&__empty{
+	font-family: $titleFont;
+	font-weight: 700;
+	font-size: 1.8rem;
+	line-height: 0;
+	
+	@mixin atSmall{
+		
+		font-size: 3rem;
+		
+		
+	}
+	
+	}
+	
+	
+	&__content{
+		display: block;
+		
+		
+		
+		
+		
+		@mixin atSmall{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+		
+	div{
+			order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+			text-align: center;
+			margin-right: 2rem;
+			max-width: 40vw;
+		}
+		
+		
+		
+		}
+		
+		@mixin atLarge{
+		
+		
+	div:nth-child(1){
+	        order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+			text-align: center;
+			margin-right: 2rem;
+			margin-left: 0;
+			max-width: 29vw;
+		
+		
+	}
+	
+	div{
+	      
+			max-width: 28vw;
+		
+		
+	}
+	
+	
+		
+		
+		
+		
+		
+		
+		}
+		
+	}
+}
