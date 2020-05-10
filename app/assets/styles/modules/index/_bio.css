@@ -6,7 +6,7 @@
 	margin-top: 0;
 	
 	@mixin atMedium{
-	margin-top: -350px;
+	margin-top: -100px;
 	width: 90vw;
 		
 		
@@ -45,7 +45,7 @@
 		
 		@mixin atMedium{
 		display: inline;
-		transform: translateY(150%);
+		transform: translateY(80%);
 		padding-left: .6rem;
 		box-shadow: 4px 4px 3px rgba(79,95,118, .4);
 		margin-left: 0;
@@ -56,18 +56,7 @@
 		
 	}
 	
-	&__project{
-		display: none;
-		
-		@mixin atMedium{
-			
-		display: block;
-		transform: translateY(230%);
-		padding-left: .6rem;
-		
-		}
-		
-	}
+	
 	
 	&__header{
 		margin-left:  0;
