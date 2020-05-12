@@ -1,0 +1,180 @@
+.primary-nav{
+	
+	padding-top: 10px;
+	overflow: hidden;
+	@mixin atMedium{
+		padding-top: 0;
+		margin-right: .5rem;
+		 
+		 
+		}
+	
+     &--pull-right{
+		 
+		@mixin atMedium{
+			
+		  float: right; 
+		 
+		}
+	 }
+	 
+	 ul{
+		 padding: 0;
+	     margin: 0;
+		 
+		 @mixin clearfix;
+	 
+	 
+	
+		
+	}
+	 
+	 
+	 li{
+		display: inline-block;
+		text-align: center;
+		list-style: none;
+		 padding: 6px;
+		background-color: transparent;  
+		transition: all .2s ease-out;
+		 
+		 @mixin atMedium{
+			 display: block;
+			 float: left;
+			  padding: 12px 0;
+			 
+			 
+		
+		 }
+		 
+	
+	
+	 }
+	 
+	li a{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		 color: #fff;
+		 text-decoration: none;
+		 text-align: center;
+		 font-weight: 300;
+		  padding: 5px 8px;
+		  font-size: .8rem;
+		  background-color: rgba($mainBlue, .5);
+		 
+		   
+
+       @mixin atMedium{
+        
+		font-size: 1rem;
+		background-color: transparent;
+		
+	   }
+	   
+	}
+	
+	.display-none-till-md{
+		
+		display: none !important;
+		
+		@mixin atMedium{
+			
+		display: flex !important;	
+			
+		}
+		
+	}
+		
+	&__dropdown{
+		opacity: 1;
+		display: inline;
+		overflow: hidden;
+		position: relative;
+		top: 0;
+		z-index: -10;
+		transition: all .5s ease-out;
+		max-width: 10rem;
+		
+		@mixin atMedium{
+			display: block;
+			visibility: hidden;
+			opacity: 0;
+			z-index: 2;
+			top: 1.2rem;
+		}
+	
+		
+		li{
+			display: inline-block;
+			text-align: center;
+			padding: 1rem;
+			transition: all .2s ease-out;
+			
+			@mixin atMedium{
+				
+				width: 100%;
+				display: block;
+			}
+			
+		}
+		
+		li:last-child{
+			
+			@mixin atMedium{
+			
+	margin-bottom: .5rem;	
+			
+		}
+			
+		}
+		
+		& li:hover{ 
+		
+		@mixin atMedium{
+			
+	background-color: $mainBlue !important;
+	border-radius: 0 !important;	
+			
+		}
+    
+	}
+	
+	& li:last-child:hover{ 
+	@mixin atMedium{
+			
+	border-radius: 0 0 10px 10px !important;	
+			
+		}
+	
+	}
+		
+		
+		
+		
+	}
+	
+	& li:hover{ 
+	@mixin atMedium{
+			
+	background-color: $mainGold;
+	border-radius: 10px;
+			
+		}
+    
+	
+}
+	 
+	 & li:hover ul { 
+	 @mixin atMedium{
+			
+	 visibility: visible;
+	opacity: 1;
+	z-index: 2;
+			
+		}
+   
+	
+}
+	
+}
