@@ -1,11 +1,10 @@
 const currentTask = process.env.npm_lifecycle_event
 const path = require('path')
-const webpack = require('webpack');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fse = require('fs-extra')
-const VueLoaderPlugin = require('vue-loader-plugin')
+
 
 const postCSSPlugins = [
   require('postcss-import'),
@@ -36,7 +35,9 @@ class RunAfterCompile {
 let cssConfig = {
 	    
         test: /\.css$/i,
-        use: [ 'css-loader?url=false', {loader: 'postcss-loader', options: {plugins: postCSSPlugins}}]
+        use: [ 'css-loader?url=false', {loader: 'postcss-loader?parser=postcss-scss', options: {plugins: postCSSPlugins}}]
+		
+		
       }
 	  
 	  let pages = fse.readdirSync('./app').filter(function(file){
@@ -77,7 +78,7 @@ if (currentTask == "dev"){
                     loaders: {}
                     // other vue-loader options go here
                 }
-            }
+				 }
 	
 	)
 	cssConfig.use.unshift('style-loader')
@@ -120,7 +121,11 @@ if (currentTask == "build"){
                     loaders: {}
                     // other vue-loader options go here
                 }
-            }
+				},
+				 {
+        test: /\.pug$/,
+        loader: 'pug-plain-loader'
+      }
 	
 	)
 		cssConfig.use.unshift(MiniCssExtractPlugin.loader)
@@ -140,6 +145,7 @@ if (currentTask == "build"){
   new CleanWebpackPlugin(), 
   new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
   new RunAfterCompile()
+  
   )
 	
 }

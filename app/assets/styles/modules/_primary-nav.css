@@ -55,21 +55,27 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		 color: #fff;
+		 color: $mainBlue;
 		 text-decoration: none;
 		 text-align: center;
-		 font-weight: 300;
+		 font-weight: 500;
 		  padding: 5px 8px;
 		  font-size: .8rem;
-		  background-color: rgba($mainBlue, .5);
+		line-height: 0;
 		 
 		   
 
        @mixin atMedium{
         
-		font-size: 1rem;
+		font-size: 3.5rem;
 		background-color: transparent;
 		
+	   }
+	   
+	  & svg{
+		   
+		   transform: translateY(-10%);
+		   
 	   }
 	   
 	}
@@ -133,7 +139,7 @@
 		
 		@mixin atMedium{
 			
-	background-color: $mainBlue !important;
+	background-color: #fff !important;
 	border-radius: 0 !important;	
 			
 		}
@@ -157,13 +163,23 @@
 	& li:hover{ 
 	@mixin atMedium{
 			
-	background-color: $mainGold;
+	background-color: $mainBlue;
+	border-radius: 10px;
+			
+		}
+		
+	}
+		
+		& li:hover a{ 
+	@mixin atMedium{
+			
+	color: #fff;
 	border-radius: 10px;
 			
 		}
     
-	
-}
+		}
+
 	 
 	 & li:hover ul { 
 	 @mixin atMedium{
