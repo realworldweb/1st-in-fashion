@@ -1,0 +1,28 @@
+.btn {
+  color: $mainBlue;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-shadow: 1px .5px #fff;
+  border: 2px solid $mainBlue;
+  border-radius: 15px;
+  box-shadow: $mainBlue 3px 1px;
+  
+  &--blue {
+    background-color: $mainBlue;
+	color: #fff;
+	max-width: 33.3%;
+	min-height: 2rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5rem;
+
+	
+  }
+
+  
+
+}

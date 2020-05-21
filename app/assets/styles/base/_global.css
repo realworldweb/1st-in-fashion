@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Girassol&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 
@@ -24,9 +24,10 @@ img {
   box-sizing: border-box;
 }
 
-svg{
+.svg__logo{
 	
 	font-family: $svgFont;
+	transform: translateX(-13%);
 	
 	
 }

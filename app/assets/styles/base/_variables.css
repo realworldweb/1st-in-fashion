@@ -1,11 +1,13 @@
 $mainBlue: #46b7e1;
 $mainOrange: #d59541;
 $mainGold: #A79344;
-$titleFont: 'Girassol', cursive;
-$mainFont: 'Oswald', sans-serif;
+$shadowBlack: #000600;
+$titleFont: 'Pangolin', cursive;;
+$mainFont: 'Pangolin', cursive;
 $svgFont: 'Patrick Hand', cursive;
 
- :root {
-  --primary: #0074d9;
-  --danger: #46b7e1;
+ .primary-custom{
+	 
+	 background-color: $mainBlue;
+	 
  }

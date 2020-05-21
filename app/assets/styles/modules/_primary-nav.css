@@ -42,6 +42,9 @@
 			 display: block;
 			 float: left;
 			  padding: 12px 0;
+			  max-width: 20rem;
+			  max-height: 7rem;
+			  overflow: hidden;
 			 
 			 
 		
@@ -52,86 +55,75 @@
 	 }
 	 
 	li a{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		display: block;
 		 color: $mainBlue;
 		 text-decoration: none;
 		 text-align: center;
 		 font-weight: 500;
-		  padding: 5px 8px;
 		  font-size: .8rem;
 		line-height: 0;
 		 
 		   
 
        @mixin atMedium{
-        
-		font-size: 3.5rem;
+		font-size: 3.2rem;
 		background-color: transparent;
-		
+		margin: 1rem auto 0 auto;
+
 	   }
 	   
-	  & svg{
-		   
-		   transform: translateY(-10%);
-		   
-	   }
+	 
 	   
 	}
 	
-	.display-none-till-md{
-		
-		display: none !important;
-		
-		@mixin atMedium{
-			
-		display: flex !important;	
-			
-		}
+	.caret{
+		position: relative;
+		top: .7rem;
 		
 	}
+	
+	
+		
+	
 		
 	&__dropdown{
 		opacity: 1;
-		display: inline;
-		overflow: hidden;
+		display: block;
 		position: relative;
 		top: 0;
 		z-index: -10;
 		transition: all .5s ease-out;
-		max-width: 10rem;
+		
 		
 		@mixin atMedium{
 			display: block;
 			visibility: hidden;
 			opacity: 0;
-			z-index: 2;
+			z-index: -10;
 			top: 1.2rem;
 		}
-	
+		
 		
 		li{
-			display: inline-block;
 			text-align: center;
-			padding: 1rem;
 			transition: all .2s ease-out;
 			
 			@mixin atMedium{
 				
 				width: 100%;
 				display: block;
+				margin: 0rem auto 0 auto;
 			}
 			
 		}
 		
-		li:last-child{
-			
-			@mixin atMedium{
-			
-	margin-bottom: .5rem;	
-			
-		}
+		
+		
+		li a{
+			font-size: 2.5rem;
+			display: block;
+			margin: 0 auto 0 auto;
+			line-height: 1;
 			
 		}
 		
@@ -140,7 +132,9 @@
 		@mixin atMedium{
 			
 	background-color: #fff !important;
-	border-radius: 0 !important;	
+	border-radius: 0 !important;
+
+   
 			
 		}
     
@@ -154,6 +148,18 @@
 		}
 	
 	}
+	
+			& li a:hover{ 
+		
+		@mixin atMedium{
+			
+	color: $mainBlue !important;
+	
+		
+			
+		}
+    
+	}
 		
 		
 		
@@ -165,6 +171,8 @@
 			
 	background-color: $mainBlue;
 	border-radius: 10px;
+	max-height: 50rem;
+    overflow: visible;
 			
 		}
 		
@@ -177,11 +185,9 @@
 	border-radius: 10px;
 			
 		}
-    
 		}
-
-	 
-	 & li:hover ul { 
+    
+		 & li:hover ul { 
 	 @mixin atMedium{
 			
 	 visibility: visible;
@@ -189,8 +195,12 @@
 	z-index: 2;
 			
 		}
+		 }
+
+	 
+	
    
 	
-}
+
 	
 }
