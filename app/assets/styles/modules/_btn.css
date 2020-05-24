@@ -12,13 +12,9 @@
   
   &--blue {
     background-color: $mainBlue;
+	box-shadow: #fff 3px 1px;
+	 border: 2px solid #fff;
 	color: #fff;
-	max-width: 33.3%;
-	min-height: 2rem;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 1.5rem;
 
 	
   }

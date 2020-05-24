@@ -9,4 +9,5 @@
 @import "modules/_wrapper";
 @import "modules/_modal";
 @import "modules/_jumbo";
-
+@import "modules/_product-slice";
+@import "modules/_product-tile";

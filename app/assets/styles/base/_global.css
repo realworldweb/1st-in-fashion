@@ -31,3 +31,11 @@ img {
 	
 	
 }
+
+.stage{
+	
+	overflow: visible;
+	min-height: 280vh;
+	
+	
+}

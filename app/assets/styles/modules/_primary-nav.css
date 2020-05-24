@@ -143,13 +143,13 @@
 	& li:last-child:hover{ 
 	@mixin atMedium{
 			
-	border-radius: 0 0 10px 10px !important;	
+	border-radius: 0 0 15px 15px !important;	
 			
 		}
 	
 	}
 	
-			& li a:hover{ 
+			& li:hover a{ 
 		
 		@mixin atMedium{
 			
@@ -173,6 +173,8 @@
 	border-radius: 10px;
 	max-height: 50rem;
     overflow: visible;
+	
+	
 			
 		}
 		

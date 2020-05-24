@@ -20,25 +20,13 @@
 </div>
 <nav class="primary-nav primary-nav--pull-right">
 <ul>
-<li><a href="#our-beginning" id="our-beginning-link">Baby<font-awesome-icon icon="caret-down" class="caret" /></a>
+<li v-for="item in categories"><a href="#our-beginning" id="our-beginning-link">{{item.name}}<font-awesome-icon icon="caret-down" class="caret" /></a>
 <ul class="primary-nav__dropdown">
-<li><a href="#" >Boys casual</a></li>
-<li><a href="#" >Boys formal</a></li>
-<li><a href="#" >Girls casual</a></li>
-<li><a href="#" >Girls formal</a></li>
+<li v-for="drop in item.subcategory"><a href="#" >{{drop}}</a></li>
 </ul>
 
 </li>
-<li><a href="#features" id="features-link">Girls<font-awesome-icon icon="caret-down" class="caret" /></a>
-<ul class="primary-nav__dropdown">
-<li><a href="#" >Casual wear</a></li>
-<li><a href="#" >Formal wear</a></li>
-</ul></li>
-<li><a href="#testimonials" id="testimonial-link">Boys<font-awesome-icon icon="caret-down" class="caret" /></a>
-<ul class="primary-nav__dropdown">
-<li><a href="#" >Casual wear</a></li>
-<li><a href="#" >Formal wear</a></li>
-</ul></li>
+
 </ul>
 </nav>
 </div>
@@ -47,7 +35,24 @@
 </template>
  
 <script>
+let dataCategories = [ {
+"name": "Baby",
+"subcategory": [ "Baby boy's", "baby girl's"]
+},
+{
+"name": "Boy's",
+"subcategory": [ "casual", "formal"]
+},
+{
+"name": "Girl's",
+"subcategory": [ "casual", "formal"]
+}]
+
 export default {
-  name: 'Head'
+  name: 'Sitenav',
+  data(){ 
+  return { categories: dataCategories }
+}
+  
 }
 </script>
