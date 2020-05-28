@@ -34,8 +34,9 @@ Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
-  components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot }
-
+  components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot },
+  data:{ categories: null, products: null }
+  
  
   
   

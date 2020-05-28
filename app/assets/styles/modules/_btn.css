@@ -10,15 +10,40 @@
   border-radius: 15px;
   box-shadow: $mainBlue 3px 1px;
   
-  &--blue {
-    background-color: $mainBlue;
-	box-shadow: #fff 3px 1px;
-	 border: 2px solid #fff;
-	color: #fff;
-
+  
+  &--small {
+    max-width: 30vw;
+	
+	@mixin atSmall
+	
+    max-width: 20vw;
 	
   }
-
   
+  @mixin atMedium{
+			 
+			 max-width: 15vw;
+			 
+		 }
+
+  &--white{
+	  color: #fff;
+	  box-shadow: #fff 3px 1px;
+	  border: 2px solid #fff;
+	  
+  }
+  
+  &:hover{
+	 	  background-color: $mainBlue; 
+		  color: #fff;
+	  
+  }
+  
+  &--white:hover{
+	  
+	  background-color: #fff;
+	  color: $mainBlue;
+	  
+  }
 
 }

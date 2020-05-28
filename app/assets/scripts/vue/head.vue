@@ -35,24 +35,19 @@
 </template>
  
 <script>
-let dataCategories = [ {
-"name": "Baby",
-"subcategory": [ "Baby boy's", "baby girl's"]
-},
-{
-"name": "Boy's",
-"subcategory": [ "casual", "formal"]
-},
-{
-"name": "Girl's",
-"subcategory": [ "casual", "formal"]
-}]
 
-export default {
-  name: 'Sitenav',
+const data = require('./vue-data/data')
+
+export default{
+
+name: 'Sitenav', 
+
   data(){ 
-  return { categories: dataCategories }
+  return { categories: data.dataCategories, products: data.dataProducts  }
 }
+}
+
+
   
-}
+
 </script>

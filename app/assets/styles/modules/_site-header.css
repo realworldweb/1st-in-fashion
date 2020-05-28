@@ -1,15 +1,16 @@
 .site-header{
 	position: absolute;
+	top: 0;
 	width: 100%;
-	height: 4rem;
-	padding: 10px 0;
+	padding:  0;
     z-index: 5;
+
 	
 	
 	@mixin atMedium{
 		position: fixed;
 		transform: scale(1);
-		top:0;
+        height: 4rem;
 		
 		
 		&--dark{
@@ -36,14 +37,16 @@
 		top: 0;
 		font-size: 1.3rem;
 	    line-height: 0;
+		transform: translateY(-25%);
+		margin-top: .3rem;
 		
 		@mixin atSmall{
-	    top: 50%;
-		transform: translateY(-35%);
+		transform: translateY(-30%);
 		font-size: 1.7rem;	
-			
+		margin-top: 1rem;
 			
 		}
+		
 		
 		@mixin atLarge {
 		font-size: 2rem;	
@@ -54,6 +57,26 @@
 		
 		
 	}
+	
+	.svg__logo{
+	font-family: $svgFont;
+	transform: translateX(-13%);
+	width: 50vw;
+	
+	@mixin atSmall {
+		margin-top: .5rem;
+		width: 27vw;
+
+	}
+	
+
+	
+	@mixin atLarge {
+		width: 20vw;	
+			
+			
+		}
+}
 	
 	
 	

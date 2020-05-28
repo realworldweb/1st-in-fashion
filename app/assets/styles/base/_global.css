@@ -24,13 +24,7 @@ img {
   box-sizing: border-box;
 }
 
-.svg__logo{
-	
-	font-family: $svgFont;
-	transform: translateX(-13%);
-	
-	
-}
+
 
 .stage{
 	

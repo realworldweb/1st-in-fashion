@@ -8,11 +8,34 @@
 	
 	&__img{
 	
-	min-width: 28%;
 	display: inline;
-	width: 25vw;	
+	width: 72vw;
+    max-width: 320px;
 	border: 2px solid rgba($mainBlue, .6);
 	box-shadow: 2px 1px rgba($shadowBlack, .4);
+	
+	
+	@mixin atSmall{
+		
+	width: 37vw;
+	max-width: 2000px;
+		
+	}
+	
+	
+	@mixin atMedium{
+		
+		width: 22vw;
+		
+		
+	}
+	
+	@mixin atLarge{
+		
+		width: 25vw;
+		
+		
+	}
 		
 	}
 	

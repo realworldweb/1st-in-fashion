@@ -1,13 +1,18 @@
 .product-slice{
 	position: relative;
-	top: 70vh;
-	min-height: 60vh;
+	top: 90vh;
+	min-height: 80vmax;
 	display: block;
 	width: 90vw;
 	margin-left: 5vw;
 	margin-right: 5vw;
 	margin-bottom: 3rem;
 	
+	@mixin atSmall{
+		
+		top: 70vh;
+		min-height: 60vh;
+	}
 	
 	&__title{
 	position: absolute;
@@ -40,21 +45,60 @@
 	
 	&__slice{
 		
+		&:first-child{
+			
+			display: none;
+			
+			@mixin atMedium{
+				
+				display: inherit;
+				
+				
+			}
+		}
+		
+		&:nth-child(2){
+			
+			display: none;
+			
+			@mixin atSmall{
+				
+				display: inherit;
+				
+				
+			}
+		}
+		
 		&:nth-child(n+4){
 		
 		display: none;
 	}
 		
 		
+		
 	}
+	
+	
 	
 	&__more{
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	margin-bottom: -8rem;
+	margin-bottom: -31vmin;
 	color: $mainBlue;
 	font-size: 2rem;
+	
+	@mixin atSmall{
+		
+		margin-bottom: -7vmin;
+		
+	}
+	
+	@mixin atLarge{
+		
+		margin-bottom: -11vmin;
+	}
+	
 		
 	}
 	

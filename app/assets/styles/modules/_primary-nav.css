@@ -1,6 +1,6 @@
 .primary-nav{
 	
-	padding-top: 10px;
+	
 	overflow: hidden;
 	@mixin atMedium{
 		padding-top: 0;
@@ -38,11 +38,14 @@
 		background-color: transparent;  
 		transition: all .2s ease-out;
 		 
+		 
+		 
+		 
 		 @mixin atMedium{
 			 display: block;
 			 float: left;
 			  padding: 12px 0;
-			  max-width: 20rem;
+			  max-width: 10rem;
 			  max-height: 7rem;
 			  overflow: hidden;
 			 
@@ -50,6 +53,7 @@
 		
 		 }
 		 
+	
 	
 	
 	 }
@@ -63,10 +67,14 @@
 		  font-size: .8rem;
 		line-height: 0;
 		 
+		 @mixin atSmall{
+		font-size: 1.5rem;
+
+	   }
 		   
 
        @mixin atMedium{
-		font-size: 3.2rem;
+		font-size: 3rem;
 		background-color: transparent;
 		margin: 1rem auto 0 auto;
 
