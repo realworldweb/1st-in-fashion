@@ -1,6 +1,6 @@
 import "lazysizes"
 import '../styles/styles.css'
-import StickyHeader from './modules/stickyheader'
+
 
 
 

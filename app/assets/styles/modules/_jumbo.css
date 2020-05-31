@@ -9,15 +9,20 @@ margin-top: 8rem;
 	display: block;
 	width: 100vw;
 	height: 90vh;
-	margin-left: 5vw;
-	margin-right: 5vw;
-	opacity: .3;
+    opacity: .3;
 	
 	@mixin atSmall{
 		
 		height: 70vh;	
-		width: 90vw;
+		
 	}
+	
+ @mixin atMedium {
+	width: 90vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	 
+ }
 }
 
 &__slideshow{
