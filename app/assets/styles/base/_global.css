@@ -4,6 +4,7 @@
 
 
 html{
+	position:absolute;
 	scroll-behavior: smooth;
 	 width: 100vw;
 	 overflow-x: hidden;
@@ -11,10 +12,12 @@ html{
 }
 
 body {
+  position:absolute;
   color: #333;
   background-color: #fff;
   font-family: $mainFont;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 img {
