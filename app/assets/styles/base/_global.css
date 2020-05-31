@@ -10,6 +10,7 @@ html{
 }
 
 body {
+  position: absolute;
   color: #333;
   background-color: #fff;
   font-family: $mainFont;
