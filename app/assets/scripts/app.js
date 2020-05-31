@@ -1,6 +1,6 @@
 import "lazysizes"
-import MobileMenu from "./modules/mobilemenu"
 import '../styles/styles.css'
+import StickyHeader from './modules/stickyheader'
 
 
 

@@ -4,12 +4,15 @@
 <img src="/assets/images/baby-clothing.jpg" alt="fashionable childrens clothing" class="jumbo__image"/>
 <div class="jumbo__slideshow">
 <div class="jumbo__tagline">
-<p>What's Your summer colour?</p>
+<p>{{tagline}}</p>
 </div>
-<a href="#" class="jumbo__slide">
-<img class="jumbo__slide-img" v-bind:src="products[0].img">
-<p class="jumbo__slide-price">&#163;{{products[0].price}}</p>
-</a>
+
+<transition-group name="fade" mode="in-out" tag="a" class="jumbo__slide" href="#" appear>
+<img class="jumbo__slide-img" v-bind:src="products[imgid].img" :onload="imgslider()" :key="imgid">
+
+<p class="jumbo__slide-price" :key="imgid">&#163;{{products[imgid].price}}</p>
+</transition-group>
+
 </div>
 </div>
 <div class="product-slice" v-for="title in categories">
@@ -37,14 +40,57 @@
 
 
 <script>
- 
+
+
+
 const data = require('../vue-data/data')
+let slide
+let count = 0
 
 export default {
 
   name: 'Stage',
   data(){ 
-  return { categories: data.dataCategories, products: data.dataProducts }
+  return { show: true, imgid: 0, categories: data.dataCategories, products: data.dataProducts }
+},
+
+methods: {
+imgslider() {
+if(count === 0){
+slide = setInterval(this.slider, 10000)
+count = 1
+}
+
+},
+slider(){
+console.log(this.imgid)
+if(this.imgid === 2){
+
+return this.imgid = 0
+
+}else{
+
+return ++this.imgid  
+
+}
+ } 
+},
+computed:{
+tagline: function(){
+let date = new Date()
+let month = date.getMonth()
+let summer = "Whats your summer color?"
+let winter = "Cure those winter blues!"
+if( month <=8 && month >=2 ) {
+
+return summer
+}
+else{
+
+return winter
+
+}
+}
 }
 }
 </script>

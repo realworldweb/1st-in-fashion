@@ -79,13 +79,16 @@ margin-top: 8rem;
 
 &__slide{
 	position: relative;
+	overflow: hidden;
 	display: block;
 	top: 50%;
 	width: 60vw;
+	max-height: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	transform: translateY(-50%);
 	text-align: center;
+	
 	
 	@mixin atSmall{
 		margin-left: 0;
@@ -95,11 +98,16 @@ margin-top: 8rem;
 		width: 25vw;
 	}
 	
+
+	
 	img{
-	display: inline;
+	position: static;
+	display: block;
+	float: right;
 	width: 60vw;	
 	border: 2px solid rgba($mainBlue, .4);
 	box-shadow: 2px 1px rgba($shadowBlack, .2);
+	
 	
 	@mixin atSmall{
 		
@@ -112,6 +120,7 @@ margin-top: 8rem;
 	}
 		
 	}
+	
 	
 }
 

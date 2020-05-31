@@ -1,7 +1,7 @@
 .primary-nav{
 	
 	
-	overflow: hidden;
+	overflow: visible;
 	@mixin atMedium{
 		padding-top: 0;
 		margin-right: .5rem;
@@ -21,35 +21,41 @@
 	 ul{
 		 padding: 0;
 	     margin: 0;
-		 
+			 
 		 @mixin clearfix;
 	 
-	 
+		 
 	
 		
 	}
 	 
 	 
 	 li{
-		display: inline-block;
+		display: block;
+		width: 60vw;
+		border: 2px solid $shadowBlack;
+	    box-shadow: $shadowBlack 3px 1px;
 		text-align: center;
 		list-style: none;
-		 padding: 6px;
-		background-color: transparent;  
+		 padding: 4px;
+		 margin: 0 auto 8px auto;
+		background-color: $mainBlue;  
 		transition: all .2s ease-out;
-		 
-		 
+		 border: 2px solid $mainBlue;
+	     box-shadow: $mainBlue 3px 1px;
 		 
 		 
 		 @mixin atMedium{
-			 display: block;
+			 
 			 float: left;
 			  padding: 12px 0;
 			  max-width: 10rem;
 			  max-height: 7rem;
 			  overflow: hidden;
-			 
-			 
+			  margin: 0 auto 0 auto;
+			  border: none;
+	          box-shadow: none;
+			  background-color: transparent;
 		
 		 }
 		 
@@ -60,28 +66,37 @@
 	 
 	li a{
 		display: block;
-		 color: $mainBlue;
+		 color: #fff;
 		 text-decoration: none;
 		 text-align: center;
 		 font-weight: 500;
-		  font-size: .8rem;
+		  font-size: 2rem;
 		line-height: 0;
 		 
 		 @mixin atSmall{
 		font-size: 1.5rem;
+		
 
 	   }
 		   
 
        @mixin atMedium{
 		font-size: 3rem;
-		background-color: transparent;
 		margin: 1rem auto 0 auto;
+		color: $mainBlue;
+		
 
 	   }
 	   
 	 
 	   
+	}
+	
+	.dark-style-links{
+		
+		font-size: 2rem;
+		color: #fff;
+		margin: 0 auto 0 auto;
 	}
 	
 	.caret{
@@ -95,8 +110,9 @@
 	
 		
 	&__dropdown{
-		opacity: 1;
-		display: block;
+		opacity: 0;
+		display: none;
+		visibility: hidden;
 		position: relative;
 		top: 0;
 		z-index: -10;
@@ -105,22 +121,22 @@
 		
 		@mixin atMedium{
 			display: block;
-			visibility: hidden;
-			opacity: 0;
-			z-index: -10;
 			top: 1.2rem;
 		}
 		
 		
 		li{
+			border: none;
+	        box-shadow: none;
+			background-color: transparent;
 			text-align: center;
 			transition: all .2s ease-out;
+			display: block;
+			width: 100%;
+			margin: 0 auto 0 auto;
 			
 			@mixin atMedium{
 				
-				width: 100%;
-				display: block;
-				margin: 0rem auto 0 auto;
 			}
 			
 		}
@@ -137,35 +153,38 @@
 		
 		& li:hover{ 
 		
+		background-color: rgba(#fff,.2) !important;
+	
 		@mixin atMedium{
 			
 	background-color: #fff !important;
 	border-radius: 0 !important;
 
    
-			
 		}
+	
     
 	}
 	
 	& li:last-child:hover{ 
-	@mixin atMedium{
+
+		@mixin atMedium{
 			
 	border-radius: 0 0 15px 15px !important;	
-			
 		}
 	
 	}
 	
 			& li:hover a{ 
 		
-		@mixin atMedium{
-			
+		
+	@mixin atMedium{
 	color: $mainBlue !important;
+	}
 	
 		
 			
-		}
+	
     
 	}
 		
@@ -175,36 +194,40 @@
 	}
 	
 	& li:hover{ 
-	@mixin atMedium{
+	
 			
-	background-color: $mainBlue;
-	border-radius: 10px;
-	max-height: 50rem;
+	
     overflow: visible;
 	
 	
+	@mixin atMedium{
+	background-color: $mainBlue;
+	border-radius: 10px;
+	max-height: 50rem;
+		
+	}
 			
-		}
+	
 		
 	}
 		
 		& li:hover a{ 
-	@mixin atMedium{
+	
 			
 	color: #fff;
 	border-radius: 10px;
 			
-		}
+
 		}
     
 		 & li:hover ul { 
-	 @mixin atMedium{
+	 
 			
 	 visibility: visible;
+	 display: block;
 	opacity: 1;
 	z-index: 2;
 			
-		}
 		 }
 
 	 
