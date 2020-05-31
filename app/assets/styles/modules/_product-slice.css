@@ -1,25 +1,25 @@
 .product-slice{
 	position: relative;
-	top: 90vh;
-	min-height: 80vmax;
+	top: 0;
+	min-height: 70vmax;
 	display: block;
 	width: 90vw;
 	margin-left: 5vw;
 	margin-right: 5vw;
 	margin-bottom: 3rem;
+	margin-top: 1rem;
 	
 	@mixin atSmall{
 		
-		top: 70vh;
 		min-height: 60vh;
 	}
 	
 	&__title{
-	position: absolute;
+	position: relative;
 	left: 0;
 	top: 0;
 	margin-left: 2rem;
-	padding-top: 2rem;
+	padding-top: 4rem;
 	color: $mainBlue;
 	font-size: 3rem;
 	font-weight: 600;
@@ -29,9 +29,9 @@
 	}
 	
 	&__products{
-	position: absolute;
-	margin-top: 9rem;
-	margin-left: 5vw;
+	position: relative;
+	top: 0;
+	left: 5vw;
     display: flex;
     flex-wrap: no-wrap;
     flex-direction: row;
@@ -83,14 +83,13 @@
 	&__more{
 	position: absolute;
 	right: 0;
-	bottom: 0;
-	margin-bottom: -25vmax;
+	bottom: -3rem;
 	color: $mainBlue;
 	font-size: 2rem;
 	
 	@mixin atSmall{
 		
-		margin-bottom: -7vmin;
+		botttom: 5rem;
 		
 	}
 	

@@ -1,6 +1,14 @@
 .jumbo{
 position: relative;
 margin-top: 8rem;
+height: 90vh;
+
+@mixin atSmall{
+		
+		height: 70vh;	
+		
+	}
+	
 
 
 &__image{
