@@ -1,5 +1,6 @@
 .jumbo{
 position: relative;
+display: block;
 margin-top: 8rem;
 height: 90vh;
 

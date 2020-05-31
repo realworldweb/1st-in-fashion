@@ -25,17 +25,18 @@
 	
 	
 	&__btn-container{
-		
+		margin-right: 5vw;
 		@mixin atMedium{
 			
 		float: right;
 		margin-top: 2rem;
+		
 		}
 		
 	}
 	
 	&__logo{
-		
+		margin-left: 5vw;
 		position: absolute;
 		top: 0;
 		font-size: 1.3rem;
@@ -47,6 +48,7 @@
 		transform: translateY(-30%);
 		font-size: 1.7rem;	
 		margin-top: 1rem;
+		
 			
 		}
 		
@@ -74,7 +76,7 @@
 	
 
 	
-	@mixin atLarge {
+	@mixin atMedium {
 		width: 20vw;	
 			
 			
