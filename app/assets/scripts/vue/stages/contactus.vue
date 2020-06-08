@@ -11,7 +11,7 @@
 <div class="contact-us__info-container"><p class="contact-us__info contact-us__info--phone"><span class="contact-us__info-label">Tel:</span>  07856533964</p>
 <p class="contact-us__info contact-us__info--email"><span class="contact-us__info-label">E-mail:</span>  email@gmail.com</p>
 </div>
-</div>\
+</div>
 </div>
 <h2 class="contact-us__section-title">Direct Mail</h2>
 <form id="contact-us" class="contact-us__form">
