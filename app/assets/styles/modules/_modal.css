@@ -7,16 +7,12 @@
 	right: 0;
 	display: block;
 	width: 100vw;
-	height: 65vmax;
-    min-height: 500px;
+	min-height: 250px;
+	padding-bottom: 20vh;
 	
 
 	
-    @mixin atSmall{ 
-	
-    min-height: 0;
-	
-	} 	
+    
 	
 	@mixin atMedium{
 		
@@ -41,7 +37,6 @@
 		
 		@mixin atSmall{
 		font-size: 5rem;
-		top: 10vh;
 			
 		}
 		
@@ -53,8 +48,7 @@
 		position: relative;
 		text-align: center;
 		display: block;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 1rem auto 1rem auto;
 		font-weight: 300;
 		line-height: 1;
 		max-width: 70vw;
@@ -68,11 +62,7 @@
 			
 		}
 		
-		@mixin atLarge {
-			
-			margin-top: 7rem;
-			
-		}
+		
 	}
 	
 	
@@ -80,15 +70,15 @@
 		
 	position: relative;
 	overflow: visible;
-	top: 0;
+	top: 15vh;
 	left: 0;
 	display: block;
 	width: 99vw;
 	padding: 0 .5rem 0 .5rem;
 	margin-left: .5vw;
 	margin-right: .5vw;
+	margin-top: -18vh;
 	z-index: 2;
-	margin-top: -50vmax;
 	background-color: #fff;
 	border: 1px solid rgba($shadowBlack, .7);
 	border-top: none;
@@ -97,24 +87,11 @@
 	
 	@mixin atSmall{
 		width: 90vw;
-		top: 26vmin;
 		margin-left: 5vw;
 	    margin-right: 5vw;
-		margin-top: -20vmax;
-		margin-bottom: 20vh;
+	
 	}
 	
-	
-	@mixin atMedium{
-		
-		top: 20vmin;
-		margin-bottom: 0;
-	}
-
-		@mixin atLarge{
-			top: 11vmin;
-		
-		}
 		
 	}
 	
@@ -124,7 +101,7 @@
 		position: relative;
 		left: -.5rem;
 		width: 94vw;
-		margin: 3rem 0 0 0;
+		margin: 5vh 0 0 0;
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: row;

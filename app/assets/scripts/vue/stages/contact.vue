@@ -1,8 +1,10 @@
 <template lang="pug">
 <div @load="currentPage">
 <div class="modal">
+<div class="modal__inner">
 <h2 class="modal__title"><font-awesome-icon icon="envelope-open-text" />&nbsp;Get in <strong>Touch</strong></h2>
 <p class="modal__description">We love to hear from all our customers. If you have any questions feel free to reach out to us any of the platforms below</p>
+</div>
 </div>
 <div class="modal__stage">
 <div class="modal__links">
