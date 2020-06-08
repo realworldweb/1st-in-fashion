@@ -6,8 +6,11 @@
 	bottom: 0;
 	right: 0;
 	display: block;
-	height: 65vmin;
-	min-height: 600px;
+	width: 100vw;
+	height: 65vmax;
+    min-height: 500px;
+	
+
 	
     @mixin atSmall{ 
 	
@@ -28,7 +31,7 @@
 		display: block;
 		position: relative;
 		left: 0;
-		top: 10vh;
+		top: 1rem;
 	    text-align: center;
 		margin-left: auto;
 		margin-left: auto;
@@ -38,6 +41,7 @@
 		
 		@mixin atSmall{
 		font-size: 5rem;
+		top: 10vh;
 			
 		}
 		
@@ -46,14 +50,15 @@
 	
 	
 	&__description{
+		position: relative;
 		text-align: center;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		font-weight: 300;
 		line-height: 1;
-		margin-top: 12vmin;
 		max-width: 70vw;
+
 		
 		@mixin atSmall{
 			
@@ -83,7 +88,7 @@
 	margin-left: .5vw;
 	margin-right: .5vw;
 	z-index: 2;
-	margin-top: -20vmin;
+	margin-top: -50vmax;
 	background-color: #fff;
 	border: 1px solid rgba($shadowBlack, .7);
 	border-top: none;
@@ -95,6 +100,7 @@
 		top: 26vmin;
 		margin-left: 5vw;
 	    margin-right: 5vw;
+		margin-top: -20vmax;
 		margin-bottom: 20vh;
 	}
 	
