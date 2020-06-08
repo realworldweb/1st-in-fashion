@@ -73,7 +73,11 @@ return this.imgid = 0
 return ++this.imgid  
 
 }
- } 
+ }
+ 
+},
+beforeDestroy(){
+clearInterval(slide)
 },
 computed:{
 tagline: function(){

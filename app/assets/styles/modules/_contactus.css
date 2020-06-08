@@ -1,0 +1,224 @@
+.contact-us {
+	
+	position: relative;
+	
+	
+	&__title {
+		
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: $mainBlue;
+	font-size: 3rem;
+	font-weight: 500;
+	text-align: center;
+		
+		
+	}
+	
+	
+	&__social-section {
+		
+		dislplay: block;
+		font-size: 3rem;
+		
+		@mixin atSmall{
+			
+		position: relative;
+		float: right;
+		display: inline-block;
+		font-size: 5rem;
+		margin-right: 5vw;
+		
+		}
+		
+		@mixin atMedium{
+			font-size: 7rem;
+		}
+		
+	}
+	
+	
+.social-icons {
+	
+	color: $mainBlue;
+	
+	
+	
+}
+	
+	&__info-section {
+		dislplay: block;
+		
+		@mixin atSmall{
+			
+		position: relative;
+		float: left;
+		display: inline-block;
+		margin-left: 5vw;
+		
+		}
+		
+	}
+	
+	.float-container{
+		
+		
+		@mixin clearfix;
+		
+	}
+	
+	
+	&__info-label {
+		
+		color: $mainBlue;
+		font-size: 1.5rem;
+		
+		
+	}
+	
+	
+     &__info {
+		 
+		 font-size: 1.5rem;
+     }
+	
+	
+	&__section-title {
+		
+		font-size: 2.5rem;
+		color: $mainBlue;
+		display: block;
+		margin-left: 5vw;
+		
+}
+	
+	&__form {
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		justify-content: space-between;
+		margin-left: auto;
+		margin-right: auto;
+		
+		
+	}
+	
+	&__inline-items{
+		display: block;
+		width: 80%;
+		margin-left: -5vw;
+		margin-right: -5vw;
+		
+		@mixin atMedium{
+			
+		display: flex;
+		flex-direction: row;
+		align-items: flex-sart;
+		align-content: space-between;
+		justify-content: space-between;
+		
+	
+		}
+		
+		
+	}
+	
+	&__label {
+		
+		display: block;
+		color: $mainBlue;
+		font-size: 1.5rem;
+		margin-top: 2rem;
+		
+		
+		
+		
+		
+		&--inline{
+			@mixin atMedium{
+				
+		margin-top: 0;
+     
+			}
+			&--left{
+				@mixin atMedium{
+				margin-left: 3vw;
+				}
+				
+				@mixin atLarge{
+					
+					margin-left: 3.6vw;	
+				}
+			}
+			
+			
+		}
+		
+		
+		
+	}
+	
+	&__input{
+		display: block;
+		width: 80%;
+		margin: 0 2vw 0 0;
+	
+		
+		&--2-wide {
+			
+			@mixin atMedium {
+		 display: inline;
+		 margin: 0 0 0 0;
+		 width: 25%;
+		 text-align: left;
+			}
+			
+		 &--left{
+		 @mixin atMedium {
+		width: 40%;
+		 }
+		 
+		 @mixin atLarge {
+			width: 32%; 
+			 
+		 }
+		}
+		}
+		
+		&--text{
+			
+		height: 20vh;
+			
+			
+		}
+		
+		&--submit{
+		 margin-top: 1rem;
+         margin-bottom: 2rem;		 
+			
+			
+			
+		}
+	}
+	
+	.invalid-number{
+	display: block;
+	width: 80%;
+	color: red;
+	margin-top: 0;
+	text-align: left;
+
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}

@@ -6,9 +6,11 @@
 @import "modules/_site-header";
 @import "modules/_primary-nav";
 @import "modules/_btn";
-
 @import "modules/_modal";
 @import "modules/_jumbo";
 @import "modules/_product-slice";
 @import "modules/_product-tile";
 @import "modules/_vue-trans";
+@import "modules/_contactus";
+@import "modules/_faqs";
+@import "modules/_terms";

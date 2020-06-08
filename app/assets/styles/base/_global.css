@@ -30,11 +30,14 @@ img {
 }
 
 
+.display-none {
+	
+	display: none;
+	
+}
 
-.stage{
+.error {
 	
-	overflow: visible;
-	min-height: 280vh;
-	
+	border-color: red;
 	
 }

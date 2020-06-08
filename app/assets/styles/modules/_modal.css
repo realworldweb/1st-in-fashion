@@ -1,86 +1,237 @@
 .modal{
-	opacity: 0;
-	visibility: hidden;
-	transform: scale(1.2);
-	transition: all .3s ease-out;
-	position: fixed;
-	background-color: rgba(255, 255, 255, .94);
-	top: 0;
+	position: relative;
+	background-color: $mainBlue;
+	top: 10vh;
 	left: 0;
 	bottom: 0;
 	right: 0;
-	z-index: 5;
-	display: flex;
+	display: block;
+	height: 65vmin;
+	min-height: 325px;
+	
+    @mixin atSmall{ 
+	
+    min-height: 0;
+	
+	} 	
+	
+	@mixin atMedium{
+		
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
 	
 	
 	&__title{
 		display: block;
 		position: relative;
+		left: 0;
+		top: 10vh;
 	    text-align: center;
 		margin-left: auto;
 		margin-left: auto;
 		font-family: $titleFont;
+		color: #fff;
+		font-size: 2.8rem;
+		
+		@mixin atSmall{
 		font-size: 5rem;
-		color: $mainBlue;
-		
-		
+			
+		}
 		
 		
 	}
 	
-	&--is-visible{
-		opacity: 1;
-		visibility: visible;
-		transform: scale(1);
-		
-		
-	}
+	
 		
 		
 	
 	
 	&__inner {
-		
+		@mixin atSmall{
+			
 		flex: 1; 
 		margin: auto;
+		
+		}
 	}
 	
 	&__description{
 		text-align: center;
-		font-size: 1.3rem;
-		font-weight: 300;
-		line-height: 1.65;
-		
-		
-	}
-	
-	
-	
-	
-	&__close{
 		display: block;
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		font-size: 2rem;
-		color: $mainBlue;
-		transform: scaleX(1.2);
-		transform-origin: 100 0;
-		cursor: pointer;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: 300;
+		line-height: 1;
+		margin-top: 12vmin;
+		max-width: 70vw;
 		
-		
-		&:hover{
-			color: $mainGold;
+		@mixin atSmall{
 			
-        }
+			font-size: 1.3rem;
+			line-height: 1.65;
+			max-width: 50vw;
+			
+		}
+		
+		@mixin atLarge {
+			
+			margin-top: 7rem;
+			
+		}
+	}
+	
+	
+	&__stage {
+		
+	position: relative;
+	overflow: visible;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 94vw;
+	padding: 0 .5rem 0 .5rem;
+	margin-left: .5vw;
+	margin-right: .5vw;
+	z-index: 2;
+	margin-top: -20vmin;
+	background-color: #fff;
+	border: 1px solid rgba($shadowBlack, .7);
+	border-top: none;
+	box-shadow: 2px 1px rgba($shadowBlack, .4), 4px 2px rgba($shadowBlack, .2);
+	
+	
+	@mixin atSmall{
+		width: 90vw;
+		top: 26vmin;
+		margin-left: 5vw;
+	    margin-right: 5vw;
+		margin-bottom: 20vh;
+	}
+	
+	
+	@mixin atMedium{
+		
+		top: 20vmin;
+		margin-bottom: 0;
+	}
+
+		@mixin atLarge{
+			top: 11vmin;
+		
+		}
 		
 	}
+	
+	
+	&__links{
 		
+		position: relative;
+		left: -.5rem;
+		width: 94vw;
+		margin: 3rem 0 0 0;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: strecth;
+		box-shadow: 2px 0 0 0 rgba($shadowBlack, .4), 4px 0  0  0 rgba($shadowBlack, .2);
+		border-bottom: none;
+		
+	   @mixin atSmall{
+		   
+		  width: 89.8vw; 
+		  margin: 3rem 0 0 0;
+	   }
+		
+		
+	}
 	
 	
 	
+	
+	
+	&__link-container{
+		position: relative;
+		display: inline-block;
+		height: 100%;
+		overflow: visible;
+		border-radius: 25px 25px 0 0;
+		padding: 1rem;
+		background-color: rgba(#ffffff, .8);
+		margin-top: -4rem;
+		flex: 2 1 auto;
+		text-align: center;
+		box-shadow: inset 0 -10px 0 -4px rgba($shadowBlack, .1);
+		
+		@mixin atSmall {
+			
+			flex: 4 1 auto;
+			margin-top: -6rem;
+		}
+	}
+	
+	&__link{
+		position: relative;
+		font-size: 1rem;
+		color: $mainBlue;
+		display: inline-block;
+		text-decoration: none;
+		
+		@mixin atSmall{
+			
+		font-size: 2rem;
+			
+		}
+	}
+	
+	&__link:active .modal__link-container {
+		
+		background-color: #fff;
+		
+	}
 
 
+&__link-icon{
+	position: relative;
+	display: block;
+	left: 46%;
+	transform: translateX(-50%);
+	color: $mainBlue;
+	
+	
+}
 
+&__link-text{
+	position: relative;
+
+	
+		
+}
+		
+}
+
+.first-tab {
+		
+		
+		background-color: #fff;
+		box-shadow: 4px 0 0 0 rgba($shadowBlack, .4), 8px 0  0  0 rgba($shadowBlack, .2);
+		
+		
+		
+		
+		
+	}
+	
+	.last-tab {
+		
+		
+		background-color: #fff;
+		box-shadow:  -4px 0  0  0 rgba($shadowBlack, .4), -2px 0 0 0 rgba($shadowBlack, .2);
+		
+		
+		
 		
 	}

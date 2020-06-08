@@ -15,7 +15,7 @@
 	
 <div class="site-header__menu-content" :class="menucontent">
 <div class="site-header__btn-container">
-<a href="#" class="btn btn--small" :class="navbtn">Get in Touch</a>
+<router-link to="/contact" class="btn btn--small" :class="navbtn">Get in Touch</router-link>
 </div>
 <nav class="primary-nav primary-nav--pull-right">
 <ul>

@@ -1,5 +1,4 @@
 .btn {
-  color: #fff;
   text-decoration: none;
   padding: .75rem 1.2rem;
   display: inline-block;
@@ -9,13 +8,10 @@
   border: 2px solid #fff;
   border-radius: 15px;
   box-shadow: #fff 3px 1px;
+  color: $mainBlue;  
+  border: 2px solid $mainBlue;
+  box-shadow: $mainBlue 3px 1px;
   
-  @mixin atMedium{
-	  
-	color: $mainBlue;  
-	border: 2px solid $mainBlue;
-	box-shadow: $mainBlue 3px 1px;
-  }
   
   &--small {
 	margin: .8rem 0 .8rem 0;
