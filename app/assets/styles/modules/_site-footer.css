@@ -5,15 +5,11 @@
 	padding: .5rem 0;
 	text-align: center;
 	position: relative;
-	top: 0;
+	top: 10vh;
 	left: 0; 
 	margin-top: 4rem;
 	
-	@mixin atSmall{ 
 	
-	margin-top: 15rem;
-	
-	}
 	
 	
 	&__text{
