@@ -7,7 +7,7 @@
 	right: 0;
 	display: block;
 	height: 65vmin;
-	min-height: 500px;
+	min-height: 600px;
 	
     @mixin atSmall{ 
 	
@@ -45,19 +45,6 @@
 	}
 	
 	
-		
-		
-	
-	
-	&__inner {
-		@mixin atSmall{
-			
-		flex: 1; 
-		margin: auto;
-		
-		}
-	}
-	
 	&__description{
 		text-align: center;
 		display: block;
@@ -91,7 +78,7 @@
 	top: 0;
 	left: 0;
 	display: block;
-	width: 94vw;
+	width: 99vw;
 	padding: 0 .5rem 0 .5rem;
 	margin-left: .5vw;
 	margin-right: .5vw;
