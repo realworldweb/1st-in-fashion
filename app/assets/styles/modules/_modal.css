@@ -7,7 +7,7 @@
 	right: 0;
 	display: block;
 	height: 65vmin;
-	min-height: 325px;
+	min-height: 500px;
 	
     @mixin atSmall{ 
 	
