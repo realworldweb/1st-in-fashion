@@ -7,7 +7,7 @@ opacity: 0;
 .fade-enter-active {
 	
 	transition: all 3s ease-out;
-	transition-delay: .001s;
+
 }
 
 .fade-leave{

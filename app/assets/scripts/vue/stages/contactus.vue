@@ -4,12 +4,12 @@
 <div class="contact-us__body">
 <div class="float-container">
 <div class="contact-us__social-section">
-<a href="#" class="social-icons"><font-awesome-icon :icon="['fab', 'facebook-square']"/></a>
-<a href="#" class="social-icons"><font-awesome-icon :icon="['fab', 'whatsapp']"  /></a>
+<a :href="contactInfo[0].facebook" class="social-icons"><font-awesome-icon :icon="['fab', 'facebook-square']"/></a>
+<a :href="contactInfo[0].whatsapp" class="social-icons"><font-awesome-icon :icon="['fab', 'whatsapp']"  /></a>
 </div>
 <div class="contact-us__info-section">
-<div class="contact-us__info-container"><p class="contact-us__info contact-us__info--phone"><span class="contact-us__info-label">Tel:</span>  07856533964</p>
-<p class="contact-us__info contact-us__info--email"><span class="contact-us__info-label">E-mail:</span>  email@gmail.com</p>
+<div class="contact-us__info-container"><p class="contact-us__info contact-us__info--phone"><span class="contact-us__info-label">Tel:</span>{{contactInfo[0].phone}}</p>
+<p class="contact-us__info contact-us__info--email"><span class="contact-us__info-label">E-mail:</span>{{contactInfo[0].mainEmail}}</p>
 </div>
 </div>
 </div>
@@ -47,8 +47,17 @@ export default {
 
   name: 'ContactUs',
   data(){ 
-  return { categories: data.dataCategories, products: data.dataProducts, emailContact: "", phoneContact: "", emailError: [], phoneError: [], phoneErrorMsg: ['display-none'], emailErrorMsg: ['display-none'], phoneMsg: "", emailMsg: "" }
+  return {emailContact: "", phoneContact: "", emailError: [], phoneError: [], phoneErrorMsg: ['display-none'], emailErrorMsg: ['display-none'], phoneMsg: "", emailMsg: "", contactInfo: [] }
 },
+mounted() {
+
+ fetch('http://51.11.139.2:1337/contact-infos')
+	  .then(response => response.json())
+	  .then( data =>{ 
+	  this.contactInfo = data
+	  })
+	  
+	},
 methods: {
 
 validatePhone(){

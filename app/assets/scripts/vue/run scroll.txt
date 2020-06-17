@@ -1,0 +1,25 @@
+runOnScroll() {
+    this.determineScrollDirection()
+
+    if (window.scrollY > 60) {
+      this.siteHeader.push('site-header--dark')
+	  this.navClasses.push('dark-style-links')
+	  this.navLogo.push('svg__logo--dark')
+	  this.navBtn.push('btn--dark','btn--white')
+    } else {
+      this.siteHeader = []
+	  this.navClasses = []
+	  this.navLogo = []
+	  this.navBtn = []
+    }
+
+  },
+
+  determineScrollDirection() {
+    if (window.scrollY > this.previousScrollY) {
+      this.scrollDirection = 'down'
+    } else {
+      this.scrollDirection = 'up'
+    }
+    this.previousScrollY = window.scrollY
+  }

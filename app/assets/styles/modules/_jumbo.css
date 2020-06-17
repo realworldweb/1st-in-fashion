@@ -1,12 +1,18 @@
 .jumbo{
 position: relative;
 display: block;
-margin-top: 8rem;
 height: 90vh;
+top: 12vmax;
+margin-bottom: 3rem;
 
 @mixin atSmall{
+	top: 7vmax;
+	height: 70vh;	
 		
-		height: 70vh;	
+	}
+	
+	@mixin atMedium{
+		top: 3rem;	
 		
 	}
 	
@@ -26,12 +32,7 @@ height: 90vh;
 		
 	}
 	
- @mixin atMedium {
-	width: 90vw;
-	margin-left: 5vw;
-	margin-right: 5vw;
-	 
- }
+
 }
 
 &__slideshow{

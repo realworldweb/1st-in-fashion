@@ -16,7 +16,12 @@ import Contact from './vue/stages/contact.vue'
 import ContactUs from './vue/stages/contactus.vue'
 import Faqs from './vue/stages/faqs.vue'
 import Terms from './vue/stages/terms.vue'
+import Category from './vue/stages/main-category-stage.vue'
+import SubCategory from './vue/stages/sub-category-stage.vue'
+import PageDetails from './vue/stages/product-stage.vue'
 import Sitefoot from './vue/footer.vue'
+
+
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -42,20 +47,25 @@ Vue.use(VueRouter)
 
 
 const routes =[
- {path: '/', component: Stage},
- {path: '/contact', component: Contact,
- children: [
+ {path: '/', component: Stage, props: true},
+ {path: '/category/:id', component: Category, props: true},
+ {path: '/category/:id/:sub', component: SubCategory, props: true},
+ {path: '/product/:id', component: PageDetails, props: true},
+ {path: '/info', component: Contact, props: true,
+ children:[
  {
- path: '/', component: ContactUs },
+ path: '/', component: ContactUs, props: true },
  {
- path: 'Faqs', component: Faqs},
+ path: 'Faqs', component: Faqs, props: true},
  { 
- path: 'Terms', component: Terms
+ path: 'Terms', component: Terms, props: true
  }
  ]}
+ 
 ]
 
 const router = new VueRouter({
+	
 	routes
 	
 })
@@ -70,8 +80,35 @@ Vue.config.productionTip = false
 new Vue({
 	router,
   el: '#app',
-  components: { 'sitenav': Sitenav, 'stage': Stage, 'contact': Contact, 'sitefoot': Sitefoot },
-  data:{ categories: null, products: null }
+  components: { 'sitenav': Sitenav, 'stage': Stage, 'contact': Contact, 'sitefoot': Sitefoot, 'category': Category, 'PageDetails':PageDetails },
+  data:{ categories: [], products: [], subcategories: []},
+  mounted: function(){
+	  
+	  fetch('http://51.11.139.2:1337/products')
+	  .then(response => response.json())
+	  .then( data =>{ 
+	  this.products = data
+	  })
+	  
+
+	  
+	   fetch('http://51.11.139.2:1337/categories')
+	  .then(response => response.json())
+	  .then( data =>{ 
+	  this.categories = data
+	  })
+	  
+	  fetch('http://51.11.139.2:1337/sub-categories')
+	  .then(response => response.json())
+	  .then( data =>{ 
+	  this.subcategories = data
+	  })
+}
+  
+	  
+	  
+	  
+  
   
  
   

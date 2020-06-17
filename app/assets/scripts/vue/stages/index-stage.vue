@@ -8,26 +8,27 @@
 </div>
 
 <transition-group name="fade" mode="in-out" tag="a" class="jumbo__slide" href="#" appear>
-<img class="jumbo__slide-img" v-bind:src="products[imgid].img" :onload="imgslider()" :key="imgid">
+<img class="jumbo__slide-img" v-bind:src="'http://51.11.139.2:1337'+products[imgid].img.url" :onload="imgslider()" :key="products[imgid].id">
 
 <p class="jumbo__slide-price" :key="imgid">&#163;{{products[imgid].price}}</p>
 </transition-group>
 
 </div>
 </div>
+<div class="product-slice__area">
 <div class="product-slice" v-for="title in categories">
-<p class="product-slice__title">{{title.name}}</p>
+<p class="product-slice__title">{{title.category}}</p>
 <div class="product-slice__products">
-<div v-for="item in products" v-if="item.category===title.name" class="product-slice__slice">
+<div v-for="item in title.products.slice(0-3)"  class="product-slice__slice">
 <a class="product-tile">
-<img class="product-tile__img lazyload" :data-src="item.img">
+<img class="product-tile__img lazyload" :src="'http://51.11.139.2:1337'+item.img.url">
 <p class="product-tile__price">&#163;{{item.price}}</p>
 </a>
 </div>
 </div>
 <a href="#" class="product-slice__more">See more<font-awesome-icon icon="caret-down" class="side-caret" /></a>
 </div>
-
+</div>
 
 
 </div>
@@ -51,9 +52,9 @@ export default {
 
   name: 'Stage',
   data(){ 
-  return { show: true, imgid: 0, categories: data.dataCategories, products: data.dataProducts }
+  return { show: true, imgid: 0}
 },
-
+props: ['products', 'categories'],
 methods: {
 imgslider() {
 if(count === 0){
@@ -63,7 +64,7 @@ count = 1
 
 },
 slider(){
-console.log(this.imgid)
+
 if(this.imgid === 2){
 
 return this.imgid = 0
@@ -75,7 +76,7 @@ return ++this.imgid
 }
  }
  
-},
+ },
 beforeDestroy(){
 clearInterval(slide)
 },

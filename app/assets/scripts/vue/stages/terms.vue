@@ -17,8 +17,18 @@ export default {
 
   name: 'ContactUs',
   data(){ 
-  return { categories: data.dataCategories, products: data.dataProducts, terms : data.dataTerms }
-}
+  return { terms: [] }
+},
+mounted() {
+
+ fetch('http://51.11.139.2:1337/terms')
+	  .then(response => response.json())
+	  .then( data =>{ 
+	  this.terms = data
+	  })
+	  
+	},
+
 
 
 

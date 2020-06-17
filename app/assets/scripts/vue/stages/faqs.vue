@@ -17,8 +17,18 @@ export default {
 
   name: 'Faqs',
   data(){ 
-  return { categories: data.dataCategories, products: data.dataProducts, faqs: data.dataFaqs }
-}
+  return { faqs: [] }
+},
+mounted() {
+
+ fetch('http://51.11.139.2:1337/faqs')
+	  .then(response => response.json())
+	  .then( data =>{ 
+	  this.faqs = data
+	  })
+	  
+	},
+
 
 
 

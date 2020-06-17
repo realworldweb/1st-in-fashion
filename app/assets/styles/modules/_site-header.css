@@ -5,21 +5,15 @@
 	padding:  0;
     z-index: 5;
 
-   
-	
-	
-	@mixin atMedium{
+  @mixin atMedium{
 		position: fixed;
-		background-color:  transparent;
+		background-color: rgba($mainBlue,.9);
+		border-bottom: 2px solid $mainBlue;
 		transform: scale(1);
-        height: 4rem;
+        height: 5rem;
 	
 		
-		&--dark{
-			@mixin atMedium {
-			background-color: rgba($mainBlue,.85);
-			}
-		}
+		
 		
 	}
 	
@@ -67,33 +61,31 @@
 	font-family: $svgFont;
 	transform: translateX(-13%);
 	width: 50vw;
+	max-height: 12vmax;
+	margin-top: 1rem;
 	
 	@mixin atSmall {
-		margin-top: .5rem;
+		max-height: 6vmax;
+		margin-top: 0;
 		width: 27vw;
+		
 
 	}
 	
 
 	
 	@mixin atMedium {
-		width: 20vw;	
+
+        width: 17vw;
+		max-height: 5.4rem;
+		background-color: #fff;		
 			
 			
 		}
 }
 	
-	.svg__logo--dark{
-		@mixin atMedium{
-			
-		width: 17vw;
-		max-height: 4.5rem;
-		margin-top: 0;
-		background-color: #fff;
-		
-		
-		}
-	}
+	
+	
 	
 	&__menu-icon{
 		position: absolute;

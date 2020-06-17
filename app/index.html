@@ -9,12 +9,16 @@
 <body>
  <div id="app">
   <header id="head" >
-<sitenav></sitenav>
+<sitenav :products="products" :categories="categories"></sitenav>
 
   </header>
   <main id="stage">
 
-<router-view></router-view>
+<router-view
+:products="products" 
+:categories="categories"
+:subcategories="subcategories"
+></router-view>
 
  </main>
   

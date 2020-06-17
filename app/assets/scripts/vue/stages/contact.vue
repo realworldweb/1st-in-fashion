@@ -8,9 +8,9 @@
 </div>
 <div class="modal__stage">
 <div class="modal__links">
-<div class="modal__link-container" :class="firstTabIsActive"><router-link :to="contactnav" class="modal__link"><font-awesome-icon icon="envelope-open-text" class="modal__link-icon"  /><span class="modal__link-text">Contact us</span></router-link></div>
-<div class="modal__link-container" :class="secondTabIsActive"><router-link :to="faqsnav" class="modal__link"><font-awesome-icon :icon="['far', 'question-circle']" class="modal__link-icon" /><span class="modal__link-text">F.A.Q's</span></router-link></div>
-<div class="modal__link-container" :class="thirdTabIsActive"><router-link :to="termsnav" class="modal__link"><font-awesome-icon :icon="['far', 'list-alt']" class="modal__link-icon" /><span class="modal__link-text">T&C'S</span></router-link></div>
+<div class="modal__link-container" :class="firstTabIsActive"><router-link :to="contactNav" class="modal__link"><font-awesome-icon icon="envelope-open-text" class="modal__link-icon"  /><span class="modal__link-text">Contact us</span></router-link></div>
+<div class="modal__link-container" :class="secondTabIsActive"><router-link :to="faqsNav" class="modal__link"><font-awesome-icon :icon="['far', 'question-circle']" class="modal__link-icon" /><span class="modal__link-text">F.A.Q's</span></router-link></div>
+<div class="modal__link-container" :class="thirdTabIsActive"><router-link :to="termsNav" class="modal__link"><font-awesome-icon :icon="['far', 'list-alt']" class="modal__link-icon" /><span class="modal__link-text">T&C'S</span></router-link></div>
 </div>
 <router-view></router-view>
 </div>
@@ -29,7 +29,7 @@ export default {
 
   name: 'Contact',
   data(){ 
-  return { categories: data.dataCategories, products: data.dataProducts, contactnav: "/contact/", faqsnav: "/contact/FAQs", termsnav: "/contact/Terms", firstTabIsActive: [], secondTabIsActive: [], thirdTabIsActive: []  }
+  return { contactNav: "/info", faqsNav: "/info/FAQs", termsNav: "/info/Terms", firstTabIsActive: [], secondTabIsActive: [], thirdTabIsActive: []  }
 },
 computed:{
 
@@ -37,8 +37,8 @@ computed:{
 
 currentPage (){
 
-console.log(this.$route.path)
-if(this.$route.path === '/contact' || this.$route.path === '/contact/'){
+
+if(this.$route.path === '/info' || this.$route.path === '/info/contact'){
 
 this.secondTabIsActive = []
 this.thirdTabIsActive  = []
@@ -46,7 +46,7 @@ this.firstTabIsActive.push('first-tab')
 
 return this.$route.path
 
-}else if(this.$route.path === '/contact/FAQs') {
+}else if(this.$route.path === '/info/FAQs') {
 
 this.firstTabIsActive = []
 this.thirdTabIsActive  = []

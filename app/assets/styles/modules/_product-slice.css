@@ -1,26 +1,30 @@
 .product-slice{
 	position: relative;
 	top: 0;
-	min-height: 70vmax;
+	min-height: 500px;
 	display: block;
 	width: 90vw;
 	margin-left: 5vw;
 	margin-right: 5vw;
 	margin-bottom: 3rem;
-	margin-top: 1rem;
+	margin-top: 3rem;
+	background-color: rgba($mainBlue,.3);
 	
-	@mixin atSmall{
+	@mixin atLarge {
 		
-		min-height: 60vh;
+		min-height: 700px;
+		max-height: 700px;
+		
 	}
+	
 	
 	&__title{
 	position: relative;
 	left: 0;
 	top: 0;
 	margin-left: 2rem;
-	padding-top: 4rem;
-	color: $mainBlue;
+	padding-top: .5rem;
+	color: #fff;
 	font-size: 3rem;
 	font-weight: 600;
 	text-shadow: 1px 2px rgba($shadowBlack, .4);
@@ -35,13 +39,11 @@
     display: flex;
     flex-wrap: no-wrap;
     flex-direction: row;
-    align-content: center;
-    align-items: center	
-		
-		
-		
-		
-	}
+    align-items: center;
+	align-self: center;
+	
+	
+}
 	
 	&__slice{
 		
@@ -82,24 +84,11 @@
 	
 	&__more{
 	position: absolute;
-	right: 0;
-	bottom: -3rem;
-	color: $mainBlue;
+	right: 1rem;
+	bottom: 1rem;
+	color: #fff;
 	font-size: 2rem;
-	
-	@mixin atSmall{
-		
-		botttom: 5rem;
-		
-	}
-	
-	@mixin atLarge{
-		
-		margin-bottom: -11vmin;
-	}
-	
-		
-	}
+}
 	
 	.side-caret{
 		
@@ -108,7 +97,26 @@
 		
 	}
 	
-	
+	&__area{
+		
+		position: relative;
+		top: 3rem;
+		
+		&--whole-page{
+		
+		 top: 3rem;
+		 margin-bottom: 5rem;
+		
+		
+		@mixin atMedium{
+			
+			top: 7rem;
+		margin-bottom: 10rem;
+			
+		}
+			
+		}
+	}
 	
 	
 }

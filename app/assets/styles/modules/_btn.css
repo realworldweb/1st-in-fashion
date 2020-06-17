@@ -18,11 +18,15 @@
     max-width: 60vw;
 	min-width: 60vw;
 	font-size: 1rem;
+	color: #fff;
+	border-color: #fff;
 	
 	@mixin atSmall{
 	  margin-top: 0;
     max-width: 20vw;
 	min-width: 10vw;
+	color: $mainBlue;
+	border-color: $mainBlue;
   }
   
   @mixin atMedium{
