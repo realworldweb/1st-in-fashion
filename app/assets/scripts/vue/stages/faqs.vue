@@ -21,7 +21,7 @@ export default {
 },
 mounted() {
 
- fetch('https://51.11.139.2:1337/faqs')
+ fetch('https://1stinfashiondata.co.uk:1337/faqs')
 	  .then(response => response.json())
 	  .then( data =>{ 
 	  this.faqs = data

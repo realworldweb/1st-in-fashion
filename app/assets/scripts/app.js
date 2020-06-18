@@ -84,7 +84,7 @@ new Vue({
   data:{ categories: [], products: [], subcategories: []},
   mounted: function(){
 	  
-	  fetch('https://51.11.139.2:1337/products')
+	  fetch('https://1stinfashiondata.co.uk:1337/products')
 	  .then(response => response.json())
 	  .then( data =>{ 
 	  this.products = data
@@ -92,13 +92,13 @@ new Vue({
 	  
 
 	  
-	   fetch('https://51.11.139.2:1337/categories')
+	   fetch('https://1stinfashiondata.co.uk:1337/categories')
 	  .then(response => response.json())
 	  .then( data =>{ 
 	  this.categories = data
 	  })
 	  
-	  fetch('https://51.11.139.2:1337/sub-categories')
+	  fetch('https://1stinfashiondata.co.uk:1337/sub-categories')
 	  .then(response => response.json())
 	  .then( data =>{ 
 	  this.subcategories = data

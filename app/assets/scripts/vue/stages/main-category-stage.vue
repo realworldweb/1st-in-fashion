@@ -6,7 +6,7 @@
 <div class="product-slice__products">
 <div v-for="product in item.products"  class="product-slice__slice">
 <a class="product-tile">
-<img class="product-tile__img lazyload" :src="'https://51.11.139.2:1337'+product.img.url">
+<img class="product-tile__img lazyload" :src="'https://1stinfashiondata.co.uk:1337'+product.img.url">
 <p class="product-tile__price">&#163;{{product.price}}</p>
 </a>
 </div>
