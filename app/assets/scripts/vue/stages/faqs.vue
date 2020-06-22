@@ -11,23 +11,15 @@
 </template>
 
 <script>
-const data = require('../vue-data/data')
+const data = require('../vue-data/contactdata')
 
 export default {
 
   name: 'Faqs',
   data(){ 
-  return { faqs: [] }
-},
-mounted() {
+  return { faqs: data.dataFaqs }
+}
 
- fetch('https://1stinfashiondata.co.uk:1337/faqs')
-	  .then(response => response.json())
-	  .then( data =>{ 
-	  this.faqs = data
-	  })
-	  
-	},
 
 
 

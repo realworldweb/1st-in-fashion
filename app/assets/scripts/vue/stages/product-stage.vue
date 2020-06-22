@@ -3,7 +3,7 @@
 <div class="product-details">
 <div class="product-details__main" style="margin-top: 400px">
 <p class="product-details__title">{{currentproduct[0].name}}</p>
-<img :src="'https://1stinfashiondata.co.uk:1337'+currentproduct[0].img.url" :alt="currentproduct[0].name">
+<img :src="'./assets/images'+currentproduct[0].img.url" :alt="currentproduct[0].name">
 <p class="product-details__price">{{currentproduct[0].price}}</p>
 <form>
 <select id=sizes name="sizes">

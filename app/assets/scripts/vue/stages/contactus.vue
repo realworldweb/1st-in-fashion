@@ -39,7 +39,7 @@
 </template>
 
 <script>
-const data = require('../vue-data/data')
+const data = require('../vue-data/contactdata')
 
 let valid
 
@@ -47,17 +47,8 @@ export default {
 
   name: 'ContactUs',
   data(){ 
-  return {emailContact: "", phoneContact: "", emailError: [], phoneError: [], phoneErrorMsg: ['display-none'], emailErrorMsg: ['display-none'], phoneMsg: "", emailMsg: "", contactInfo: [] }
+  return {emailContact: "", phoneContact: "", emailError: [], phoneError: [], phoneErrorMsg: ['display-none'], emailErrorMsg: ['display-none'], phoneMsg: "", emailMsg: "", contactInfo: data.dataContactInfo }
 },
-mounted() {
-
- fetch('https://1stinfashiondata.co.uk:1337/contact-infos')
-	  .then(response => response.json())
-	  .then( data =>{ 
-	  this.contactInfo = data
-	  })
-	  
-	},
 methods: {
 
 validatePhone(){

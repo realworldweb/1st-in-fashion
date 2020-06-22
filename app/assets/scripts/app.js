@@ -22,6 +22,9 @@ import PageDetails from './vue/stages/product-stage.vue'
 import Sitefoot from './vue/footer.vue'
 
 
+const data = require('./vue/vue-data/data')
+
+
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -81,29 +84,8 @@ new Vue({
 	router,
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'contact': Contact, 'sitefoot': Sitefoot, 'category': Category, 'PageDetails':PageDetails },
-  data:{ categories: [], products: [], subcategories: []},
-  mounted: function(){
-	  
-	  fetch('https://1stinfashiondata.co.uk:1337/products')
-	  .then(response => response.json())
-	  .then( data =>{ 
-	  this.products = data
-	  })
-	  
-
-	  
-	   fetch('https://1stinfashiondata.co.uk:1337/categories')
-	  .then(response => response.json())
-	  .then( data =>{ 
-	  this.categories = data
-	  })
-	  
-	  fetch('https://1stinfashiondata.co.uk:1337/sub-categories')
-	  .then(response => response.json())
-	  .then( data =>{ 
-	  this.subcategories = data
-	  })
-}
+  data:{ categories: data.dataCategories, products: data.dataProducts, subcategories: data.dataSubCategories},
+  
   
 	  
 	  

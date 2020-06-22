@@ -4,7 +4,7 @@
 <p class="product-pane__title">{{appliedArray}}</p>
 <div class="product-pane__products" v-for="item in subcategories" v-if="item.subCategory === appliedArray">
 <router-link tag="a" class="product-tile" :key="product.id" v-for="product in item.products" :to="'/product/'+product.id">
-<img class="product-tile__img lazyload" :src="'https://1stinfashiondata.co.uk:1337' + product.img.url">
+<img class="product-tile__img lazyload" :src="'./assets/images'+product.img.url">
 <p class="product-tile__price">&#163;{{product.price}}</p>
 </router-link>
 </div>

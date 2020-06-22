@@ -8,7 +8,7 @@
 </div>
 
 <transition-group name="fade" mode="in-out" tag="a" class="jumbo__slide" href="#" appear>
-<img class="jumbo__slide-img" v-bind:src="'https://1stinfashiondata.co.uk:1337'+products[imgid].img.url" :onload="imgslider()" :key="products[imgid].id">
+<img class="jumbo__slide-img" v-bind:src="'./assets/images'+products[imgid].img.url" :onload="imgslider()" :key="products[imgid].id">
 
 <p class="jumbo__slide-price" :key="imgid">&#163;{{products[imgid].price}}</p>
 </transition-group>
@@ -21,7 +21,7 @@
 <div class="product-slice__products">
 <div v-for="item in title.products.slice(0-3)"  class="product-slice__slice">
 <a class="product-tile">
-<img class="product-tile__img lazyload" :src="'https://1stinfashiondata.co.uk:1337'+item.img.url">
+<img class="product-tile__img lazyload" :src="'./assets/images'+item.img.url">
 <p class="product-tile__price">&#163;{{item.price}}</p>
 </a>
 </div>
@@ -44,7 +44,7 @@
 
 
 
-const data = require('../vue-data/data')
+
 let slide
 let count = 0
 
