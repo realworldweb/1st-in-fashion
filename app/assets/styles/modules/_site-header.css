@@ -214,7 +214,7 @@
 		
 				background-color: rgba($mainBlue,.85);
 				height: 100vmax;
-				
+				z-index: 5;
 				 @mixin atSmall{
 		
 		height: 60vmax;
