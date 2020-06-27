@@ -602,7 +602,84 @@ let dataSubCategories = [
             "created_at": "2020-06-08T22:49:50.611Z",
             "updated_at": "2020-06-08T22:49:50.611Z"
         }
+            },
+			 {
+                "id": 50,
+                "name": "boys 3pc formal suit",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
+                "price": 23.99,
+                "created_at": "2020-06-11T16:42:34.045Z",
+                "updated_at": "2020-06-11T16:42:34.045Z",
+                 "img": {
+            "id": 9,
+            "name": "boys 3pc formal suit",
+            "alternativeText": "",
+            "caption": "",
+            "width": 320,
+            "height": 320,
+            "formats": {
+                "thumbnail": {
+                    "hash": "boys_3pc_formal_suit",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "width": 156,
+                    "height": 156,
+                    "size": 5.18,
+                    "path": null,
+                    "url": "/uploads/boys_3pc_formal_suit.jpeg"
+					}
+            },
+            "hash": "boys_3pc_formal_suit",
+            "ext": ".jpeg",
+            "mime": "image/jpeg",
+            "size": 16.49,
+            "url": "/uploads/boys_3pc_formal_suit.jpeg",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "created_at": "2020-06-08T22:49:50.611Z",
+            "updated_at": "2020-06-08T22:49:50.611Z"
+        }
+			 },
+		 {
+                "id": 51,
+                "name": "boys 3pc formal suit",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
+                "price": 23.99,
+                "created_at": "2020-06-11T16:42:34.045Z",
+                "updated_at": "2020-06-11T16:42:34.045Z",
+                 "img": {
+            "id": 9,
+            "name": "boys 3pc formal suit",
+            "alternativeText": "",
+            "caption": "",
+            "width": 320,
+            "height": 320,
+            "formats": {
+                "thumbnail": {
+                    "hash": "boys_3pc_formal_suit",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "width": 156,
+                    "height": 156,
+                    "size": 5.18,
+                    "path": null,
+                    "url": "/uploads/boys_3pc_formal_suit.jpeg"
+					}
+            },
+            "hash": "boys_3pc_formal_suit",
+            "ext": ".jpeg",
+            "mime": "image/jpeg",
+            "size": 16.49,
+            "url": "/uploads/boys_3pc_formal_suit.jpeg",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "created_at": "2020-06-08T22:49:50.611Z",
+            "updated_at": "2020-06-08T22:49:50.611Z"
+        }
             }
+            
         ]
     },
     {
