@@ -604,7 +604,7 @@ let dataSubCategories = [
         }
             },
 			 {
-                "id": 50,
+                "id": 5,
                 "name": "boys 3pc formal suit",
                 "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
                 "price": 23.99,
@@ -642,7 +642,7 @@ let dataSubCategories = [
         }
 			 },
 		 {
-                "id": 51,
+                "id": 5,
                 "name": "boys 3pc formal suit",
                 "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
                 "price": 23.99,
