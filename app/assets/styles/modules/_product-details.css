@@ -1,0 +1,279 @@
+.product-details{
+	position: relative;
+	top: 5vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 90vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-bottom: 5rem;
+	margin-top: 3rem;
+	background-color: $mainBlue;
+	padding: 0 0 1rem 0;
+	
+	
+	@mixin atMedium{
+	margin-top: 10vh;	
+	}
+	
+	
+		
+	
+	&__main{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		background-color: rgba(#ffffff, .4);
+		padding: 1rem 0 1rem 0;
+		flex: 12 1 auto;
+	    align-self: auto;
+		
+	
+	}
+	
+	&__title{
+		display: block;
+		margin: .3rem auto 0 auto;
+		font-size: 3rem;
+		text-align: center;
+		flex: 12 1 auto;
+	    align-self: auto;
+		
+		@mixin atMedium{
+			
+		margin-left: 275px;
+	}
+	
+	@mixin atLarge{
+			
+		margin-left: 400px;
+		font-size: 5rem;
+	}
+		
+		
+	}
+	
+	&__img{
+	display: block;
+	margin: 1rem auto 0 auto;
+	max-width: 70vw;
+	flex: 6 1 auto;
+	align-self: auto;
+	
+	@mixin atMedium{
+		position: absolute;
+		width: 275px;
+		top: 0;
+		left: 0;
+		margin: 1rem;
+	}
+	
+	@mixin atLarge{
+			
+		width: 400px;
+	}
+	
+	
+    }
+	
+	
+	
+	
+		
+	
+	
+	&__purchase{
+		
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: no-wrap;
+		align-content: center;
+		justify-content: space-between;
+		justify-self: center;
+		margin: 1rem;
+		flex: 12 1 auto;
+	    align-self: auto;
+		
+		@mixin atMedium{
+		
+		max-width: 35vw;
+		margin-left: 300px;
+		transform: translateX(30%);
+		order: 2;
+		flex: 6 1 auto;
+		flex-wrap: wrap;
+	}
+	
+	@mixin atLarge{
+			
+		margin-left: 400px;
+		
+	}
+		
+		
+	}
+	
+	
+
+&__sizes{
+    
+	flex: 2 1 auto;
+	align-self: auto;
+	margin: 0 .5rem 0 .5rem;
+	font-size: 1rem;
+	
+	@mixin atSmall{
+		
+		font-size: 1rem;
+		
+		
+	}
+	
+	@mixin atMedium{
+		
+		width: 45%;
+		align-self: flex-start;
+		
+	}
+	
+	@mixin atLarge{
+			
+		font-size: 2rem;
+		
+	}
+	
+	
+}
+
+&__price{
+	
+	
+	font-size: 2rem;
+	flex: 2 1 auto;
+	align-self: auto;
+	
+	@mixin atSmall{
+	font-size: 2.5rem;
+	}
+	
+	@mixin atMedium{
+		
+		width: 45%;
+		align-self: flex-end;
+	}
+	
+	@mixin atLarge{
+			
+		font-size: 2rem;
+		
+	}
+	
+	input{
+		
+		max-width: 30px;
+		text-align: center;
+		
+	}
+}
+
+
+
+
+
+	
+	&__buy{
+		
+		display: inline;
+		flex: 4 1 auto;
+	    align-self: auto;
+		background-color: #fff;
+		border: 2px solid $mainBlue;
+		border-radius: 25px;
+		box-shadow: 2px 2px rgba($shadowBlack, .2), .5px 1px rgba($shadowBlack, .5);
+		padding: .5rem;
+		margin: -.5rem 0 0 0;
+		
+		@mixin atMedium{
+		margin-top: 1rem;
+		width: 80%;
+		
+	}
+	
+	@mixin atLarge{
+			
+		font-size: 2rem;
+		
+	}
+		
+		}
+		
+	&__desc{
+		
+		padding: 0 1rem 0 1rem;
+		flex: 6 1 auto;
+	
+		
+		@mixin atSmall{
+			
+			font-size: 1.2rem;
+			line-height: 1.5;
+			
+		}
+		
+		@mixin atMedium{
+			max-width: 45vw;
+			margin: .5rem 0 0 0;
+			order: 1;
+			
+			
+		}
+		@mixin atLarge{
+			
+			font-size: 2rem;
+			
+		}
+	}
+	
+
+	&__sizeguide{
+		position: relative;
+		flex: 4 1 auto;
+		margin: 1rem auto 0 auto;
+		background-color: #fff;
+		max-width: 70vw;
+		min-height: 12rem;
+		
+		@mixin atMedium{
+		  
+         max-width: 45vw;
+         margin: 7rem 0 0 1rem;		 
+			
+		}
+		
+		@mixin atLarge{
+		  
+      
+         margin: 10rem 0 0 1rem;		 
+			
+		}
+		
+		p{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			margin: 0 auto 0 auto;
+			
+		}
+	}
+	
+	
+		
+	
+	
+	
+	
+}

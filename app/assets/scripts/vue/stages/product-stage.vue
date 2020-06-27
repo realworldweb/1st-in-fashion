@@ -1,20 +1,22 @@
 <template lang="pug">
 <div id="stage" class="stage">
 <div class="product-details">
-<div class="product-details__main" style="margin-top: 400px">
+<div class="product-details__main">
 <p class="product-details__title">{{currentproduct[0].name}}</p>
-<img :src="'./assets/images'+currentproduct[0].img.url" :alt="currentproduct[0].name">
-<p class="product-details__price">{{currentproduct[0].price}}</p>
-<form>
-<select id=sizes name="sizes">
-<option v-for="sizes in currentproduct[0].sizes" :value="sizes.size">{{sizes.size}}</option>
+<img class="product-details__img" :src="'./assets/images'+currentproduct[0].img.url" :alt="currentproduct[0].name">
+
+<form class="product-details__purchase">
+<span class="product-details__price">&#163;{{currentproduct[0].price}}</span>
+<label class="product-details__sizes">Size:
+<select id="sizes" name="sizes" >
+<option  v-for="sizes in currentproduct[0].sizes" :value="sizes.size">{{sizes.size}}</option>
 </select>
-<input type="text" name="qty" placeholder="1">
-<input type="submit" name="add" class="btn" value="Add to basket">
+</label>
+<input type="submit" name="add" class="product-details__buy" value="Add to basket">
 </form>
 </div>
 <p class="product-details__desc">{{currentproduct[0].desc}}</p>
-<div class="Product-details__sizeguide"></div>
+<div class="product-details__sizeguide"><p>sizeguide</p></div>
 
 </div>
 </div>
@@ -34,9 +36,10 @@
 export default {
 
   name: 'PageDetails',
-  data() { return { currentproduct: null}},
+  data() { return { currentproduct: null }},
   props: ['products', 'categories', 'subcategories'],
-  mounted(){
+  created(){
+  
   this.loadproduct
  },
 computed:{

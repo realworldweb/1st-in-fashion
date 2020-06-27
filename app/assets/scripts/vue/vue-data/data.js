@@ -1624,7 +1624,7 @@ let dataProducts = [
     },
     {
         "id": 3,
-        "name": "boys quilted short set",
+        "name": "quilted short set",
         "desc": "A Baby Boys 2 piece   Short -Set,\n\nComes in Red / Navy & in Orange / Navy,\n\nCondition is New with Tags\n\nThese suits are Suitable for SPRING/Summer & Autumn\n.",
         "price": 5.95,
         "created_at": "2020-06-09T14:51:29.777Z",

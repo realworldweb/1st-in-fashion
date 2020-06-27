@@ -20,10 +20,10 @@
 <p class="product-slice__title">{{title.category}}</p>
 <div class="product-slice__products">
 <div v-for="item in title.products.slice(0-3)"  class="product-slice__slice">
-<a class="product-tile">
+<router-link tag="a" :to="'/product/'+item.id" class="product-tile">
 <img class="product-tile__img lazyload" :src="'./assets/images'+item.img.url">
 <p class="product-tile__price">&#163;{{item.price}}</p>
-</a>
+</router-link>
 </div>
 </div>
 <a href="#" class="product-slice__more">See more<font-awesome-icon icon="caret-down" class="side-caret" /></a>
