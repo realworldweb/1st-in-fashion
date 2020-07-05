@@ -14,23 +14,44 @@
 </div>
 	
 <div class="site-header__menu-content" :class="menuContent">
-<div class="site-header__btn-container">
-<router-link to="/info" class="btn btn--small" :class="navBtn">Get in Touch</router-link>
-</div>
 <nav class="primary-nav primary-nav--pull-right">
 <ul>
+<li><router-link tag="a" to="/" name="kids_home" id="fashion_home">home<span class="caret">&nbsp;</span></router-link></li>
 <li v-for="item in categories"><router-link tag="a" :to="'/category/'+item.category" id="fashion categories" :class="navClasses">{{item.category}}<font-awesome-icon icon="caret-down" class="caret" /></router-link>
 <ul class="primary-nav__dropdown">
-<li v-if="item.category === 'baby'"><router-link tag="a" :to="'/category/'+item.category+'/boyscasual'">boys casual</router-link></li>
-<li v-if="item.category === 'baby'"><router-link tag="a" :to="'/category/'+item.category+'/girlscasual'">girls casual</router-link></li>
-<li v-if="item.category !== 'baby'"><router-link tag="a" :to="'/category/'+item.category+'/casual'">casual</router-link></li>
-<li v-if="item.category === 'baby'"><router-link tag="a" :to="'/category/'+item.category+'/boysformal'">boys formal</router-link></li>
-<li v-if="item.category === 'baby'"><router-link tag="a" :to="'/category/'+item.category+'/girlsformal'">girls formal</router-link></li>
-<li v-if="item.category !== 'baby'"><router-link tag="a" :to="'/category/'+item.category+'/formal'">formal</router-link></li>
+<li v-if="item.category === 'baby'"><router-link tag="a" name:="girls_casual_fashion" id="girls_casual" :to="'/category/'+item.category+'/boyscasual'">boys casual</router-link></li>
+<li v-if="item.category === 'baby'"><router-link tag="a" name:="boys_casual_fashion" id="boys_casual":to="'/category/'+item.category+'/girlscasual'">girls casual</router-link></li>
+<li v-if="item.category !== 'baby'"><router-link tag="a" name:="kids_casual" id="casual" :to="'/category/'+item.category+'/casual'">casual</router-link></li>
+<li v-if="item.category === 'baby'"><router-link tag="a" name:="boys_formal_attire" id="boys_formal" :to="'/category/'+item.category+'/boysformal'">boys formal</router-link></li>
+<li v-if="item.category === 'baby'"><router-link tag="a" name:="girls_formal_dresses" id="girlsformal":to="'/category/'+item.category+'/girlsformal'">girls formal</router-link></li>
+<li v-if="item.category !== 'baby'"><router-link tag="a" name:="formal_attire" id="formal" :to="'/category/'+item.category+'/formal'">formal</router-link></li>
 </ul>
 </li>
 </ul>
 </nav>
+</div>
+<div class="basket" :class="applyhover">
+<p class="basket__default"><font-awesome-icon icon="shopping-basket" class="basket__icon"/>{{basketcontents.length}} Items<font-awesome-icon icon="caret-down" class="caret--items" /></p>
+<span class="basket__details">
+<div class="basket__products">
+<table>
+<tr>
+<th>Product name</th>
+<th>Size</th>
+<th>Price</th>
+<th>Remove</th>
+</tr>
+<tr v-for="products in basketcontents">
+<td>{{products.name}}</td>
+<td>{{products.size}}</td>
+<td>{{products.price}}</td>
+<td><font-awesome-icon icon="minus-circle"/><a href="#" @click="$emit('remove', products.basketId)">Remove</a></td>
+</tr>
+</table>
+</div>
+<p class="basket__total">total: &#163;{{baskettotal}}</p>
+<a href="#"class="basket__checkout">Checkout</a>
+</span>
 </div>
 </div>
 </template>
@@ -38,7 +59,7 @@
 <script>
 import throttle from 'lodash/throttle'
 import debounce from 'lodash/debounce'
-const data = require('./vue-data/data')
+
 
 export default{
 
@@ -46,8 +67,9 @@ name: 'Sitenav',
 
   data(){ 
   return { browserHeight: 0, previousScrollY: 0, scrollDirection: null, siteHeader: [], menuContent: [], menuIcon:[], navClasses: [], navLogo: ['svg__logo--dark'], navBtn: ['btn--dark','btn--white'], mobileNav: false}
-},
-props: ['products', 'categories'],
+  
+  },
+props: ['products', 'categories', 'basketcontents', 'baskettotal', 'applyhover'],
 watch: {
 '$route' (){
 
@@ -84,6 +106,14 @@ this.siteHeader = []
  return this.mobileNav = false
 
 }
+
+
+
+
+
+
+
+
 
 }
 

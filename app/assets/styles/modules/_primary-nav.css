@@ -13,21 +13,31 @@
 		 
 		@mixin atMedium{
 			
-		  float: right; 
+		  margin-left: 20vw;
+
+         		  
 		 
 		}
+		
+		@mixin atLarge{
+			
+		  margin-left: 24vw;
+
+         		  
+		 
+		}
+		
+		
 	 }
 	 
 	 ul{
-		 padding: 0;
-	     margin: 0 ;
+	    
+	     padding: 0;
+	     margin: 0;
 			 
 		 @mixin clearfix;
 	 
-		 
-	
-		
-	}
+          }	
 	 
 	 
 	 li{
@@ -37,7 +47,7 @@
 	    box-shadow: $shadowBlack 3px 1px;
 		text-align: center;
 		list-style: none;
-		 padding: 4px;
+		 padding: 6px;
 		 margin: 0 auto 8px auto;
 		background-color: $mainBlue;  
 		transition: all .2s ease-out;
@@ -47,15 +57,23 @@
 		 
 		 @mixin atMedium{
 			 
-			 float: left;
+			  float: left;
 			  padding: 12px 0;
-			  max-width: 10rem;
+			  max-width: 6rem;
 			  max-height: 7rem;
 			  overflow: hidden;
 			  margin: 0 auto 0 auto;
 			  border: none;
 	          box-shadow: none;
 			  background-color: transparent;
+		
+		 }
+		 
+		 @mixin atLarge{
+			 
+			  
+			  max-width: 10rem;
+			  
 		
 		 }
 		 
@@ -71,7 +89,7 @@
 		 text-align: center;
 		 font-weight: 500;
 		  font-size: 2rem;
-		line-height: 0;
+		
 		 
 		 @mixin atSmall{
 		font-size: 1.5rem;
@@ -81,7 +99,7 @@
 		   
 
        @mixin atMedium{
-		font-size: 2.2rem;
+		font-size: 2rem;
 		margin: 1rem auto 0 auto;
 		
 		
@@ -89,8 +107,9 @@
 	   }
 	   
 	   @mixin atLarge{
-		font-size: 2rem;
-		margin: 0 auto 0 auto;
+		font-size: 2.6rem;
+		
+		
 		
 
 	   }
@@ -137,9 +156,7 @@
 			width: 100%;
 			margin: 0 auto 0 auto;
 			
-			@mixin atMedium{
-				
-			}
+			
 			
 		}
 		
@@ -153,7 +170,7 @@
 			
 		}
 		
-		& li:hover{ 
+& li:hover{ 
 		
 		background-color: rgba(#fff,.2) !important;
 	
@@ -177,7 +194,9 @@
 	
 	}
 	
-			& li:hover a{ 
+
+	
+	& li:hover a{ 
 		
 		
 	@mixin atMedium{
@@ -190,9 +209,17 @@
     
 	}
 		
+	}
 		
 		
-		
+	& li:first-child:hover{ 
+
+		@mixin atMedium{
+			
+	background-color: transparent;
+	
+		}
+	
 	}
 	
 	& li:hover{ 

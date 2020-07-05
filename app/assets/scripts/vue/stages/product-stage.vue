@@ -5,15 +5,21 @@
 <p class="product-details__title">{{currentproduct[0].name}}</p>
 <img class="product-details__img" :src="'./assets/images'+currentproduct[0].img.url" :alt="currentproduct[0].name">
 
-<form class="product-details__purchase">
+<form class="product-details__purchase" @submit.prevent>
 <span class="product-details__price">&#163;{{currentproduct[0].price}}</span>
 <label class="product-details__sizes">Size:
-<select id="sizes" name="sizes" >
-<option  v-for="sizes in currentproduct[0].sizes" :value="sizes.size">{{sizes.size}}</option>
+<select id="sizes" name="sizes" v-model="selected" :class="sizeselection">
+<option  v-for="sizes in currentproduct[0].sizes" :value="sizes.size" >{{sizes.size}}</option>
 </select>
 </label>
-<input type="submit" name="add" class="product-details__buy" value="Add to basket">
+<p :class='errormsg'>Please select a size</p>
+<input type="submit" name="add" @click="addToBasket" class="product-details__buy" value="Add to basket">
 </form>
+</div>
+<div :class="addedtobasket">
+<p>Item added to Basket</p>
+<a href="#" >Checkout</a>
+<a href="#" @click="close" >Continue Shopping</a>
 </div>
 <p class="product-details__desc">{{currentproduct[0].desc}}</p>
 <div class="product-details__sizeguide"><p>sizeguide</p></div>
@@ -36,7 +42,7 @@
 export default {
 
   name: 'PageDetails',
-  data() { return { currentproduct: null }},
+  data() { return { currentproduct: null, selected: [], sizeselection: [], errormsg: ['errormsg','sizeerror', 'display-none'], addedtobasket: ['product-details__checked', 'display-none'] }},
   props: ['products', 'categories', 'subcategories'],
   created(){
   
@@ -53,6 +59,40 @@ computed:{
   
   }
  
+ 
+ },
+ methods:{
+ 
+ addToBasket(){
+ 
+ if(this.selected.length === 0){
+ 
+ this.sizeselection.push('error')
+ this.errormsg = ['errormsg','sizeerror']
+ 
+ return
+ }
+ else
+ {
+ 
+
+  this.$emit('add', this.currentproduct[0].name, this.selected, this.currentproduct[0].price, this.currentproduct[0].id)
+  this.errormsg = ['errormsg','sizeerror', 'display-none']
+  this.sizeselection = []
+  this.addedtobasket = ['product-details__checked']
+  
+ }
+ 
+ 
+ },
+ close(){
+ 
+ this.addedtobasket = ['product-details__checked','display-none']
+ 
+ 
+ }
+ 
+
  
  }
   

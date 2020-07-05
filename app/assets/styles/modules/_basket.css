@@ -1,0 +1,193 @@
+.basket{
+			position: absolute;
+			top: -1rem;
+			right: 1rem;
+			margin: 2rem;
+			font-size: 1rem;
+			background-color: #fff;
+			border: $mainBlue 2px solid;
+			border-radius: 25px;
+		    padding: 1rem 1rem 0 1rem;
+			color: $mainBlue;
+			transition: all .5s ease-out;
+		    
+			
+			&--hover{
+				
+				z-index: 8;
+				
+			}
+			
+				
+			&--hover:hover{
+				
+				border-radius: 25px 25px 0px 0px;
+			
+				
+				
+				
+				
+		    }
+			
+			
+			@mixin atMedium{
+			font-size: 1.2rem;
+			top: 0rem;
+			right: 0;
+			}
+			
+			
+			@mixin atLarge{
+				font-size: 1.2rem;
+			
+				
+			}
+			
+			&__default{
+				position: relative;
+				top: -.75rem;
+				right: 0;
+				display: inline;
+				line-height: 0;
+				color: $mainBlue;
+				z-index: 6;
+				transition: all .5s ease-out;
+				}
+				
+			
+			
+			&__icon{
+				
+				margin-right: .5rem;
+				
+				
+			}
+			
+			&__details{
+				
+			position: absolute;
+			left: -144%;
+			top: 1.7rem;
+			width: 245%;
+			background-color: $mainBlue;
+			color: white;
+			border-radius: 0 0 25px 25px;
+			border: #fff 2px solid;
+			padding: .5rem;
+			visibility: hidden;
+			z-index: 90;
+			
+			
+			@mixin atSmall{
+            left: -199%;
+			width: 300%;
+
+			}
+				}
+			
+		   &--hover:hover &__details{
+			visibility: visible;
+			z-index: 5;
+				
+				
+			}
+			
+			table, td, th {
+            border: 2px solid black;
+			border-collapse: collapse;
+			text-align: center;
+}
+			
+			td, th{
+				
+			color: $mainBlue;
+				
+				
+				
+			}
+			
+			
+			td:first-child, th:first-child, td:nth-child(3), th:nth-child(3) {
+				
+				background-color: $mainBlue;
+				color: #fff;
+				font-size: 1.5rem;
+				
+				
+			}
+			
+			td:first-child{
+				width: 50%;
+				
+			}
+			
+			td:nth-child(2), td:nth-child(3){
+				
+				width: 10%;
+				
+				
+				
+				
+				
+			}
+			
+			td:last-child{
+				
+				color: #ff0000;
+				width: 20%;
+				font-size: 1rem;
+				text-decoration: underline;
+				
+			}
+			
+			&__products{
+				
+				background-color: #fff;
+				color: $shadowBlack;
+			}
+			
+			&__product-name{
+				
+				margin-left: 1rem;
+				
+				
+				
+			}
+			
+			&__product-price{
+				
+				float: right;
+				margin-right: 1rem;
+				
+				
+				
+			}
+			
+			&__checkout{
+			    float: left;
+				display: inline;
+				text-decoration: none;
+				background-color: #fff;
+				color: $mainBlue;
+				border-radius: 25px;
+				border: $mainBlue 2px solid;
+				padding: .5rem;
+				box-shadow: 2px 4px rgba($shadowBlack, .3);
+				margin-top: 1rem;
+				
+				}
+				
+				
+			
+			&__total{
+				
+				float: right;
+				display: inline;
+				
+				
+			
+				
+			}
+			
+            		
+			}

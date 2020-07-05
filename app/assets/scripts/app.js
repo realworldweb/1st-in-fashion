@@ -28,8 +28,9 @@ const data = require('./vue/vue-data/data')
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+import { faMinusCircle } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons'
 import { faQuestionCircle } from '@fortawesome/free-regular-svg-icons'
 import { faListAlt } from '@fortawesome/free-regular-svg-icons'
@@ -37,8 +38,10 @@ import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
  
-library.add(faUserSecret)
+
 library.add(faCaretDown)
+library.add(faMinusCircle)
+library.add(faShoppingBasket)
 library.add(faQuestionCircle)
 library.add(faListAlt)
 library.add(faFacebookSquare)
@@ -84,18 +87,83 @@ new Vue({
 	router,
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'contact': Contact, 'sitefoot': Sitefoot, 'category': Category, 'PageDetails':PageDetails },
-  data:{ categories: data.dataCategories, products: data.dataProducts, subcategories: data.dataSubCategories},
-  
-  
+  data:{ categories: data.dataCategories, products: data.dataProducts, subcategories: data.dataSubCategories, basketcontents: [], baskettotal: null, applyhover: []},
+  methods: {
+	  
+	  finalTotal(){
+		  
+         
+		
+		let sum = this.basketcontents.map( function(x){ return x.price })
+		
+		
+		
+		
+		
+		if(sum.length){
+		
+		return this.baskettotal = sum.reduce(function(total, price){
+			
+			return total + price
+		})
+		}
+		else{
+			
+			return this.baskettotal = 0
+			
+		}
+		
+		
+			
+		
+},
+	  
+	  removeItem(basketId){
+		  
+		let  idToRemove = basketId;
+		
+		let index = this.basketcontents.map(function(item) {
+		
+		return item.basketId }).indexOf(idToRemove)
+		
+		this.basketcontents.splice(index,1)
+		
+		this.finalTotal()
+		
+		if(this.basketcontents.length === 0){
+			
+			this.applyhover = []
+			
+		}
+		  
+	  },
+	  
+	   addItem(productName, productSize, productPrice, productId){
+		   
+		   if( this.basketcontents.length === 0 ){
+		  
+		this.basketcontents.push({ 'basketId': 0, 'name': productName, 'size': productSize, 'price': productPrice, 'productId': productId})
+		
+		this.finalTotal()
+		this.applyhover = ['basket--hover']
+			
+		
+		   }
+		   else{
+			   
+			   this.basketcontents.push({ 'basketId': this.basketcontents.length, 'name': productName, 'size': productSize, 'price': productPrice, 'productId': productId})
+			   
+			   this.finalTotal()
+			   this.applyhover = ['basket--hover']
+			
+			   
+		   }
+		  
+	  }
 	  
 	  
-	  
-  
-  
- 
-  
-  
-  }).$mount('#app')
+  }
+}).$mount('#app')
   
 
   

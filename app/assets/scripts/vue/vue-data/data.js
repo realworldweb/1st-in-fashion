@@ -973,7 +973,7 @@ let dataSubCategories = [
             {
                 "id": 3,
                 "name": "boys quilted short set",
-                "desc": "A Baby Boys 2 piece   Short -Set,\n\nComes in Red / Navy & in Orange / Navy,\n\nCondition is New with Tags\n\nThese suits are Suitable for SPRING/Summer & Autumn\n.",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
                 "price": 5.95,
                 "created_at": "2020-06-09T14:51:29.777Z",
                 "updated_at": "2020-06-09T15:15:03.242Z",
@@ -1504,7 +1504,7 @@ let dataProducts = [
     {
         "id": 1,
         "name": "boy's short set",
-        "desc": "yellow boys short set",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
         "price": 9.99,
         "created_at": "2020-06-08T23:18:51.456Z",
         "updated_at": "2020-06-08T23:19:43.058Z",
@@ -1540,17 +1540,18 @@ let dataProducts = [
         },
         "sizes": [
             {
-                "id": 2,
-                "size": "3-6",
-                "created_at": "2020-06-08T23:22:55.957Z",
-                "updated_at": "2020-06-08T23:22:55.957Z"
-            },
-            {
                 "id": 1,
                 "size": "0-3",
                 "created_at": "2020-06-08T23:17:26.195Z",
                 "updated_at": "2020-06-08T23:17:26.195Z"
             },
+			{
+                "id": 2,
+                "size": "3-6",
+                "created_at": "2020-06-08T23:22:55.957Z",
+                "updated_at": "2020-06-08T23:22:55.957Z"
+            },
+            
             {
                 "id": 3,
                 "size": "6-12",
@@ -1603,7 +1604,7 @@ let dataProducts = [
     {
         "id": 2,
         "name": "girls dress",
-        "desc": "dress for girl",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
         "price": 9.99,
         "created_at": "2020-06-08T23:26:14.458Z",
         "updated_at": "2020-06-08T23:26:14.458Z",
@@ -1702,7 +1703,7 @@ let dataProducts = [
     {
         "id": 3,
         "name": "quilted short set",
-        "desc": "A Baby Boys 2 piece   Short -Set,\n\nComes in Red / Navy & in Orange / Navy,\n\nCondition is New with Tags\n\nThese suits are Suitable for SPRING/Summer & Autumn\n.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et sapien et quam auctor efficitur. Pellentesque ex tellus, commodo ac ultricies a, lacinia eget ipsum. Curabitur luctus congue purus eget sodales. Fusce dictum, ligula eu volutpat commodo, eros dui accumsan libero, in mattis sapien dui feugiat metus. In sit amet enim sollicitudin, rhoncus risus a, gravida diam. Proin non justo sed dolor rutrum malesuada vel sit amet orci. Praesent at elementum tortor, non sagittis ante. Nunc tellus metus, sagittis a diam ac, euismod pharetra velit. Integer mollis nulla eget ex sollicitudin, eu ultrices risus mattis. Nunc ultricies, risus vel dictum.",
         "price": 5.95,
         "created_at": "2020-06-09T14:51:29.777Z",
         "updated_at": "2020-06-09T15:15:03.242Z",
@@ -1826,24 +1827,26 @@ let dataProducts = [
             "updated_at": "2020-06-08T22:49:50.611Z"
         },
         "sizes": [
-            {
-                "id": 3,
-                "size": "6-12",
-                "created_at": "2020-06-08T23:23:27.932Z",
-                "updated_at": "2020-06-08T23:23:27.932Z"
+		    {
+                "id": 1,
+                "size": "0-3",
+                "created_at": "2020-06-08T23:17:26.195Z",
+                "updated_at": "2020-06-08T23:17:26.195Z"
             },
-            {
+			{
                 "id": 2,
                 "size": "3-6",
                 "created_at": "2020-06-08T23:22:55.957Z",
                 "updated_at": "2020-06-08T23:22:55.957Z"
             },
             {
-                "id": 1,
-                "size": "0-3",
-                "created_at": "2020-06-08T23:17:26.195Z",
-                "updated_at": "2020-06-08T23:17:26.195Z"
+                "id": 3,
+                "size": "6-12",
+                "created_at": "2020-06-08T23:23:27.932Z",
+                "updated_at": "2020-06-08T23:23:27.932Z"
             }
+            
+            
         ],
         "sub_categories": [
             {
@@ -1920,12 +1923,13 @@ let dataProducts = [
                 "created_at": "2020-06-08T23:17:26.195Z",
                 "updated_at": "2020-06-08T23:17:26.195Z"
             },
-            {
-                "id": 5,
-                "size": "18-23",
-                "created_at": "2020-06-09T15:12:24.105Z",
-                "updated_at": "2020-06-09T15:12:24.105Z"
+			 {
+                "id": 2,
+                "size": "3-6",
+                "created_at": "2020-06-08T23:22:55.957Z",
+                "updated_at": "2020-06-08T23:22:55.957Z"
             },
+            
             {
                 "id": 3,
                 "size": "6-12",
@@ -1933,22 +1937,16 @@ let dataProducts = [
                 "updated_at": "2020-06-08T23:23:27.932Z"
             },
             {
-                "id": 6,
-                "size": "2",
-                "created_at": "2020-06-09T15:12:35.772Z",
-                "updated_at": "2020-06-09T15:12:35.772Z"
-            },
-            {
-                "id": 2,
-                "size": "3-6",
-                "created_at": "2020-06-08T23:22:55.957Z",
-                "updated_at": "2020-06-08T23:22:55.957Z"
-            },
-            {
                 "id": 4,
                 "size": "12-18",
                 "created_at": "2020-06-09T15:12:14.299Z",
                 "updated_at": "2020-06-09T15:12:14.299Z"
+            },
+			{
+                "id": 5,
+                "size": "18-23",
+                "created_at": "2020-06-09T15:12:24.105Z",
+                "updated_at": "2020-06-09T15:12:24.105Z"
             }
         ],
         "sub_categories": [
@@ -2025,11 +2023,30 @@ let dataProducts = [
             "updated_at": "2020-06-08T22:49:50.611Z"
         },
         "sizes": [
+		
+			{
+                "id": 1,
+                "size": "0-3",
+                "created_at": "2020-06-08T23:17:26.195Z",
+                "updated_at": "2020-06-08T23:17:26.195Z"
+            },
             {
                 "id": 2,
                 "size": "3-6",
                 "created_at": "2020-06-08T23:22:55.957Z",
                 "updated_at": "2020-06-08T23:22:55.957Z"
+            },
+			 {
+                "id": 3,
+                "size": "6-12",
+                "created_at": "2020-06-08T23:23:27.932Z",
+                "updated_at": "2020-06-08T23:23:27.932Z"
+            },
+           {
+                "id": 4,
+                "size": "12-18",
+                "created_at": "2020-06-09T15:12:14.299Z",
+                "updated_at": "2020-06-09T15:12:14.299Z"
             },
             {
                 "id": 5,
@@ -2037,29 +2054,13 @@ let dataProducts = [
                 "created_at": "2020-06-09T15:12:24.105Z",
                 "updated_at": "2020-06-09T15:12:24.105Z"
             },
-            {
+            
+		
+			{
                 "id": 6,
                 "size": "2",
                 "created_at": "2020-06-09T15:12:35.772Z",
                 "updated_at": "2020-06-09T15:12:35.772Z"
-            },
-            {
-                "id": 4,
-                "size": "12-18",
-                "created_at": "2020-06-09T15:12:14.299Z",
-                "updated_at": "2020-06-09T15:12:14.299Z"
-            },
-            {
-                "id": 1,
-                "size": "0-3",
-                "created_at": "2020-06-08T23:17:26.195Z",
-                "updated_at": "2020-06-08T23:17:26.195Z"
-            },
-            {
-                "id": 3,
-                "size": "6-12",
-                "created_at": "2020-06-08T23:23:27.932Z",
-                "updated_at": "2020-06-08T23:23:27.932Z"
             }
         ],
         "sub_categories": [
@@ -2124,30 +2125,33 @@ let dataProducts = [
                 "created_at": "2020-06-08T23:17:26.195Z",
                 "updated_at": "2020-06-08T23:17:26.195Z"
             },
-            {
-                "id": 5,
-                "size": "18-23",
-                "created_at": "2020-06-09T15:12:24.105Z",
-                "updated_at": "2020-06-09T15:12:24.105Z"
+			{
+                "id": 2,
+                "size": "3-6",
+                "created_at": "2020-06-08T23:22:55.957Z",
+                "updated_at": "2020-06-08T23:22:55.957Z"
             },
+			 {
+                "id": 3,
+                "size": "6-12",
+                "created_at": "2020-06-08T23:23:27.932Z",
+                "updated_at": "2020-06-08T23:23:27.932Z"
+            },
+            
             {
                 "id": 4,
                 "size": "12-18",
                 "created_at": "2020-06-09T15:12:14.299Z",
                 "updated_at": "2020-06-09T15:12:14.299Z"
             },
-            {
-                "id": 2,
-                "size": "3-6",
-                "created_at": "2020-06-08T23:22:55.957Z",
-                "updated_at": "2020-06-08T23:22:55.957Z"
-            },
-            {
-                "id": 3,
-                "size": "6-12",
-                "created_at": "2020-06-08T23:23:27.932Z",
-                "updated_at": "2020-06-08T23:23:27.932Z"
+			{
+                "id": 5,
+                "size": "18-23",
+                "created_at": "2020-06-09T15:12:24.105Z",
+                "updated_at": "2020-06-09T15:12:24.105Z"
             }
+            
+           
         ],
         "sub_categories": [
             {
@@ -2299,6 +2303,12 @@ let dataProducts = [
             "updated_at": "2020-06-08T23:25:43.974Z"
         },
         "sizes": [
+		  {
+                "id": 1,
+                "size": "0-3",
+                "created_at": "2020-06-08T23:17:26.195Z",
+                "updated_at": "2020-06-08T23:17:26.195Z"
+            },
             {
                 "id": 4,
                 "size": "12-18",
@@ -2310,13 +2320,8 @@ let dataProducts = [
                 "size": "18-23",
                 "created_at": "2020-06-09T15:12:24.105Z",
                 "updated_at": "2020-06-09T15:12:24.105Z"
-            },
-            {
-                "id": 1,
-                "size": "0-3",
-                "created_at": "2020-06-08T23:17:26.195Z",
-                "updated_at": "2020-06-08T23:17:26.195Z"
             }
+          
         ],
         "sub_categories": [
             {
