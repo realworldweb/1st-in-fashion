@@ -17,16 +17,7 @@
 <nav class="primary-nav primary-nav--pull-right">
 <ul>
 <li><router-link tag="a" to="/" name="kids_home" id="fashion_home">home<span class="caret">&nbsp;</span></router-link></li>
-<li v-for="item in categories"><router-link tag="a" :to="'/category/'+item.category" id="fashion categories" :class="navClasses">{{item.category}}<font-awesome-icon icon="caret-down" class="caret" /></router-link>
-<ul class="primary-nav__dropdown">
-<li v-if="item.category === 'baby'"><router-link tag="a" name:="girls_casual_fashion" id="girls_casual" :to="'/category/'+item.category+'/boyscasual'">boys casual</router-link></li>
-<li v-if="item.category === 'baby'"><router-link tag="a" name:="boys_casual_fashion" id="boys_casual":to="'/category/'+item.category+'/girlscasual'">girls casual</router-link></li>
-<li v-if="item.category !== 'baby'"><router-link tag="a" name:="kids_casual" id="casual" :to="'/category/'+item.category+'/casual'">casual</router-link></li>
-<li v-if="item.category === 'baby'"><router-link tag="a" name:="boys_formal_attire" id="boys_formal" :to="'/category/'+item.category+'/boysformal'">boys formal</router-link></li>
-<li v-if="item.category === 'baby'"><router-link tag="a" name:="girls_formal_dresses" id="girlsformal":to="'/category/'+item.category+'/girlsformal'">girls formal</router-link></li>
-<li v-if="item.category !== 'baby'"><router-link tag="a" name:="formal_attire" id="formal" :to="'/category/'+item.category+'/formal'">formal</router-link></li>
-</ul>
-</li>
+<li v-for="item in categories"><router-link tag="a" :to="'/category/'+item.category" id="fashion categories" :class="navClasses">{{item.category}}</router-link></li>
 </ul>
 </nav>
 </div>
