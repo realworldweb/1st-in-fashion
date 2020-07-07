@@ -130,134 +130,27 @@
 		
 	
 		
-	&__dropdown{
-		opacity: 0;
-		display: none;
-		visibility: hidden;
-		position: relative;
-		top: 0;
-		z-index: -10;
-		transition: all .5s ease-out;
-		
-		
-		@mixin atMedium{
-			display: block;
-			top: 1.2rem;
-		}
-		
-		
-		li{
-			border: none;
-	        box-shadow: none;
-			background-color: transparent;
-			text-align: center;
-			transition: all .2s ease-out;
-			display: block;
-			width: 100%;
-			margin: 0 auto 0 auto;
-			
-			
-			
-		}
-		
-		
-		
-		li a{
-			font-size: 2.5rem;
-			display: block;
-			margin: 0 auto 0 auto;
-			line-height: 1;
-			
-		}
-		
-& li:hover{ 
-		
-		background-color: rgba(#fff,.2) !important;
 	
-		@mixin atMedium{
-			
-	background-color: #fff !important;
-	border-radius: 0 !important;
-
-   
-		}
 	
-    
-	}
-	
-	& li:last-child:hover{ 
-
-		@mixin atMedium{
-			
-	border-radius: 0 0 15px 15px !important;	
-		}
-	
-	}
 	
 
 	
-	& li:hover a{ 
-		
-		
-	@mixin atMedium{
-	color: $mainBlue !important;
-	}
+	
 	
 		
 			
 	
     
-	}
-		
-	}
-		
-		
-	& li:first-child:hover{ 
-
-		@mixin atMedium{
-			
-	background-color: transparent;
-	
-		}
-	
-	}
-	
-	& li:hover{ 
-	
-			
-	
-    overflow: visible;
-	
-	
-	@mixin atMedium{
-	background-color: $mainBlue;
-	border-radius: 10px;
-	max-height: 50rem;
-		
-	}
-			
 	
 		
-	}
-		
-		& li:hover a{ 
 	
-			
-	color: #fff;
-	border-radius: 10px;
-			
-
-		}
-    
-		 & li:hover ul { 
-	 
-			
-	 visibility: visible;
-	 display: block;
-	opacity: 1;
-	z-index: 2;
-			
-		 }
+		
+		
+	
+	
+	
+	
+	
 
 	 
 	

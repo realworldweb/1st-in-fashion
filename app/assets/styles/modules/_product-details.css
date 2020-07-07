@@ -8,7 +8,7 @@
 	background-color: $mainBlue;
 	padding: 0 0 1rem 0;
 	width: 90vw;
-	margin: 3rem 2.5vw 5rem 2.5vw;
+	margin: 3rem 5vw 5rem 5vw;
 	
 	@mixin atSmall{
 		
