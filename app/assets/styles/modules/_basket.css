@@ -92,6 +92,7 @@
 				
 			}
 			
+			
 			table, td, th {
             border: 2px solid black;
 			border-collapse: collapse;
@@ -164,18 +165,19 @@
 			}
 			
 			&__checkout{
-			    float: left;
-				display: inline;
-				text-decoration: none;
-				background-color: #fff;
-				color: $mainBlue;
-				border-radius: 25px;
-				border: $mainBlue 2px solid;
-				padding: .5rem;
-				box-shadow: 2px 4px rgba($shadowBlack, .3);
-				margin-top: 1rem;
+			  display: none;
+			
 				
 				}
+			
+			 &--hover:hover &__checkout{
+			display: block;
+		
+				
+				
+			}
+			
+			
 				
 				
 			

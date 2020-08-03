@@ -41,15 +41,19 @@
 </table>
 </div>
 <p class="basket__total">total: &#163;{{baskettotal}}</p>
-<a href="#"class="basket__checkout">Checkout</a>
+<div class="basket__checkout">
+<div  ref="paypal"></div>
+</div>
 </span>
 </div>
 </div>
 </template>
  
 <script>
+
 import throttle from 'lodash/throttle'
 import debounce from 'lodash/debounce'
+
 
 
 export default{
@@ -57,20 +61,142 @@ export default{
 name: 'Sitenav', 
 
   data(){ 
-  return { browserHeight: 0, previousScrollY: 0, scrollDirection: null, siteHeader: [], menuContent: [], menuIcon:[], navClasses: [], navLogo: ['svg__logo--dark'], navBtn: ['btn--dark','btn--white'], mobileNav: false}
+  return { browserHeight: 0, previousScrollY: 0, scrollDirection: null, siteHeader: [], menuContent: [], menuIcon:[], navClasses: [], navLogo: ['svg__logo--dark'], navBtn: ['btn--dark','btn--white'], mobileNav: false, loaded: false }
   
   },
-props: ['products', 'categories', 'basketcontents', 'baskettotal', 'applyhover'],
+  created(){
+  if(this.loaded === false){
+ const script = document.createElement('script')
+    script.src =
+      "https://www.paypal.com/sdk/js?client-id=AXYztPjRv2EyChheiKWTTAl_E_ciGHAayuKmSc5ivBro4ZpxzS9CbswTbM8CWWtF401JXIBQ5McEN8VF&currency=GBP"
+	  script.addEventListener('load', this.setLoaded)
+    document.body.appendChild(script)
+    }
+	  
+  },
+props: ['products', 'categories', 'basketcontents', 'baskettotal', 'paypalitems', 'applyhover'],
 watch: {
 '$route' (){
 
 this.navDisplayClose()
-
+ 
 
 }
 
 },
+
 methods: {
+	setLoaded() {
+      this.loaded = true
+	 paypal
+        .Buttons({
+          createOrder: (data, actions) => {
+            return actions.order.create({
+              purchase_units: [{
+                     amount: {
+                      currency_code: "GBP",
+                       value: ""+this.baskettotal+"",
+                      breakdown: {
+                        item_total: {currency_code:"GBP", value:""+this.baskettotal+""}
+						}
+                     },
+                 items: this.paypalitems
+        }],
+		})
+		 },
+onShippingChange: (data, actions) => {
+        //handle shipping rules
+        if (data.shipping_address.country_code === 'GB') {
+            
+        
+
+        // uk shipping Amount
+        const shippingAmount = '3.00'
+        return actions.order.patch([
+            {
+                op: 'replace',
+                path: '/purchase_units/@reference_id==\'default\'/amount',
+                value: {
+                    currency_code: 'GBP',
+                    value: (parseFloat(this.baskettotal) + parseFloat(shippingAmount)).toFixed(2),
+                    breakdown: {
+                        item_total: {
+                            currency_code: 'GBP',
+                            value: this.baskettotal
+                        },
+                        shipping: {
+                            currency_code: 'GBP',
+                            value: shippingAmount
+                        }
+                    }
+                }
+            }
+        ])
+    }else if (data.shipping_address.country_code === 'IE'){
+	// irl shipping Amount
+        const shippingAmount = '7.00'
+        return actions.order.patch([
+            {
+                op: 'replace',
+                path: '/purchase_units/@reference_id==\'default\'/amount',
+                value: {
+                    currency_code: 'GBP',
+                    value: (parseFloat(this.baskettotal) + parseFloat(shippingAmount)).toFixed(2),
+                    breakdown: {
+                        item_total: {
+                            currency_code: 'GBP',
+                            value: this.baskettotal
+                        },
+                        shipping: {
+                            currency_code: 'GBP',
+                            value: shippingAmount
+                        }
+                    }
+                }
+            }
+        ])
+	
+	
+	}
+	else{
+	// ROW shipping Amount
+        const shippingAmount = '12.00'
+        return actions.order.patch([
+            {
+                op: 'replace',
+                path: '/purchase_units/@reference_id==\'default\'/amount',
+                value: {
+                    currency_code: 'GBP',
+                    value: (parseFloat(this.baskettotal) + parseFloat(shippingAmount)).toFixed(2),
+                    breakdown: {
+                        item_total: {
+                            currency_code: 'GBP',
+                            value: this.baskettotal
+                        },
+                        shipping: {
+                            currency_code: 'GBP',
+                            value: shippingAmount
+                        }
+                    }
+                }
+            }
+        ])
+	
+	
+	}
+	},		 
+          onApprove: async (data, actions) => {
+            const order = await actions.order.capture();
+            this.paidFor = true;
+            console.log(order);
+          },
+          onError: err => {
+            console.log(err);
+          }
+        })
+        .render(this.$refs.paypal)
+		},   
+
 navDisplay() {
 if (this.mobileNav === false){
 
@@ -111,6 +237,6 @@ this.siteHeader = []
 
 }
 
-  
+ 
 
 </script>

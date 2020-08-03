@@ -22,7 +22,10 @@ import PageDetails from './vue/stages/product-stage.vue'
 import Sitefoot from './vue/footer.vue'
 
 
-const data = require('./vue/vue-data/data')
+const dataProducts = require('./vue/vue-data/products')
+const dataCategories = require('./vue/vue-data/categories')
+const dataSubcategories = require('./vue/vue-data/subcategories')
+
 
 
 
@@ -87,10 +90,11 @@ new Vue({
 	router,
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'contact': Contact, 'sitefoot': Sitefoot, 'category': Category, 'PageDetails':PageDetails },
-  data:{ categories: data.dataCategories, products: data.dataProducts, subcategories: data.dataSubCategories, basketcontents: [], baskettotal: null, applyhover: []},
-  methods: {
+  data:{ categories: dataCategories.product, products: dataProducts.product, subcategories: dataSubcategories, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
+ methods: {
+
 	  
-	  finalTotal(){
+       finalTotal(){
 		  
          
 		
@@ -127,7 +131,7 @@ new Vue({
 		return item.basketId }).indexOf(idToRemove)
 		
 		this.basketcontents.splice(index,1)
-		
+		this.paypalitems.splice(index,1)
 		this.finalTotal()
 		
 		if(this.basketcontents.length === 0){
@@ -141,8 +145,9 @@ new Vue({
 	   addItem(productName, productSize, productPrice, productId){
 		   
 		   if( this.basketcontents.length === 0 ){
-		  
-		this.basketcontents.push({ 'basketId': 0, 'name': productName, 'size': productSize, 'price': productPrice, 'productId': productId})
+		//on site data element  
+		this.basketcontents.push({ 'basketId': 0, 'name': productName,  'size': productSize, 'price': productPrice, 'productId': productId})
+		this.paypalitems.push({name:`${productName} ${productSize}`, productid: 0, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
 		
 		this.finalTotal()
 		this.applyhover = ['basket--hover']
@@ -152,6 +157,7 @@ new Vue({
 		   else{
 			   
 			   this.basketcontents.push({ 'basketId': this.basketcontents.length, 'name': productName, 'size': productSize, 'price': productPrice, 'productId': productId})
+			   this.paypalitems.push({name:`${productName} ${productSize}`, productid: this.basketcontents.length, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
 			   
 			   this.finalTotal()
 			   this.applyhover = ['basket--hover']
