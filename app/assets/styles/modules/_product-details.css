@@ -61,14 +61,20 @@
 		}
 		
 		@mixin atMedium{
-		min-width: 70%;
-		margin-left: 275px;
+		font-size: 2rem;
+		width: 40%;
+		min-width: 0%;
+		max-width: 300px;
+		margin-left: 50%;
+	
+		
 	}
 	
 	@mixin atLarge{
-			
+		font-size: 3rem;	
 		margin-left: 400px;
-		font-size: 5rem;
+		max-width: 600px;
+		margin-left: 43%;
 	}
 		
 		
@@ -280,10 +286,11 @@
 		}
 		
 		@mixin atMedium{
-	
+			
+	       
 			margin: .5rem 0 0 0;
 			order: 1;
-			width: 60%;
+			width: 40%;
 			min-height: 500px;
 			
 			
@@ -308,25 +315,37 @@
 		@mixin atMedium{
 		  
          width: 30%;
-         margin: 7rem 0 0 1rem;		 
+         margin: 9rem 0 0 1rem;		 
 			
 		}
 		
 		@mixin atLarge{
 		  
-      
-         margin: 10rem 0 0 1rem;		 
+         width: 30%;
+         margin: 16rem 0 0 1rem;		 
 			
 		}
 		
-		p{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateY(-50%) translateX(-50%);
-			margin: 0 auto 0 auto;
+		table{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			font-size: 2rem;
+			border: $mainBlue solid 2px;
+			box-shadow: 3px 5px rgba($shadowBlack, .4);
+			
+			th{
+			border: $mainBlue solid 2px;	
+				
+			}
+			
+			td{
+			border: $mainBlue solid 2px;	
+				
+			}
 			
 		}
+		
 	}
 	
 	&__checked{

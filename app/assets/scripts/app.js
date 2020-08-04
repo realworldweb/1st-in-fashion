@@ -90,7 +90,7 @@ new Vue({
 	router,
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'contact': Contact, 'sitefoot': Sitefoot, 'category': Category, 'PageDetails':PageDetails },
-  data:{ categories: dataCategories.product, products: dataProducts.product, subcategories: dataSubcategories, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
+  data:{ categories: dataCategories.category, products: dataProducts.product, subcategories: dataSubcategories.subcategory, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
  methods: {
 
 	  
@@ -142,12 +142,12 @@ new Vue({
 		  
 	  },
 	  
-	   addItem(productName, productSize, productPrice, productId){
+	   addItem(productName, productSize, productPrice, productId, productSku){
 		   
 		   if( this.basketcontents.length === 0 ){
 		//on site data element  
 		this.basketcontents.push({ 'basketId': 0, 'name': productName,  'size': productSize, 'price': productPrice, 'productId': productId})
-		this.paypalitems.push({name:`${productName} ${productSize}`, productid: 0, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
+		this.paypalitems.push({name:`${productName} ${productSku} ${productSize}`, productid: 0, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
 		
 		this.finalTotal()
 		this.applyhover = ['basket--hover']
@@ -157,7 +157,7 @@ new Vue({
 		   else{
 			   
 			   this.basketcontents.push({ 'basketId': this.basketcontents.length, 'name': productName, 'size': productSize, 'price': productPrice, 'productId': productId})
-			   this.paypalitems.push({name:`${productName} ${productSize}`, productid: this.basketcontents.length, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
+			   this.paypalitems.push({name:`${productName} ${productSku} ${productSize}`, productid: this.basketcontents.length, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
 			   
 			   this.finalTotal()
 			   this.applyhover = ['basket--hover']

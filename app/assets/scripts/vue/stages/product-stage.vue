@@ -22,7 +22,20 @@
 <a href="#" @click="close" >Continue Shopping</a>
 </div>
 <p class="product-details__desc">{{currentproduct[0].desc}}</p>
-<div class="product-details__sizeguide"><p>sizeguide</p></div>
+<div class="product-details__sizeguide">
+<table>
+<tr>
+<th>size</th>
+<th>chest</th>
+<th>length</th>
+</tr>
+<tr v-for="size in currentproduct[0].sizeguide">
+<td>{{size.size}}</td>
+<td>{{size.chest}}</td>
+<td>{{size.length}}</td>
+</tr>
+</table>
+</div>
 
 </div>
 </div>
@@ -187,7 +200,7 @@ onShippingChange: (data, actions) => {
  {
  
 
-  this.$emit('add', this.currentproduct[0].name, this.selected, this.currentproduct[0].price, this.currentproduct[0].id)
+  this.$emit('add', this.currentproduct[0].name, this.selected, this.currentproduct[0].price, this.currentproduct[0].id, this.currentproduct[0].sku)
   this.errormsg = ['errormsg','sizeerror', 'display-none']
   this.sizeselection = []
   this.addedtobasket = ['product-details__checked']

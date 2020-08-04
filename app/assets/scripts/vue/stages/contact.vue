@@ -23,7 +23,7 @@
 </template>
 
 <script>
-const data = require('../vue-data/data')
+
 
 export default {
 

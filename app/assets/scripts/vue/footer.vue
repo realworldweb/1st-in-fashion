@@ -6,13 +6,13 @@
 
 <script>
 
-const data = require('./vue-data/data')
+
 
 export default {
 
   name: 'Sitefooter',
    data(){ 
-  return { categories: data.dataCategories, products: data.dataProducts  }
+  return {  }
 }
 }
 </script>
