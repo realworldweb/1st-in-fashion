@@ -53,3 +53,17 @@ text-align: center;
 font-size: 2rem;
 	
 }
+
+.caret--nextpage{
+
+transform: rotate(270deg) translateX(-20%);
+
+
+}
+
+.caret--prevpage{
+
+transform: rotate(90deg) translateX(10%);
+
+
+}

@@ -25,14 +25,11 @@
 <div class="product-details__sizeguide">
 <table>
 <tr>
-<th>size</th>
-<th>chest</th>
-<th>length</th>
+<th v-for="(size, name) in currentproduct[0].sizeguide[0]">{{name}} CM</th>
 </tr>
 <tr v-for="size in currentproduct[0].sizeguide">
-<td>{{size.size}}</td>
-<td>{{size.chest}}</td>
-<td>{{size.length}}</td>
+<td v-for="(sizes ,name) in size">{{size[name]}}</td>
+
 </tr>
 </table>
 </div>
@@ -82,6 +79,7 @@ computed:{
 	  paypal
         .Buttons({
           createOrder: (data, actions) => {
+		  this.close()
             return actions.order.create({
               purchase_units: [{
                      amount: {
@@ -96,13 +94,38 @@ computed:{
 		})
 		 },
 onShippingChange: (data, actions) => {
-        //handle shipping rules
+      
+		  //handle shipping rules
+		const euro = ['FR','DK','EE','FI','DE','GR','IE','IT','LV','NL','NO','PL','PT','ES','SE','UA']
+		let isEuro = false
+		
+		for (let country in euro){
+		
+		if(euro[country] === data.shipping_address.country_code){
+		
+		isEuro = true
+		
+		break
+		}
+		
+		}
+		let shippingAmount
+		
         if (data.shipping_address.country_code === 'GB') {
-            
+         
         
+		
+        if(this.baskettotal >= 20){
+		
+		 shippingAmount = '0.00'
+		}
+		else
+		{
 
         // uk shipping Amount
-        const shippingAmount = '3.00'
+         shippingAmount = '3.00'
+	    }
+		
         return actions.order.patch([
             {
                 op: 'replace',
@@ -123,9 +146,9 @@ onShippingChange: (data, actions) => {
                 }
             }
         ])
-    }else if (data.shipping_address.country_code === 'IE'){
-	// irl shipping Amount
-        const shippingAmount = '7.00'
+    }else if (isEuro === true){
+	// euro shipping Amount
+         shippingAmount = '7.00'
         return actions.order.patch([
             {
                 op: 'replace',
@@ -151,7 +174,7 @@ onShippingChange: (data, actions) => {
 	}
 	else{
 	// ROW shipping Amount
-        const shippingAmount = '12.00'
+        shippingAmount = '12.00'
         return actions.order.patch([
             {
                 op: 'replace',
@@ -177,9 +200,40 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
-            const order = await actions.order.capture();
-            this.paidFor = true;
-            console.log(order);
+            const order = await actions.order.authorize()
+			console.log(order)
+			let listItems = `<table>
+			<tr>
+			<th>Item</th>
+			<th>Qty</th>
+			</tr>`
+            this.paidFor = true
+			for( let key in order.purchase_units[0].items){
+			
+			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>`
+			
+			}
+			
+			
+            if(order.status === 'COMPLETED') {
+			const alert = document.createElement('div')
+			alert.className = 'confirmed'
+			alert.innerHTML = `<h1 class="confirmed__title">Details Confirmed</h1>
+			                    <p class="confirmed__details">Thank's for your order of.<br>
+								 ${listItems}</table>
+								 Once we confirm stock we will charge your prefered payment method.
+								 You will recieve an order/payment confirmation email. 
+								 Letting you know this has taken place and your order will be shipped to.<br>
+								 ${order.purchase_units[0].shipping.address.address_line_1}<br>
+								 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
+								 ${order.purchase_units[0].shipping.address.postal_code}<br>
+								 Thanks for shopping with us we hope you enjoy your experince</p>
+								<button class="confirmed__close">Close</button>`
+			document.body.appendChild(alert)
+			
+			
+			
+			}
           },
           onError: err => {
             console.log(err);

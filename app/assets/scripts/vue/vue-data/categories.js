@@ -40,7 +40,7 @@ const category =[
             {
                 "id": 11,
                 "name": "red/blue/white Spanish style dress",
-                "desc": "This beautiful girl\"s traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or pair it with a red or Navy cardigan and tights for that evening party . This versatile 3 pc really is a must have.",
+                "desc": "This beautiful girl's traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or pair it with a red or Navy cardigan and tights for that evening party . This versatile 3 pc really is a must have.",
                 "price": 7.99,
                 "sku": "CK2161",
                 "materials": "cotton/polyester",
@@ -67,12 +67,12 @@ const category =[
                     "caption": "girls red navy white fashion dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-03T14:57:49.259Z",
-                "updated_at": "2020-08-04T12:20:15.288Z"
+                "updated_at": "2020-08-04T14:48:37.402Z"
             },
             {
                 "id": 12,
                 "name": "girl's traditional polka dress",
-                "desc": "This beautiful girl\"s traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or pair it with a Navy cardigan and tights for that evening party . This versatile 3 pc really is a must have.\n",
+                "desc": "This beautiful girl's traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or pair it with a Navy cardigan and tights for that evening party . This versatile 3 pc really is a must have.\n",
                 "price": 7.99,
                 "sku": "CK2162",
                 "materials": "cotton/polyester",
@@ -99,7 +99,7 @@ const category =[
                     "caption": "girls navy white polka fashion dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-03T15:14:27.132Z",
-                "updated_at": "2020-08-04T12:21:01.088Z"
+                "updated_at": "2020-08-04T14:49:07.264Z"
             },
             {
                 "id": 14,
@@ -158,17 +158,17 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "uploads/baby_dressk005.jpg",
+                    "url": "/uploads/baby_dressk005.jpg",
                     "alt": "girls summer dress 0-3 to 18-24",
                     "caption": "girls summer dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-04T12:53:17.172Z",
-                "updated_at": "2020-08-04T12:53:17.172Z"
+                "updated_at": "2020-08-04T14:50:17.315Z"
             },
             {
                 "id": 13,
                 "name": "red/navy floral dress",
-                "desc": "This beautiful girl\"s traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or pair it with a Navy cardigan and tights for that evening party . This versatile 3 pc really is a must have.\n",
+                "desc": "This beautiful girl's traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or pair it with a Navy cardigan and tights for that evening party . This versatile 3 pc really is a must have.\n",
                 "price": 7.99,
                 "sku": "CK2163",
                 "materials": "cotton/polyester",
@@ -195,7 +195,7 @@ const category =[
                     "caption": "girls navy white fashion dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-03T15:24:31.977Z",
-                "updated_at": "2020-08-04T12:21:45.347Z"
+                "updated_at": "2020-08-04T14:49:32.858Z"
             },
             {
                 "id": 16,
@@ -222,12 +222,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "uploads/baby_dressk006.jpg",
+                    "url": "/uploads/baby_dressk006.jpg",
                     "alt": "girls summer dress 0-3 to 18-24",
                     "caption": "girls summer dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-04T12:57:08.725Z",
-                "updated_at": "2020-08-04T12:57:08.725Z"
+                "updated_at": "2020-08-04T14:50:31.550Z"
             },
             {
                 "id": 17,
@@ -254,12 +254,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "uploads/baby_romperk002.jpg",
+                    "url": "/uploads/baby_romperk002.jpg",
                     "alt": "boys summer romper 0-3 to 18-24",
                     "caption": "boys summer romper 0-3 to 18-24"
                 },
                 "created_at": "2020-08-04T13:02:00.202Z",
-                "updated_at": "2020-08-04T13:08:55.988Z"
+                "updated_at": "2020-08-04T14:50:47.352Z"
             },
             {
                 "id": 18,
@@ -286,12 +286,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "uploads/baby_romperk003.jpg",
+                    "url": "/uploads/baby_romperk003.jpg",
                     "alt": "boys summer romper 0-3 to 18-24",
                     "caption": "boys summer romper 0-3 to 18-24"
                 },
                 "created_at": "2020-08-04T13:12:51.698Z",
-                "updated_at": "2020-08-04T13:12:51.698Z"
+                "updated_at": "2020-08-04T14:51:04.384Z"
             },
             {
                 "id": 19,
@@ -318,12 +318,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "uploads/baby_romperk004.jpg",
+                    "url": "/uploads/baby_romperk004.jpg",
                     "alt": "boys summer romper 0-3 to 18-24",
                     "caption": "boys summer romper 0-3 to 18-24"
                 },
                 "created_at": "2020-08-04T13:17:19.143Z",
-                "updated_at": "2020-08-04T13:17:19.143Z"
+                "updated_at": "2020-08-04T14:51:28.557Z"
             },
             {
                 "id": 20,
@@ -350,12 +350,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "uploads/baby_dressk007.jpg",
+                    "url": "/uploads/baby_dressk007.jpg",
                     "alt": "girls summer dress 0-3 to 18-24",
                     "caption": "girls summer dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-04T13:30:25.997Z",
-                "updated_at": "2020-08-04T13:30:25.997Z"
+                "updated_at": "2020-08-04T14:51:58.758Z"
             },
             {
                 "id": 21,
@@ -387,12 +387,332 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "uploads/baby_dressk008.jpg",
+                    "url": "/uploads/baby_dressk008.jpg",
                     "alt": "girls summer dress 0-3 to 18-24",
                     "caption": "girls summer dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-04T13:38:09.797Z",
-                "updated_at": "2020-08-04T13:38:09.797Z"
+                "updated_at": "2020-08-04T14:52:17.945Z"
+            },
+            {
+                "id": 22,
+                "name": "Spanish Style Romany Navy & White Short Set",
+                "desc": "This beautiful boy's traditional style sailor. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day.  perfect for any occasion  or special event.\n",
+                "price": 13.99,
+                "sku": "ck2173",
+                "materials": "cotton",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 51,
+                        "top-length": 30,
+                        "bottom-length": 37
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 54,
+                        "top-length": 31,
+                        "bottom-length": 38
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 56,
+                        "top-length": 32,
+                        "bottom-length": 39
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_sailork001.jpg",
+                    "alt": "boys summer sailor 0-3 to 18-24",
+                    "caption": "boys summer sailor 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T14:59:38.406Z",
+                "updated_at": "2020-08-04T14:59:38.406Z"
+            },
+            {
+                "id": 23,
+                "name": "Kinder  princess dress",
+                "desc": "This wonderful princess dress is a truly magcial item.  inspired by the disney films and the traditional style of garments worn .  it's colourful fun and sure to please.",
+                "price": 34.99,
+                "sku": "ck2172",
+                "materials": "cotton",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 44,
+                        "length": 34
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 46,
+                        "length": 36
+                    },
+                    {
+                        "size": "6-12",
+                        "chest": 50,
+                        "length": 38
+                    },
+                    {
+                        "size": "12-18",
+                        "chest": 53,
+                        "length": 40
+                    },
+                    {
+                        "size": "18-24",
+                        "chest": 56,
+                        "length": 42
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_dressk009.jpg",
+                    "alt": "girls princess dress 0-3 to 18-24",
+                    "caption": "girls princess dress 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T21:42:10.753Z",
+                "updated_at": "2020-08-04T21:42:10.753Z"
+            },
+            {
+                "id": 24,
+                "name": "Summer Cerise & Ivory Floral Headband Dress",
+                "desc": "This beautiful girl’s floral style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or pair it with a cardigan and tights for that evening party . This versatile 3 pc really is a must have.\n",
+                "price": 3.99,
+                "sku": "ck2174",
+                "materials": "cotton/polyester",
+                "sizeguide": [
+                    {
+                        "size": "6-12",
+                        "chest": 48,
+                        "length": 38
+                    },
+                    {
+                        "size": "12-18",
+                        "chest": 52,
+                        "length": 42
+                    },
+                    {
+                        "size": "18-24",
+                        "chest": 54,
+                        "length": 45
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_dressk010.jpg",
+                    "alt": "girls summer dress 0-3 to 18-24",
+                    "caption": "girls summer dress 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T21:48:34.888Z",
+                "updated_at": "2020-08-04T21:48:34.888Z"
+            },
+            {
+                "id": 25,
+                "name": "Spanish Style Romany Blue Dungarees suit",
+                "desc": "This beautiful boy's traditional style dungaree. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day.  perfect for any occasion  or special event.\n",
+                "price": 8.99,
+                "sku": "ck2175",
+                "materials": "cotton/polyester",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 48,
+                        "top length": 27,
+                        "bottom length": 36
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 49,
+                        "top length": 29,
+                        "bottom length": 38
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 53,
+                        "top length": 31,
+                        "bottom length": 43
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_dungareek001.jpg",
+                    "alt": "boys summer dungaree 0-3 to 18-24",
+                    "caption": "boys summer dungaree 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T21:59:42.179Z",
+                "updated_at": "2020-08-04T21:59:42.179Z"
+            },
+            {
+                "id": 26,
+                "name": "Spanish Style Romany Blue & White Short Set",
+                "desc": "This beautiful boy's traditional style short set Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day.  perfect for any occasion  or special event.\n",
+                "price": 8.99,
+                "sku": "ck2176",
+                "materials": "cotton/polyester",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 48,
+                        "top length": 27,
+                        "bottom length": 36
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 49,
+                        "top length": 29,
+                        "bottom length": 38
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 53,
+                        "top length": 31,
+                        "bottom length": 43
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_shortsetk002.jpg",
+                    "alt": "boys summer short set 0-3 to 18-24",
+                    "caption": "boys summer short set 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T22:04:12.889Z",
+                "updated_at": "2020-08-04T22:04:12.889Z"
+            },
+            {
+                "id": 27,
+                "name": "Spanish Style Romany Navy & White Short Set",
+                "desc": "This beautiful boy's traditional style short set. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day.  perfect for any occasion  or special event.\n",
+                "price": 8.99,
+                "sku": "ck2177",
+                "materials": "cotton/polyester",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 43,
+                        "top length": 22,
+                        "bottom length": 19
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 46,
+                        "top length": 24,
+                        "bottom length": 21
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 50,
+                        "top length": 27,
+                        "bottom length": 23
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_shortsetk001.jpg",
+                    "alt": "boys summer short set 0-3 to 18-24",
+                    "caption": "boys summer short set 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T22:27:56.744Z",
+                "updated_at": "2020-08-04T22:29:00.706Z"
+            },
+            {
+                "id": 28,
+                "name": "Spanish Style Romany Blue & White Short Set",
+                "desc": "This beautiful boy's traditional style short. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day.  perfect for any occasion  or special event.\n",
+                "price": 8.99,
+                "sku": "ck2178",
+                "materials": "cotton/polyester",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 48,
+                        "top length": 24,
+                        "bottom length": 21
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 51,
+                        "top length": 25,
+                        "bottom length": 22
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 54,
+                        "top length": 26,
+                        "bottom length": 25
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_shortsetk003.jpg",
+                    "alt": "boys summer short set 0-3 to 18-24",
+                    "caption": "boys summer short set 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T22:35:44.864Z",
+                "updated_at": "2020-08-04T22:35:44.864Z"
+            },
+            {
+                "id": 29,
+                "name": " Ribbon Bows Disney Princess Dress",
+                "desc": "This wonderful princess dress is a truly magcial item.  inspired by the disney films and the traditional style of garments worn .  it's colourful fun and sure to please.",
+                "price": 24.99,
+                "sku": "ck2179",
+                "materials": "cotton",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 44,
+                        "length": 35
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 46,
+                        "length": 37
+                    },
+                    {
+                        "size": "6-12",
+                        "chest": 48,
+                        "length": 40
+                    },
+                    {
+                        "size": "12-18",
+                        "chest": 50,
+                        "length": 43
+                    },
+                    {
+                        "size": "18-24",
+                        "chest": 56,
+                        "length": 46
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 58,
+                        "length": 50
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_dressk011.jpg",
+                    "alt": "girls summer dress 0-3 to 18-24",
+                    "caption": "girls summer dress 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T22:36:55.816Z",
+                "updated_at": "2020-08-04T22:45:50.868Z"
+            },
+            {
+                "id": 30,
+                "name": "Waistcoat Grey Suit Pageboy",
+                "desc": "This elegant boy's formal 4pc waistcoat suit . Is the perfect for any special occasion wedding or party. your little one is sure to stand out with the beautiful silver grey waistcoat and tie ",
+                "price": 21.99,
+                "sku": "ck2180",
+                "materials": "Polyviscose",
+                "sizeguide": [
+                    {
+                        "size": "5-6",
+                        "chest": 68,
+                        "sleeve": 39,
+                        "waist": "50/60",
+                        "inside leg": 43
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/boys_formalsuitk001.jpg",
+                    "alt": "boys formal 4pc 2-3 to 5-6",
+                    "caption": "boys formal 4pc 2-3 to 5-6"
+                },
+                "created_at": "2020-08-05T09:10:08.933Z",
+                "updated_at": "2020-08-05T14:19:15.857Z"
             }
         ]
     },
@@ -401,14 +721,195 @@ const category =[
         "category": "boys",
         "created_at": "2020-06-08T23:54:16.787Z",
         "updated_at": "2020-06-08T23:54:16.787Z",
-        "products": []
+        "products": [
+            {
+                "id": 30,
+                "name": "Waistcoat Grey Suit Pageboy",
+                "desc": "This elegant boy's formal 4pc waistcoat suit . Is the perfect for any special occasion wedding or party. your little one is sure to stand out with the beautiful silver grey waistcoat and tie ",
+                "price": 21.99,
+                "sku": "ck2180",
+                "materials": "Polyviscose",
+                "sizeguide": [
+                    {
+                        "size": "5-6",
+                        "chest": 68,
+                        "sleeve": 39,
+                        "waist": "50/60",
+                        "inside leg": 43
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/boys_formalsuitk001.jpg",
+                    "alt": "boys formal 4pc 2-3 to 5-6",
+                    "caption": "boys formal 4pc 2-3 to 5-6"
+                },
+                "created_at": "2020-08-05T09:10:08.933Z",
+                "updated_at": "2020-08-05T14:19:15.857Z"
+            },
+            {
+                "id": 31,
+                "name": " All Cream Waistcoat Suit Pageboy",
+                "desc": "This elegant boy's formal 4pc waistcoat suit . Is the perfect for any special occasion wedding or party. your little one is sure to stand out with the striking all cream 4pc suit.\n",
+                "price": 17.99,
+                "sku": "ck2181",
+                "materials": "Polyviscose",
+                "sizeguide": [
+                    {
+                        "size": "4-5",
+                        "chest": 66,
+                        "sleeve": 38,
+                        "waist": "50/58",
+                        "inner leg": 41
+                    },
+                    {
+                        "size": "5-6",
+                        "chest": 68,
+                        "sleeve": 41,
+                        "waist": "50/59",
+                        "inner leg": 43
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/boys_formalsuitk002.jpg",
+                    "alt": "boys 4pc suit 0-3 to 18-24",
+                    "caption": "boys 4pc suit 0-3 to 18-24"
+                },
+                "created_at": "2020-08-05T14:02:59.033Z",
+                "updated_at": "2020-08-05T16:45:04.695Z"
+            },
+            {
+                "id": 32,
+                "name": "Boys 3PC Short Sets",
+                "desc": "This boys checked short set . Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day.  perfect for any occasion  or special event.\n",
+                "price": 5.99,
+                "sku": "ck2182",
+                "materials": "cotton/polyester",
+                "sizeguide": [
+                    {
+                        "size": "6-7",
+                        "chest": 68,
+                        "sleeve": 44,
+                        "waist": 32
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/boys_shortsetk001.jpg",
+                    "alt": "boys summer romper 0-3 to 18-24",
+                    "caption": "boys summer romper 0-3 to 18-24"
+                },
+                "created_at": "2020-08-05T17:20:46.643Z",
+                "updated_at": "2020-08-05T17:31:36.211Z"
+            }
+        ]
     },
     {
         "id": 3,
         "category": "girls",
         "created_at": "2020-06-08T23:54:28.787Z",
         "updated_at": "2020-06-08T23:54:28.787Z",
-        "products": []
+        "products": [
+            {
+                "id": 29,
+                "name": " Ribbon Bows Disney Princess Dress",
+                "desc": "This wonderful princess dress is a truly magcial item.  inspired by the disney films and the traditional style of garments worn .  it's colourful fun and sure to please.",
+                "price": 24.99,
+                "sku": "ck2179",
+                "materials": "cotton",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 44,
+                        "length": 35
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 46,
+                        "length": 37
+                    },
+                    {
+                        "size": "6-12",
+                        "chest": 48,
+                        "length": 40
+                    },
+                    {
+                        "size": "12-18",
+                        "chest": 50,
+                        "length": 43
+                    },
+                    {
+                        "size": "18-24",
+                        "chest": 56,
+                        "length": 46
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 58,
+                        "length": 50
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/baby_dressk011.jpg",
+                    "alt": "girls summer dress 0-3 to 18-24",
+                    "caption": "girls summer dress 0-3 to 18-24"
+                },
+                "created_at": "2020-08-04T22:36:55.816Z",
+                "updated_at": "2020-08-04T22:45:50.868Z"
+            },
+            {
+                "id": 33,
+                "name": "Navy & White Polka Dot Sleeveless Dress & yellow Bolero",
+                "desc": "This beautiful girl’s traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or wear with the wonderful Bolero and a pair tight for that evening party.",
+                "price": 6.99,
+                "sku": "ck2183",
+                "materials": "cotton",
+                "sizeguide": [
+                    {
+                        "size": "2-3",
+                        "chest": 50,
+                        "length": 59
+                    },
+                    {
+                        "size": "6-7",
+                        "chest": 60,
+                        " length": 72
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/girls_dressk001.jpg",
+                    "alt": "boys summer romper 0-3 to 18-24",
+                    "caption": "boys summer romper 0-3 to 18-24"
+                },
+                "created_at": "2020-08-05T17:38:51.994Z",
+                "updated_at": "2020-08-05T17:38:51.994Z"
+            },
+            {
+                "id": 34,
+                "name": " Pink & Blue floral Sleeveless Dress & Pink Bolero",
+                "desc": "This beautiful girl’s traditional style dress. Is the perfect accompaniment to any summer wardrobe with a breathable cotton polyester blend  that will keep your little one cool throughout the day. Or wear with the wonderful Bolero and a pair tight for that evening party.",
+                "price": 5.99,
+                "sku": "ck2184",
+                "materials": "cotton",
+                "sizeguide": [
+                    {
+                        "size": "2-3",
+                        "chest": 50,
+                        "length": 59
+                    },
+                    {
+                        "size": "6-7",
+                        "chest": 60,
+                        " length": 72
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/girls_dressk002.jpg",
+                    "alt": "girls dress 2-3  to 6-7 ",
+                    "caption": "girls dress 2-3 to 6-7"
+                },
+                "created_at": "2020-08-05T17:42:17.539Z",
+                "updated_at": "2020-08-05T17:42:45.790Z"
+            }
+        ]
     }
 ]
 

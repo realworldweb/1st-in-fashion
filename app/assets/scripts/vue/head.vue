@@ -68,7 +68,7 @@ name: 'Sitenav',
   if(this.loaded === false){
  const script = document.createElement('script')
     script.src =
-      "https://www.paypal.com/sdk/js?client-id=AXYztPjRv2EyChheiKWTTAl_E_ciGHAayuKmSc5ivBro4ZpxzS9CbswTbM8CWWtF401JXIBQ5McEN8VF&currency=GBP"
+      "https://www.paypal.com/sdk/js?client-id=AXYztPjRv2EyChheiKWTTAl_E_ciGHAayuKmSc5ivBro4ZpxzS9CbswTbM8CWWtF401JXIBQ5McEN8VF&currency=GBP&intent=authorize"
 	  script.addEventListener('load', this.setLoaded)
     document.body.appendChild(script)
     }
@@ -106,12 +106,33 @@ methods: {
 		 },
 onShippingChange: (data, actions) => {
         //handle shipping rules
+		const euro = ['FR','DK','EE','FI','DE','GR','IE','IT','LV','NL','NO','PL','PT','ES','SE','UA']
+		let isEuro = false
+		
+		for (let country in euro){
+		
+		if(euro[country] === data.shipping_address.country_code){
+		
+		isEuro = true
+		
+		break
+		}
+		
+		}
+		let shippingAmount
         if (data.shipping_address.country_code === 'GB') {
             
-        
+        if(this.baskettotal >= 20){
+		
+		shippingAmount = '0.00'
+		}
+		else
+		{
 
         // uk shipping Amount
-        const shippingAmount = '3.00'
+        shippingAmount = '3.00'
+	    }
+		
         return actions.order.patch([
             {
                 op: 'replace',
@@ -132,9 +153,9 @@ onShippingChange: (data, actions) => {
                 }
             }
         ])
-    }else if (data.shipping_address.country_code === 'IE'){
+    }else if (isEuro === true){
 	// irl shipping Amount
-        const shippingAmount = '7.00'
+        shippingAmount = '7.00'
         return actions.order.patch([
             {
                 op: 'replace',
@@ -160,7 +181,7 @@ onShippingChange: (data, actions) => {
 	}
 	else{
 	// ROW shipping Amount
-        const shippingAmount = '12.00'
+        shippingAmount = '12.00'
         return actions.order.patch([
             {
                 op: 'replace',
@@ -186,7 +207,7 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
-            const order = await actions.order.capture();
+            const order = await actions.order.authorize();
             this.paidFor = true;
             console.log(order);
           },

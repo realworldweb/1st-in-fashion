@@ -39,4 +39,50 @@
     align-items: center;
 	align-self: center;
 	}
+	
+	&__page{
+		
+		position: relative;
+		display: block;
+		margin: 2rem auto 0 auto;
+		padding: 2rem;
+		font-size: 1.2rem;
+		text-align: center;
+		color: #fff;
+		
+		@mixin atMedium {
+			
+			font-size: 2rem;
+			
+			
+		}
+	}
+	
+	&__next{
+		display: inline;
+		margin-left: 1rem;
+		
+	&--hidden{
+		
+		display: none;
+		
+	}
+		
+		
+	}
+	
+	&__prev{
+		display: inline;
+		margin-right: 1rem;
+		
+	&--hidden{
+		
+		display: none;
+		
+	}
+		
+		
+	}
+	
+	
 }
