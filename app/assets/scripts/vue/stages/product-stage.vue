@@ -200,9 +200,13 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
-            const order = await actions.order.authorize()
-			console.log(order)
-			let listItems = `<table>
+		   this.$emit('remove', 'all')
+		   const alert = document.createElement('div')
+			alert.className = 'confirmed'
+			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
+			document.body.appendChild(alert)
+		    const order = await actions.order.authorize()
+            let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
 			<th>Qty</th>
@@ -216,20 +220,21 @@ onShippingChange: (data, actions) => {
 			
 			
             if(order.status === 'COMPLETED') {
-			const alert = document.createElement('div')
-			alert.className = 'confirmed'
+			alert.addEventListener('click' , this.closeorder)
 			alert.innerHTML = `<h1 class="confirmed__title">Details Confirmed</h1>
-			                    <p class="confirmed__details">Thank's for your order of.<br>
+			                    <p class="confirmed__details">Thank's for your order of.<br></p>
 								 ${listItems}</table>
-								 Once we confirm stock we will charge your prefered payment method.
+								 <p class="confirmed__details">Once we confirm stock we will charge your prefered payment method.
 								 You will recieve an order/payment confirmation email. 
 								 Letting you know this has taken place and your order will be shipped to.<br>
+								 <span class="confirmed__address">
 								 ${order.purchase_units[0].shipping.address.address_line_1}<br>
 								 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
 								 ${order.purchase_units[0].shipping.address.postal_code}<br>
+								 </span>
 								 Thanks for shopping with us we hope you enjoy your experince</p>
-								<button class="confirmed__close">Close</button>`
-			document.body.appendChild(alert)
+								<button class="confirmed__close" value="close">Close</button>`
+			
 			
 			
 			
@@ -268,7 +273,19 @@ onShippingChange: (data, actions) => {
  this.addedtobasket = ['product-details__checked','display-none']
  
  
+ },
+ closeorder(e){
+ 
+ if(e.target.getAttribute('value') === 'close'){
+ 
+  const alert = document.querySelector('.confirmed')
+  alert.remove()
+ 
+ 
  }
+
+ 
+}
  
 
  

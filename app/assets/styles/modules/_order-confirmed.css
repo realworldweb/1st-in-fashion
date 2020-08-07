@@ -1,39 +1,91 @@
 .confirmed{
 	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	width: 50%;
 	display: block;
-	margin: auto;
+	background-color: #fff;
+	border: 2px solid $mainBlue;
+	padding: 2rem;
 	
+	&--displaynone{
 	
+	 display: none;
+		
+	}
 	
+	&__loading{
+		position: relative;
+		display: block;
+		margin: auto;
+		
+		
+	}
 	
+	&__title{
+	display: block;
+	text-align: center;
+    color: $mainBlue;
+    font-weight: 700;	
+		
+		
+	}
 	
+	&__details{
+		
+		
+		text-align: center;
+		font-size: 1.3rem;
+		
+	}
 	
+	&__items{
+		
+		border: 2px solid $mainBlue;
+		font-size: 1.5rem;
+		
+		
+		th{
+			
+			background-color: $mainBlue;
+			color: #fff;
+		}
+		
+		tr{
+		 text-align: center;
+		 border: 2px solid $mainBlue;
+		}
+		
+		td{
+			
+			border: 2px solid $mainBlue;
+			
+		}
+		
+	}
 	
+	&__address{
+		
+	  font-size: 1.5rem;
+	  color: $mainBlue;
+	  font-weight: 700;
+		
+		
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	&__close{
+		
+		position: relative;
+		display: block;
+		color: #fff;
+		margin: 0 auto 0 auto;
+		background-color: $mainBlue;
+		border-radius: 25px;
+		box-shadow: 3px 3px rgba($shadowBlack, .2);
+		padding: .5rem 3rem;
+		
+		
+	}
 	
 }

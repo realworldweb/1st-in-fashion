@@ -123,6 +123,13 @@ new Vue({
 },
 	  
 	  removeItem(basketId){
+		  console.log('ran')
+		 if(basketId === 'all'){
+		  this.basketcontents = []
+          this.paypalitems = []		  
+			 
+			return 
+		 }
 		  
 		let  idToRemove = basketId;
 		

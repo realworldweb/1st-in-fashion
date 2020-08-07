@@ -207,12 +207,48 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
-            const order = await actions.order.authorize();
-            this.paidFor = true;
-            console.log(order);
+		   this.$emit('remove', 'all')
+		   const alert = document.createElement('div')
+			alert.className = 'confirmed'
+			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
+			document.body.appendChild(alert)
+		    const order = await actions.order.authorize()
+            let listItems = `<table class="confirmed__items">
+			<tr>
+			<th>Item</th>
+			<th>Qty</th>
+			</tr>`
+            this.paidFor = true
+			for( let key in order.purchase_units[0].items){
+			
+			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>`
+			
+			}
+			
+			
+            if(order.status === 'COMPLETED') {
+			alert.addEventListener('click' , this.closeorder)
+			alert.innerHTML = `<h1 class="confirmed__title">Details Confirmed</h1>
+			                    <p class="confirmed__details">Thank's for your order of.<br></p>
+								 ${listItems}</table>
+								 <p class="confirmed__details">Once we confirm stock we will charge your prefered payment method.
+								 You will recieve an order/payment confirmation email. 
+								 Letting you know this has taken place and your order will be shipped to.<br>
+								 <span class="confirmed__address">
+								 ${order.purchase_units[0].shipping.address.address_line_1}<br>
+								 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
+								 ${order.purchase_units[0].shipping.address.postal_code}<br>
+								 </span>
+								 Thanks for shopping with us we hope you enjoy your experince</p>
+								<button class="confirmed__close" value="close">Close</button>`
+			
+			
+			
+			
+			}
           },
           onError: err => {
-            console.log(err);
+            console.log(err)
           }
         })
         .render(this.$refs.paypal)
@@ -243,6 +279,18 @@ this.siteHeader = []
  this.menuIcon = []
  return this.mobileNav = false
 
+},
+ closeorder(e){
+ 
+ if(e.target.getAttribute('value') === 'close'){
+ 
+  const alert = document.querySelector('.confirmed')
+  alert.remove()
+ 
+ 
+ }
+
+ 
 }
 
 
