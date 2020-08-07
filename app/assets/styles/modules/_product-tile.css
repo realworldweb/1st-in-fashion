@@ -33,6 +33,7 @@
 	@mixin atLarge{
 		
 		width: 25vw;
+		max-height: 520px;
 		
 		
 	}

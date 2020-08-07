@@ -41,20 +41,32 @@
 	}
 	
 	&__items{
-		
+		position: relative;
+		width: 60%;
+		display: block;
+		margin: 0 auto 0 auto;
 		border: 2px solid $mainBlue;
 		font-size: 1.5rem;
-		
+	
+     th:first-child{
+
+      width: 80%;
+
+     }		 
 		
 		th{
 			
 			background-color: $mainBlue;
 			color: #fff;
+			width: 20%;
 		}
+		
+		
 		
 		tr{
 		 text-align: center;
 		 border: 2px solid $mainBlue;
+		 
 		}
 		
 		td{
