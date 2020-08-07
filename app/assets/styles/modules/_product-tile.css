@@ -13,7 +13,7 @@
     max-width: 320px;
 	border: 2px solid rgba($mainBlue, .6);
 	box-shadow: 2px 1px rgba($shadowBlack, .4);
-	max-height: 520px;
+	max-height: 500px;
 	
 	@mixin atSmall{
 		
@@ -33,7 +33,7 @@
 	@mixin atLarge{
 		
 		width: 25vw;
-		
+		max-height: 520px;
 		
 		
 	}
