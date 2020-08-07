@@ -68,7 +68,7 @@ name: 'Sitenav',
   if(this.loaded === false){
  const script = document.createElement('script')
     script.src =
-      "https://www.paypal.com/sdk/js?client-id=AXYztPjRv2EyChheiKWTTAl_E_ciGHAayuKmSc5ivBro4ZpxzS9CbswTbM8CWWtF401JXIBQ5McEN8VF&currency=GBP&intent=authorize"
+      "https://www.paypal.com/sdk/js?client-id=Ab1o3HYYOP8crQG21uyx8EMASXUnQ1sRX6_G3uPcJKxz_3zkIdUag9hOmm1AZV8jLEr3PU0yBWhFSf14&currency=GBP&intent=authorize"
 	  script.addEventListener('load', this.setLoaded)
     document.body.appendChild(script)
     }
