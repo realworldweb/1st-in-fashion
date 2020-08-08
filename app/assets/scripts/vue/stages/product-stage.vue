@@ -3,7 +3,7 @@
 <div class="product-details">
 <div class="product-details__main">
 <p class="product-details__title">{{currentproduct[0].name}}</p>
-<img class="product-details__img" :src="'./assets/images'+currentproduct[0].img.url" :alt="currentproduct[0].name">
+<img class="product-details__img" :src="'/./assets/images'+currentproduct[0].img.url" :alt="currentproduct[0].name">
 
 <form class="product-details__purchase" @submit.prevent>
 <span class="product-details__price">&#163;{{currentproduct[0].price}}</span>
