@@ -45,6 +45,8 @@
 
 
 <script>
+let postJson
+const postInfo = {}
 
 export default {
 
@@ -200,6 +202,7 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
+		   this.compileEmail(data, actions)
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
 			alert.className = 'confirmed'
@@ -218,12 +221,13 @@ onShippingChange: (data, actions) => {
 			
 			}
 			
+			listItems += `</table>`
 			
             if(order.status === 'COMPLETED') {
 			alert.addEventListener('click' , this.closeorder)
 			alert.innerHTML = `<h1 class="confirmed__title">Details Confirmed</h1>
 			                    <p class="confirmed__details">Thank's for your order of.<br></p>
-								 ${listItems}</table>
+								 ${listItems}
 								 <p class="confirmed__details">Once we confirm stock we will charge your prefered payment method.
 								 You will recieve an order/payment confirmation email. 
 								 Letting you know this has taken place and your order will be shipped to.<br>
@@ -274,7 +278,44 @@ onShippingChange: (data, actions) => {
  
  
  },
- closeorder(e){
+ compileEmail(){
+  let listItems = `<table class="confirmed__items">
+			<tr>
+			<th>Item</th>
+			<th>Qty</th>
+			</tr>`
+			for( let key in order.purchase_units[0].items){
+			
+			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>`
+			
+			}
+			
+			listItems += `</table>`
+	
+	postInfo[item] = listItems
+	postInfo[address] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
+						 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
+					     ${order.purchase_units[0].shipping.address.postal_code}<br>`
+	
+	
+		
+		postJson = JSON.stringify(postInfo)
+		this.sendrequest()
+	
+				
+	
+
+},
+
+sendrequest(){
+	
+	Axios.post('/.netlify/functions/orderemails', postJson ).then(() => {
+      this.run.remove()
+    }).catch(() => {
+      console.log('Sorry something went wrong please retry order email')
+    })
+},
+closeorder(e){
  
  if(e.target.getAttribute('value') === 'close'){
  
