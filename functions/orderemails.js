@@ -21,7 +21,7 @@ if (event.body) {
     content: {
       from: 'sales@1stinfashion.co.uk',
       subject: 'sales request',
-      html:'<html><body><p>Order for<br>items:<br>'+''+body.item+''+'</p><p>sendingaddress:<br>'+''+body.address+''+'</p></body></html>'
+      html:'<html><body><p>Order for<br>items:<img src="'+body.img+'"><br>'+''+body.item+''+'</p><p>sendingaddress:<br>'+''+body.address+''+'</p></body></html>'
     },
     recipients: [
       {address: 'coolkidsformal@hotmail.co.uk'}

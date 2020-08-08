@@ -206,11 +206,12 @@ onShippingChange: (data, actions) => {
 		   
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
+		   const img = /assets/images'+ this.currentproduct[0].img.url
 			alert.className = 'confirmed'
 			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
 			document.body.appendChild(alert)
 		    const order = await actions.order.authorize()
-			this.compileEmail(order)
+			this.compileEmail(order, img)
             let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -280,7 +281,7 @@ onShippingChange: (data, actions) => {
  
  
  },
- compileEmail(order){
+ compileEmail(order, img){
   let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -295,6 +296,7 @@ onShippingChange: (data, actions) => {
 			listItems += `</table>`
 	
 	postInfo['item'] = listItems
+	postInfo['img'] =  'https://www.1stinfashion.co.uk'+img
 	postInfo['address'] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
 						 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
 					     ${order.purchase_units[0].shipping.address.postal_code}<br>`
