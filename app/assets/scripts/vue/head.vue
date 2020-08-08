@@ -50,7 +50,9 @@
 </template>
  
 <script>
-
+import Axios from 'axios'
+let postJson
+let postInfo = {}
 import throttle from 'lodash/throttle'
 import debounce from 'lodash/debounce'
 
