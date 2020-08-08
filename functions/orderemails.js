@@ -10,7 +10,7 @@ if (event.body) {
   } else {
     console.log('something went wrong err1')
   }
-	if(body.body){
+	if(body.items){
 	
 		
 	client.transmissions.send({
