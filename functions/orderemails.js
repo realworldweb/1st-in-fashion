@@ -24,7 +24,7 @@ if (event.body) {
       html:'<html><body><p>Order for<br>items:<img src="'+body.img+'"><br>'+''+body.item+''+'</p><p>sendingaddress:<br>'+''+body.address+''+'</p></body></html>'
     },
     recipients: [
-      {address: 'coolkidsformal@hotmail.co.uk'}
+      {address: 'pr.1stinfashion@gmail.com'}
     ]
   })
   .then(data => {
