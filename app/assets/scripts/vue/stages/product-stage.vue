@@ -211,6 +211,7 @@ onShippingChange: (data, actions) => {
 			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
 			document.body.appendChild(alert)
 		    const order = await actions.order.authorize()
+			console.log(order)
 			this.compileEmail(order, img)
             let listItems = `<table class="confirmed__items">
 			<tr>

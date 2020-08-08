@@ -33,28 +33,35 @@ if (event.body) {
 		width: 60%;
 		display: block;
 		margin: 0 auto 0 auto;
-		border: 2px solid $mainBlue;
+		border: 2px solid #46b7e1;
 		font-size: 1.5rem;
 	th:first-child{
     width: 80%;
      }		 
 		th{
 			
-			background-color: $mainBlue;
+			background-color: #46b7e1;
 			color: #fff;
 			width: 20%;
 		}
 		tr{
 		 text-align: center;
-		 border: 2px solid $mainBlue;
+		 border: 2px solid #46b7e1;
 		 }
 		td{
-		border: 2px solid $mainBlue;
-			}}</style>
+		border: 2px solid #46b7e1;
+			}
+	confirmed__address{
+	  font-size: 1.5rem;
+	  color: #46b7e1;
+	  font-weight: 700;
+		
+		
+	}}</style>
 			</head>
 			<body>
 			<p>Order for<br>items:<img class="img" src="${body.img}"><br>${body.item}</p>
-	<p>sendingaddress:<br>${body.address}</p></body></html>`
+	<p>sendingaddress:<br><span class="confirmed__address" >${body.address}</span></p></body></html>`
     },
     recipients: [
       {address: 'pr.1stinfashion@gmail.com'}
