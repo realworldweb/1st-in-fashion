@@ -206,7 +206,7 @@ onShippingChange: (data, actions) => {
 		   
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
-		   const img = /assets/images'+ this.currentproduct[0].img.url
+		   const img = '/assets/images'+ this.currentproduct[0].img.url
 			alert.className = 'confirmed'
 			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
 			document.body.appendChild(alert)
