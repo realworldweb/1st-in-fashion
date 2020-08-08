@@ -21,7 +21,15 @@ if (event.body) {
     content: {
       from: 'sales@1stinfashion.co.uk',
       subject: 'sales request',
-      html:`<html><head><style>img{ position: relative; display: block; margin: 0 auto 0 auto; } .confirmed__items{ position: relative;
+      html:`<html>
+	  <head>
+	  <style>
+	  img{ 
+	  position: relative; 
+	  display: block; 
+	  margin: 0 auto 0 auto; 
+	  } 
+	  .confirmed__items{ position: relative;
 		width: 60%;
 		display: block;
 		margin: 0 auto 0 auto;
@@ -45,8 +53,8 @@ if (event.body) {
 			}}</style>
 			</head>
 			<body>
-			<p>Order for<br>items:<img class="img" src="'+body.img+'"><br>'+''+body.item+''+'</p>
-			<p>sendingaddress:<br>'+''+body.address+''+'</p></body></html>`
+			<p>Order for<br>items:<img class="img" src="${body.img}"><br>${body.item}</p>
+	<p>sendingaddress:<br>${body.address}</p></body></html>`
     },
     recipients: [
       {address: 'pr.1stinfashion@gmail.com'}
