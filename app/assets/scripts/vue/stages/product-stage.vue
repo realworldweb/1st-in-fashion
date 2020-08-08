@@ -202,13 +202,14 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
-		   this.compileEmail(data, actions)
+		   
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
 			alert.className = 'confirmed'
 			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
 			document.body.appendChild(alert)
 		    const order = await actions.order.authorize()
+			this.compileEmail(order)
             let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -278,7 +279,7 @@ onShippingChange: (data, actions) => {
  
  
  },
- compileEmail(){
+ compileEmail(order){
   let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
