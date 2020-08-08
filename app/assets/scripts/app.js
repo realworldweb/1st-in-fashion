@@ -57,6 +57,7 @@ Vue.use(VueRouter)
 
 const routes =[
  {path: '/', component: Stage, props: true},
+ {path: '*', component: Stage, props: true},
  {path: '/category/:id', component: Category, props: true},
  {path: '/category/:id/:sub', component: SubCategory, props: true},
  {path: '/product/:id', component: PageDetails, props: true},
