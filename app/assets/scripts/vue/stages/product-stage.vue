@@ -314,6 +314,7 @@ sendrequest(){
 	Axios.post('/.netlify/functions/orderemails', postJson ).then(() => {
       this.run.remove()
     }).catch(() => {
+	  console.log(postJson)
       console.log('Sorry something went wrong please retry order email')
     })
 },
