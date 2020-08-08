@@ -46,7 +46,7 @@
 
 <script>
 let postJson
-const postInfo = {}
+let postInfo = {}
 
 export default {
 
