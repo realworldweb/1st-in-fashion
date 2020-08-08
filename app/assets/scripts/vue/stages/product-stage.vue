@@ -293,8 +293,8 @@ onShippingChange: (data, actions) => {
 			
 			listItems += `</table>`
 	
-	postInfo[item] = listItems
-	postInfo[address] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
+	postInfo['item'] = listItems
+	postInfo['address'] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
 						 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
 					     ${order.purchase_units[0].shipping.address.postal_code}<br>`
 	
