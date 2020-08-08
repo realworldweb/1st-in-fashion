@@ -11,7 +11,7 @@ if (event.body) {
   } else {
     console.log('something went wrong err1')
   }
-	if(body.items){
+	if(body.item){
 	
 		
 	client.transmissions.send({
@@ -21,7 +21,7 @@ if (event.body) {
     content: {
       from: 'sales@1stinfashion.co.uk',
       subject: 'sales request',
-      html:'<html><body><p>Order for<br>items:<br>'+''+body.items+''+'</p><p>sendingaddress:<br>'+''+body.address+''+'</p></body></html>'
+      html:'<html><body><p>Order for<br>items:<br>'+''+body.item+''+'</p><p>sendingaddress:<br>'+''+body.address+''+'</p></body></html>'
     },
     recipients: [
       {address: 'coolkidsformal@gmail.com'}
