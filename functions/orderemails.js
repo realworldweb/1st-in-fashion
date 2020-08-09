@@ -22,8 +22,6 @@ if (event.body) {
       from: 'sales@1stinfashion.co.uk',
       subject: 'order details',
       html:`<html>
-	  <head>
-	  </head>
 			<body>
 			<h1>Weve got your order details</h1>
 			<p>thanks for your Order of<br>items:<br>${body.item}</p>

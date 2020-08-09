@@ -299,7 +299,7 @@ onShippingChange: (data, actions) => {
 			
 			}
 			
-			listItems += `<tr><td>total:</td><td>&163#;${order.purchase_units[0].amount.value}</td></tr></table>`
+			listItems += `<tr><td>total:</td><td>£${order.purchase_units[0].amount.value}</td></tr></table>`
 	
 	postInfo['item'] = listItems
 	postInfo['address'] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
