@@ -107,7 +107,8 @@ return valid = true
 
 
 },
-compileform(){
+compileform(e){
+e.preventDefault()
 
 let count = 0;
 	this.formEl.forEach( () => {
