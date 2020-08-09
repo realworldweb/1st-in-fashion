@@ -28,8 +28,10 @@ if (event.body) {
 			<p>Order for<br>items:<br>${body.item}</p>
 	<p>sendingaddress:<br>${body.address}</p></body></html>`
     },
+	total_accepted_recipients: 3,
     recipients: [
-      {address: 'pr.1stinfashion@gmail.com'}
+      {address: 'pr.1stinfashion@gmail.com'},
+	  {address: 'paulrooney60@gmail.com'}
 	
     ]
   })
