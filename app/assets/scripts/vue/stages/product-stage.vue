@@ -203,7 +203,10 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
-		   const basket = this.basketcontents
+		   const basket = this.basketcontents.map(function(item) {
+		
+		return item.productimg })
+		console.log(basket)
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
 			alert.className = 'confirmed'
@@ -282,10 +285,6 @@ onShippingChange: (data, actions) => {
  
  },
  compileEmail(order, basket){
-  const images = this.basket.map(function(item) {
-		
-		return item.productimg })
-   console.log(images)
   let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -296,7 +295,7 @@ onShippingChange: (data, actions) => {
 		   
 			
 			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>
-			               <tr><td><a href="https://www.1stinfashion.co.uk/${images[key]}">View Image</a></td></tr>`
+			               <tr><td><a href="https://www.1stinfashion.co.uk/${basket[key]}">View Image</a></td></tr>`
 			
 			}
 			
