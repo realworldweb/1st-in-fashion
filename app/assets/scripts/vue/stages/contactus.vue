@@ -14,7 +14,7 @@
 </div>
 </div>
 <h2 class="contact-us__section-title">Direct Mail</h2>
-<form id="contact-us" class="contact-us__form" @submit.prevent="compileform(e)">
+<form id="contact-us" class="contact-us__form" @submit.prevent="compileform">
 <div class="contact-us__inline-items">
 <label class=" contact-us__label contact-us__label--inline" for="nameinput">Name:</label>
 <input id="nameinput" class="contact-us__input contact-us__input--2-wide" type="text" name="name" placeholder="Please enter name" required>
