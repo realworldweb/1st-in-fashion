@@ -111,14 +111,14 @@ return valid = true
 },
 compileform(e){
 const formEl = document.querySelectorAll('.contact-us__input')
-
+console.log(formEl)
 
 let count = 0;
 	formEl.forEach( () => {
     let el = formEl[count]
 	let name = el.getAttribute('name')
-	this.name = el.value
-	postInfo[name] = this.name
+	let nameValue = el.value
+	postInfo[name] = nameValue
 	count++
 	
 	})
