@@ -290,7 +290,7 @@ onShippingChange: (data, actions) => {
 			</tr>`
 			for( let key in order.purchase_units[0].items){
 			
-		
+		     console.log(this.basketcontents[key].productimg)
 			
 			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>
 			               <tr><td><a href="https://www.1stinfashion.co.uk/${this.basketcontents[key].productimg}">View Image</a></td></tr>`
