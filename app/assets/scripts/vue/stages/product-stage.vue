@@ -203,15 +203,14 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
-		   
+		   const basket = this.basketcontents
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
 			alert.className = 'confirmed'
 			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
 			document.body.appendChild(alert)
 		    const order = await actions.order.authorize()
-			console.log(order)
-			this.compileEmail(order)
+			this.compileEmail(order, basket)
             let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -282,7 +281,11 @@ onShippingChange: (data, actions) => {
  
  
  },
- compileEmail(order){
+ compileEmail(order, basket){
+  const images = this.basket.map(function(item) {
+		
+		return item.productimg })
+   console.log(images)
   let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -290,10 +293,10 @@ onShippingChange: (data, actions) => {
 			</tr>`
 			for( let key in order.purchase_units[0].items){
 			
-		     console.log(this.basketcontents[key])
+		   
 			
 			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>
-			               <tr><td><a href="https://www.1stinfashion.co.uk/${this.basketcontents[key]}">View Image</a></td></tr>`
+			               <tr><td><a href="https://www.1stinfashion.co.uk/${images[key]}">View Image</a></td></tr>`
 			
 			}
 			
