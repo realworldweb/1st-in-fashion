@@ -25,13 +25,15 @@ if (event.body) {
 	  <head>
 	  </head>
 			<body>
-			<p>Order for<br>items:<br>${body.item}</p>
+			<h1>Weve got your order details</h1>
+			<p>thanks for your Order of<br>items:<br>${body.item}</p>
+			<p>Once we confirm stock we will take payment and send the item(s) we will send another email to confirm payment and est delivery</p>
 	<p>sendingaddress:<br>${body.address}</p></body></html>`
     },
 	total_accepted_recipients: 3,
     recipients: [
       {address: 'pr.1stinfashion@gmail.com'},
-	  {address: 'paulrooney60@gmail.com'}
+	  {address: body.email}
 	
     ]
   })
