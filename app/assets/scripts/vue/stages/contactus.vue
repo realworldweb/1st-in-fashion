@@ -116,9 +116,9 @@ const formEl = document.querySelectorAll('.contact-us__input')
 let count = 0;
 	formEl.forEach( () => {
     let el = formEl[count]
-	console.log(el)
 	let name = el.getAttribute('name')
 	let nameValue = el.value
+	console.log(name, nameValue)
 	postInfo[name] = nameValue
 	count++
 	
