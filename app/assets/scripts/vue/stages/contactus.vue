@@ -138,7 +138,7 @@ sendrequest(){
 	Axios.post('.netlify/functions/send-email', postJson ).then(() => {
    
     })
-},
+}
 
 	
 	

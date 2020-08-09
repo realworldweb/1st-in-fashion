@@ -1,5 +1,5 @@
-const SparkPost = require('sparkpost');
-const client = new SparkPost(process.env.SPARKPOST);
+const SparkPost = require('sparkpost')
+const client = new SparkPost(process.env.SPARKPOST)
 let body
 
 
@@ -7,7 +7,7 @@ let body
 exports.handler = function(event, context, callback){
 if (event.body) {
     body = JSON.parse(event.body)
-	console.log(body)
+	
   } else {
     console.log('something went wrong err1')
   }
@@ -28,11 +28,11 @@ if (event.body) {
     ]
   })
   .then(data => {
-    console.log('Woohoo! You just sent your first mailing!');
+    console.log('Woohoo! You just sent your first mailing!')
     console.log(data);
   })
   .catch(err => {
-    console.log('Whoops! Something went wrong');
+    console.log('Whoops! Something went wrong')
     console.log(err);
   })
 	}else{
