@@ -284,6 +284,7 @@ onShippingChange: (data, actions) => {
  
  },
  compileEmail(order, basket){
+ console.log(order)
   let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -298,7 +299,7 @@ onShippingChange: (data, actions) => {
 			
 			}
 			
-			listItems += `</table>`
+			listItems += `<tr><td>total:</td><td></td></tr></table>`
 	
 	postInfo['item'] = listItems
 	postInfo['address'] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
@@ -317,9 +318,7 @@ onShippingChange: (data, actions) => {
 
 sendrequest(){
 	
-	Axios.post('/.netlify/functions/orderemails', postJson ).then(() => {
-      this.run.remove()
-    })
+	Axios.post('/.netlify/functions/orderemails', postJson )
 },
 closeorder(e){
  
