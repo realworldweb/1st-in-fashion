@@ -42,6 +42,8 @@
 const data = require('../vue-data/contactdata')
 
 let valid
+let postInfo = []
+let postJson
 
 export default {
 
@@ -109,7 +111,7 @@ return valid = true
 },
 compileform(e){
 const formEl = document.querySelectorAll('.contact-us__input')
- 
+
 
 let count = 0;
 	formEl.forEach( () => {
