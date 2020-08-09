@@ -30,7 +30,7 @@
 <label class="contact-us__label" for="bodyinput">Body:</label>
 <textarea id="bodyinput" name="body" placeholder="write what you would like to say here..." class="contact-us__input contact-us__input--text" required>
 </textarea>
-<input type="submit" name="submit" @submit="compileform" value="submit" class="contact-us__input contact-us__input--submit btn">
+<input type="submit" name="submit" @submit.prevent="compileform(e)" value="submit" class="contact-us__input contact-us__input--submit btn">
 
 
 </form>
@@ -108,7 +108,7 @@ return valid = true
 
 },
 compileform(e){
-e.preventDefault()
+console.log(e)
 
 let count = 0;
 	this.formEl.forEach( () => {
