@@ -14,7 +14,7 @@
 </div>
 </div>
 <h2 class="contact-us__section-title">Direct Mail</h2>
-<form id="contact-us" class="contact-us__form">
+<form id="contact-us" class="contact-us__form" @submit.prevent="compileform(e)">
 <div class="contact-us__inline-items">
 <label class=" contact-us__label contact-us__label--inline" for="nameinput">Name:</label>
 <input id="nameinput" class="contact-us__input contact-us__input--2-wide" type="text" name="name" placeholder="Please enter name" required>
@@ -30,7 +30,7 @@
 <label class="contact-us__label" for="bodyinput">Body:</label>
 <textarea id="bodyinput" name="body" placeholder="write what you would like to say here..." class="contact-us__input contact-us__input--text" required>
 </textarea>
-<input type="submit" name="submit" @submit.prevent="compileform(e)" value="submit" class="contact-us__input contact-us__input--submit btn">
+<input type="submit" name="submit" value="submit" class="contact-us__input contact-us__input--submit btn">
 
 
 </form>
@@ -108,7 +108,7 @@ return valid = true
 
 },
 compileform(e){
-console.log(e)
+
 
 let count = 0;
 	this.formEl.forEach( () => {
