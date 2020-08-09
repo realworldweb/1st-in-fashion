@@ -295,7 +295,7 @@ onShippingChange: (data, actions) => {
 		   
 			
 			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>
-			               <tr><td><a href="https://www.1stinfashion.co.uk/${basket[key]}">View Image</a></td></tr>`
+			               <tr><td><img src="https://www.1stinfashion.co.uk/${basket[key]}"></td></tr>`
 			
 			}
 			
