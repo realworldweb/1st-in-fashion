@@ -26,11 +26,11 @@ if (event.body) {
 	  </head>
 			<body>
 			<p>Order for<br>items:<br>${body.item}</p>
-	<p>sendingaddress:<br><span class="confirmed__address" >${body.address}</span></p></body></html>`
+	<p>sendingaddress:<br>${body.address}</p></body></html>`
     },
     recipients: [
-      {address: 'pr.1stinfashion@gmail.com'},
-	  {address: 'paulrooney60@gmail.com'}
+      {address: 'pr.1stinfashion@gmail.com'}
+	
     ]
   })
   .then(data => {
