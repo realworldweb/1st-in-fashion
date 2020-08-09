@@ -135,7 +135,7 @@ let count = 0;
 },
 sendrequest(){
 	
-	Axios.post('.netlify/functions/send-email', postJson ).then(() => {
+	Axios.post('/.netlify/functions/send-email', postJson ).then(() => {
    
     })
 }

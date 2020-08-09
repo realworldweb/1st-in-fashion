@@ -6,8 +6,9 @@ let body
 
 exports.handler = function(event, context, callback){
 if (event.body) {
-    body = JSON.parse(event.body)
 	
+    body = JSON.parse(event.body)
+	console.log(body)
   } else {
     console.log('something went wrong err1')
   }
