@@ -30,7 +30,7 @@
 <label class="contact-us__label" for="bodyinput">Body:</label>
 <textarea id="bodyinput" name="body" placeholder="write what you would like to say here..." class="contact-us__input contact-us__input--text" required>
 </textarea>
-<input type="submit" name="submit" value="submit" class="contact-us__input contact-us__input--submit btn">
+<input type="submit" name="submit" @submit="compileform" value="submit" class="contact-us__input contact-us__input--submit btn">
 
 
 </form>
@@ -106,7 +106,46 @@ this.emailErrorMsg.push('display-none')
 return valid = true
 
 
-}
+},
+compileform(){
+
+let count = 0;
+	this.formEl.forEach( () => {
+    this.el = this.formEl[count]
+	let name = this.el.getAttribute('name')
+	this.name = this.el.value
+	postInfo[name] = this.name
+	count++
+	
+	})
+	
+	if(valid === true){
+		
+		postJson = JSON.stringify(postInfo)
+		this.sendrequest()
+	
+				
+	}else{
+		this.warning.innerHTML = 'Please check your phone or email'
+	}
+},
+sendrequest(){
+	
+	Axios.post('.netlify/functions/send-email', postJson ).then(() => {
+      this.success()
+    }).catch(() => {
+      this.warning.innerHTML = 'Sorry something went wrong please retry'
+    })
+},
+success(){
+	
+	this.container.insertAdjacentHTML('beforeend', `
+   
+      <h3 class="contact-us__success">Success your message has been sent!</h3>
+	  <h3 class="contact-us__success contact-us__success--smaller">Contact will be made on your phone or email provided</h3>
+        
+    `)
+	
 
 
 }
