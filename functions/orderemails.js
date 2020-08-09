@@ -20,51 +20,17 @@ if (event.body) {
     },
     content: {
       from: 'sales@1stinfashion.co.uk',
-      subject: 'sales request',
+      subject: 'order details',
       html:`<html>
 	  <head>
-	  <style>
-	  img{ 
-	  position: relative; 
-	  display: block; 
-	  margin: 0 auto 0 auto; 
-	  } 
-	  .confirmed__items{ position: relative;
-		width: 60%;
-		display: block;
-		margin: 0 auto 0 auto;
-		border: 2px solid #46b7e1;
-		font-size: 1.5rem;
-	th:first-child{
-    width: 80%;
-     }		 
-		th{
-			
-			background-color: #46b7e1;
-			color: #fff;
-			width: 20%;
-		}
-		tr{
-		 text-align: center;
-		 border: 2px solid #46b7e1;
-		 }
-		td{
-		border: 2px solid #46b7e1;
-			}
-	confirmed__address{
-	  font-size: 1.5rem;
-	  color: #46b7e1;
-	  font-weight: 700;
-		
-		
-	}}</style>
-			</head>
+	  </head>
 			<body>
-			<p>Order for<br>items:<img class="img" src="${body.img}"><br>${body.item}</p>
+			<p>Order for<br>items:<br>${body.item}</p>
 	<p>sendingaddress:<br><span class="confirmed__address" >${body.address}</span></p></body></html>`
     },
     recipients: [
-      {address: 'pr.1stinfashion@gmail.com'}
+      {address: 'pr.1stinfashion@gmail.com'},
+	  {address: 'paulrooney60@gmail.com'}
     ]
   })
   .then(data => {

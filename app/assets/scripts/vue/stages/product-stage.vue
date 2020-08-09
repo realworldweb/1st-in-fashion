@@ -53,7 +53,7 @@ export default {
 
   name: 'PageDetails',
   data() { return { currentproduct: null, selected: [], sizeselection: [], errormsg: ['errormsg','sizeerror', 'display-none'], addedtobasket: ['product-details__checked', 'display-none'] }},
-  props: ['products', 'categories', 'subcategories','baskettotal', 'paypalitems'],
+  props: ['products', 'categories', 'subcategories','baskettotal', 'basketcontents', 'paypalitems'],
   created(){
   
   this.loadproduct
@@ -206,13 +206,12 @@ onShippingChange: (data, actions) => {
 		   
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
-		   const img = '/assets/images'+ this.currentproduct[0].img.url
 			alert.className = 'confirmed'
 			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
 			document.body.appendChild(alert)
 		    const order = await actions.order.authorize()
 			console.log(order)
-			this.compileEmail(order, img)
+			this.compileEmail(order)
             let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -255,6 +254,7 @@ onShippingChange: (data, actions) => {
         .render(this.$refs.paypalcart)
 		},  
  addToBasket(){
+ 
  this.setloaded()
  if(this.selected.length === 0){
  
@@ -267,7 +267,7 @@ onShippingChange: (data, actions) => {
  {
  
 
-  this.$emit('add', this.currentproduct[0].name, this.selected, this.currentproduct[0].price, this.currentproduct[0].id, this.currentproduct[0].sku)
+  this.$emit('add', this.currentproduct[0].name, this.selected, this.currentproduct[0].price, this.currentproduct[0].id, this.currentproduct[0].sku, this.currentproduct[0].img.url )
   this.errormsg = ['errormsg','sizeerror', 'display-none']
   this.sizeselection = []
   this.addedtobasket = ['product-details__checked']
@@ -282,7 +282,7 @@ onShippingChange: (data, actions) => {
  
  
  },
- compileEmail(order, img){
+ compileEmail(order){
   let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -290,14 +290,14 @@ onShippingChange: (data, actions) => {
 			</tr>`
 			for( let key in order.purchase_units[0].items){
 			
-			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>`
+			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>
+			               <tr><td><a href="https://www.1stinfashion.co.uk/${this.basketcontents[key].img.url}">View Image</a></td></tr>`
 			
 			}
 			
 			listItems += `</table>`
 	
 	postInfo['item'] = listItems
-	postInfo['img'] =  'https://www.1stinfashion.co.uk'+img
 	postInfo['address'] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
 						 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
 					     ${order.purchase_units[0].shipping.address.postal_code}<br>`

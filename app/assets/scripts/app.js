@@ -149,11 +149,11 @@ new Vue({
 		  
 	  },
 	  
-	   addItem(productName, productSize, productPrice, productId, productSku){
+	   addItem(productName, productSize, productPrice, productId, productSku, img){
 		   
 		   if( this.basketcontents.length === 0 ){
 		//on site data element  
-		this.basketcontents.push({ 'basketId': 0, 'name': productName,  'size': productSize, 'price': productPrice, 'productId': productId})
+		this.basketcontents.push({ 'basketId': 0, 'name': productName,  'size': productSize, 'price': productPrice, 'productId': productId, 'productimg': img})
 		this.paypalitems.push({name:`${productName} ${productSku} ${productSize}`, productid: 0, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
 		
 		this.finalTotal()
@@ -163,7 +163,7 @@ new Vue({
 		   }
 		   else{
 			   
-			   this.basketcontents.push({ 'basketId': this.basketcontents.length, 'name': productName, 'size': productSize, 'price': productPrice, 'productId': productId})
+			   this.basketcontents.push({ 'basketId': this.basketcontents.length, 'name': productName, 'size': productSize, 'price': productPrice, 'productId': productId, 'productimg': img})
 			   this.paypalitems.push({name:`${productName} ${productSku} ${productSize}`, productid: this.basketcontents.length, quantity:"1", unit_amount:{currency_code:"GBP", value:`${productPrice}`}})
 			   
 			   this.finalTotal()
