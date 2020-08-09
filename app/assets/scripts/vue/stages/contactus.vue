@@ -42,7 +42,7 @@
 const data = require('../vue-data/contactdata')
 import Axios from 'axios'
 let valid
-let postInfo = []
+let postInfo = {}
 let postJson
 
 export default {
@@ -118,7 +118,6 @@ let count = 0;
     let el = formEl[count]
 	let name = el.getAttribute('name')
 	let nameValue = el.value
-	console.log(name, nameValue)
 	postInfo[name] = nameValue
 	count++
 	
