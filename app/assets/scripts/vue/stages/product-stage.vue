@@ -206,7 +206,6 @@ onShippingChange: (data, actions) => {
 		   const basket = this.basketcontents.map(function(item) {
 		
 		return item.productimg })
-		console.log(basket)
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
 			alert.className = 'confirmed'
@@ -295,7 +294,7 @@ onShippingChange: (data, actions) => {
 		   
 			
 			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>
-			               <tr><td><img src="https://www.1stinfashion.co.uk/${basket[key]}"></td></tr>`
+			               <tr><td><a href="https://www.1stinfashion.co.uk${basket[key]}">View Image</a></td></tr>`
 			
 			}
 			
@@ -320,9 +319,6 @@ sendrequest(){
 	
 	Axios.post('/.netlify/functions/orderemails', postJson ).then(() => {
       this.run.remove()
-    }).catch(() => {
-	  console.log(postJson)
-      console.log('Sorry something went wrong please retry order email')
     })
 },
 closeorder(e){
