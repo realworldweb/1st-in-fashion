@@ -137,8 +137,19 @@ sendrequest(){
 	console.log(postJson)
 	Axios.post('/.netlify/functions/send-email', postJson ).then(() => {
    
-    })
-}
+    }).then(
+	this.success()
+	).catch(
+	
+	console.log('something went wrong')
+	
+	)
+},
+	success(){
+	
+	console.log('success')
+	
+	}
 
 	
 	
