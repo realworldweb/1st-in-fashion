@@ -43,7 +43,7 @@
 <script>
 const data = require('../vue-data/contactdata')
 import Axios from 'axios'
-const stage = document.getElementById('formstage')
+let stage = document.getElementById('formstage')
 let valid
 let postInfo = {}
 let postJson
