@@ -88,11 +88,13 @@ this.navDisplayClose()
 },
 
 methods: {
-	setLoaded() {
-      this.loaded = true
-	 paypal
+	setLoaded(){
+ document.getElementById('paypal').innerHTML =''
+  this.loaded = true
+	  paypal
         .Buttons({
           createOrder: (data, actions) => {
+		  this.close()
             return actions.order.create({
               purchase_units: [{
                      amount: {
@@ -107,7 +109,8 @@ methods: {
 		})
 		 },
 onShippingChange: (data, actions) => {
-        //handle shipping rules
+      
+		  //handle shipping rules
 		const euro = ['FR','DK','EE','FI','DE','GR','IE','IT','LV','NL','NO','PL','PT','ES','SE','UA']
 		let isEuro = false
 		
@@ -122,17 +125,20 @@ onShippingChange: (data, actions) => {
 		
 		}
 		let shippingAmount
+		
         if (data.shipping_address.country_code === 'GB') {
-            
+         
+        
+		
         if(this.baskettotal >= 20){
 		
-		shippingAmount = '0.00'
+		 shippingAmount = '0.00'
 		}
 		else
 		{
 
         // uk shipping Amount
-        shippingAmount = '3.00'
+         shippingAmount = '3.00'
 	    }
 		
         return actions.order.patch([
@@ -156,8 +162,8 @@ onShippingChange: (data, actions) => {
             }
         ])
     }else if (isEuro === true){
-	// irl shipping Amount
-        shippingAmount = '7.00'
+	// euro shipping Amount
+         shippingAmount = '7.00'
         return actions.order.patch([
             {
                 op: 'replace',
@@ -209,12 +215,16 @@ onShippingChange: (data, actions) => {
 	}
 	},		 
           onApprove: async (data, actions) => {
+		   const basket = this.basketcontents.map(function(item) {
+		
+		return item.productimg })
 		   this.$emit('remove', 'all')
 		   const alert = document.createElement('div')
 			alert.className = 'confirmed'
 			alert.innerHTML = `<img class='confirmed__loading' src="/assets/images/loading.gif" alt="loading order details">`
 			document.body.appendChild(alert)
 		    const order = await actions.order.authorize()
+			this.compileEmail(order, basket)
             let listItems = `<table class="confirmed__items">
 			<tr>
 			<th>Item</th>
@@ -227,12 +237,13 @@ onShippingChange: (data, actions) => {
 			
 			}
 			
+			listItems += `</table>`
 			
             if(order.status === 'COMPLETED') {
 			alert.addEventListener('click' , this.closeorder)
 			alert.innerHTML = `<h1 class="confirmed__title">Details Confirmed</h1>
 			                    <p class="confirmed__details">Thank's for your order of.<br></p>
-								 ${listItems}</table>
+								 ${listItems}
 								 <p class="confirmed__details">Once we confirm stock we will charge your prefered payment method.
 								 You will recieve an order/payment confirmation email. 
 								 Letting you know this has taken place and your order will be shipped to.<br>
@@ -250,11 +261,11 @@ onShippingChange: (data, actions) => {
 			}
           },
           onError: err => {
-            console.log(err)
+            console.log(err);
           }
         })
         .render(this.$refs.paypal)
-		},   
+		},  
 
 navDisplay() {
 if (this.mobileNav === false){
