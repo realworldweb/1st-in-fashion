@@ -19,7 +19,7 @@ let dataContactInfo = [
     {
         "id": 3,
         "phone": "07783196464",
-        "mainEmail": "patrickrooney56@gmail.com",
+        "mainEmail": "pr.1stinfashion@gmail.com",
         "secondaryEmail": "paulrooney60@gmail.com",
         "facebook": "#",
         "whatsapp": "#",
