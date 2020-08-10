@@ -22,7 +22,7 @@ if (event.body) {
     content: {
       from: 'contact@1stinfashion.co.uk',
       subject: body.subject,
-      html:'<html><body><p>Name:'+''+body.name+''+'</p><p>Contact:'+''+contact+''+'</p><p>Body:'+''+body.body+''+'</p></body></html>'
+	html:`<html><body><p>Name: ${body.name}</p><p>Contact: ${contact}</p><p>${body.body}</p></body></html>`
     },
     recipients: [
       {address: 'pr.1stinfashion@gmail.com'}
