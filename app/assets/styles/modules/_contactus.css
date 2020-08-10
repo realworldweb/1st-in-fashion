@@ -216,9 +216,19 @@
 		
 	}
 	
+	&__loading{
+		position: relative;
+		display: block;
+		margin: auto;
+		
+		
+	}
+	
+	
 	&__confirmed-title{
 		
 		position: relative;
+		font-size: 1.5rem;
 		display: block;
 		width: 80%;
 		margin: 0 auto 0 auto;
@@ -242,6 +252,12 @@
 		@mixin atMedium{
 			
 			width: 60%;
+		}
+		
+		&--bottom{
+			
+			margin: 0 auto 2rem auto;
+			
 		}
 	}
 	

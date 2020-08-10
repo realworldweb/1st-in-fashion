@@ -43,6 +43,7 @@
 <script>
 const data = require('../vue-data/contactdata')
 import Axios from 'axios'
+const stage = document.getElementById('formstage')
 let valid
 let postInfo = {}
 let postJson
@@ -129,7 +130,7 @@ compileform(e){
 		
 		postJson = JSON.stringify(postInfo)
 		this.sendrequest()
-	
+	    stage.innerHTML =`<img class='contact-us__loading' src="/assets/images/loading.gif" alt="please wait sending email.">`
 				
 	}else{
 		this.warning.innerHTML = 'Please check your phone or email'
@@ -144,10 +145,10 @@ sendrequest(){
 	
 },
 	success(){
-	const stage = document.getElementById('formstage')
+	
 	stage.innerHTML = `<h3 class="contact-us__confirmed-title">Email Sent</h3>
 	                   <p class="contact-us__confirmed-text">Thank you for getting in touch we have got you email And will be in touch shortly to answer your enquiry.</p>
-	                   <p class="contact-us__confirmed-text">In the mean time you might find the anwsers you are looking for in our terms or FAQS sections</p>`
+	                   <p class="contact-us__confirmed-text contact-us__confirmed-text--bottom">In the mean time you might find the anwsers you are looking for in our terms or FAQS sections</p>`
 	}
 
 	
