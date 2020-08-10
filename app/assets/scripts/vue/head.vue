@@ -89,12 +89,10 @@ this.navDisplayClose()
 
 methods: {
 	setLoaded(){
- document.getElementById('paypal').innerHTML =''
   this.loaded = true
 	  paypal
         .Buttons({
           createOrder: (data, actions) => {
-		  this.close()
             return actions.order.create({
               purchase_units: [{
                      amount: {
@@ -292,6 +290,44 @@ this.siteHeader = []
  this.menuIcon = []
  return this.mobileNav = false
 
+},
+compileEmail(order, basket){
+ console.log(order)
+  let listItems = `<table class="confirmed__items">
+			<tr>
+			<th>Item</th>
+			<th>Qty</th>
+			</tr>`
+			for( let key in order.purchase_units[0].items){
+			
+		   
+			
+			 listItems += `<tr><td>${order.purchase_units[0].items[key].name}</td><td>${order.purchase_units[0].items[key].quantity}</td></tr>
+			               <tr><td><a href="https://www.1stinfashion.co.uk/assets/images${basket[key]}">View Image</a></td></tr>`
+			
+			}
+			
+			listItems += `<tr><td>total:</td><td>£${order.purchase_units[0].amount.value}</td></tr></table>`
+	
+	postInfo['item'] = listItems
+	postInfo['address'] = `${order.purchase_units[0].shipping.address.address_line_1}<br>
+						 ${order.purchase_units[0].shipping.address.admin_area_1}<br>
+					     ${order.purchase_units[0].shipping.address.postal_code}<br>`
+    postInfo['email'] = order.payer.email_address
+	
+	
+		
+		postJson = JSON.stringify(postInfo)
+		this.sendrequest()
+	
+				
+	
+
+},
+
+sendrequest(){
+	
+	Axios.post('/.netlify/functions/orderemails', postJson )
 },
  closeorder(e){
  
