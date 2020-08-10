@@ -14,6 +14,7 @@
 </div>
 </div>
 <h2 class="contact-us__section-title">Direct Mail</h2>
+<div id="formstage">
 <form id="contact-us" class="contact-us__form" @submit.prevent="compileform">
 <div class="contact-us__inline-items">
 <label class=" contact-us__label contact-us__label--inline" for="nameinput">Name:</label>
@@ -34,6 +35,7 @@
 
 
 </form>
+</div>
 </div>
 </div>
 </template>
@@ -110,10 +112,10 @@ return valid = true
 
 },
 compileform(e){
-const formEl = document.querySelectorAll('.contact-us__input')
 
+   const formEl = document.querySelectorAll('.contact-us__input')
 
-let count = 0;
+    let count = 0
 	formEl.forEach( () => {
     let el = formEl[count]
 	let name = el.getAttribute('name')
@@ -136,19 +138,16 @@ let count = 0;
 sendrequest(){
 	console.log(postJson)
 	Axios.post('/.netlify/functions/send-email', postJson ).then(() => {
-   
-    }).then(
-	this.success()
-	).catch(
+   this.success()
+    }).catch( console.log('something went wrong')
 	
-	console.log('something went wrong')
 	
-	)
 },
 	success(){
-	
-	console.log('success')
-	
+	const stage = document.getElementById('formstage')
+	stage.innerHTML = `<h3 class="contact-us__confirmed-title">Email Sent</h3>
+	                   <p class="contact-us__confirmed-text">Thank you for getting in touch we have got you email And will be in touch shortly to answer your enquiry.</p>`
+	                   <p class="contact-us__confirmed-text">In the mean time you might find the anwsers you are looking for in our terms or FAQS sections</p>
 	}
 
 	

@@ -13,7 +13,7 @@ if (event.body) {
     console.log('something went wrong err1')
   }
 	if(body.body){
-		let contact = body.phone + ' ' + body.email
+		let contact = `${body.phone}<br>${body.email}`
 		
 	client.transmissions.send({
     options: {
