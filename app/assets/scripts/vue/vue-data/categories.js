@@ -713,6 +713,35 @@ const category =[
                 },
                 "created_at": "2020-08-05T09:10:08.933Z",
                 "updated_at": "2020-08-05T14:19:15.857Z"
+            },
+            {
+                "id": 35,
+                "name": "Girls fairytale dress  ",
+                "desc": "This colorful girls dress is sure to delight any little one making it a perfect gift . ",
+                "price": 24.99,
+                "sku": "ck2185",
+                "materials": "cotton",
+                "sizeguide": [
+                    {
+                        "size": "0-3",
+                        "chest": 50
+                    },
+                    {
+                        "size": "3-6",
+                        "chest": 52
+                    },
+                    {
+                        "size": "6-9",
+                        "chest": 50
+                    }
+                ],
+                "img": {
+                    "url": "/uploads/girls_dressk004.jpg",
+                    "alt": "girls summer dress 0-3 to 18-24",
+                    "caption": "girls summer dress 0-3 to 18-24"
+                },
+                "created_at": "2020-08-10T16:31:09.700Z",
+                "updated_at": "2020-08-10T16:31:09.700Z"
             }
         ]
     },

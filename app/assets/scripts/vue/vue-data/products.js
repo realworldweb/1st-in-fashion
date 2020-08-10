@@ -1639,6 +1639,72 @@ const product = [
                 "updated_at": "2020-06-08T23:54:28.787Z"
             }
         ]
+    },
+    {
+        "id": 35,
+        "name": "Girls fairytale dress  ",
+        "desc": "This colorful girls dress is sure to delight any little one making it a perfect gift . ",
+        "price": 24.99,
+        "sku": "ck2185",
+        "materials": "cotton",
+        "sizeguide": [
+            {
+                "size": "0-3",
+                "chest": 50
+            },
+            {
+                "size": "3-6",
+                "chest": 52
+            },
+            {
+                "size": "6-9",
+                "chest": 50
+            }
+        ],
+        "img": {
+            "url": "/uploads/girls_dressk004.jpg",
+            "alt": "girls summer dress 0-3 to 18-24",
+            "caption": "girls summer dress 0-3 to 18-24"
+        },
+        "created_at": "2020-08-10T16:31:09.700Z",
+        "updated_at": "2020-08-10T16:31:09.700Z",
+        "sizes": [
+            {
+                "id": 1,
+                "size": "0-3",
+                "created_at": "2020-06-08T23:17:26.195Z",
+                "updated_at": "2020-06-08T23:17:26.195Z"
+            },
+            {
+                "id": 2,
+                "size": "3-6",
+                "created_at": "2020-06-08T23:22:55.957Z",
+                "updated_at": "2020-06-08T23:22:55.957Z"
+            },
+            {
+                "id": 8,
+                "size": "6-9",
+                "created_at": "2020-08-03T14:58:19.966Z",
+                "updated_at": "2020-08-03T14:58:19.966Z"
+            }
+        ],
+        "sub_categories": [
+            {
+                "id": 3,
+                "subCategory": "baby girls casual",
+                "created_at": "2020-06-13T16:33:52.441Z",
+                "updated_at": "2020-06-13T16:33:52.441Z"
+            }
+        ],
+        "options": [],
+        "categories": [
+            {
+                "id": 1,
+                "category": "baby",
+                "created_at": "2020-06-08T23:53:50.382Z",
+                "updated_at": "2020-06-08T23:53:50.382Z"
+            }
+        ]
     }
 ]
 
