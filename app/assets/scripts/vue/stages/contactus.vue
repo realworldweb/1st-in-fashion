@@ -139,15 +139,15 @@ sendrequest(){
 	console.log(postJson)
 	Axios.post('/.netlify/functions/send-email', postJson ).then(() => {
    this.success()
-    }).catch( console.log('something went wrong')
+    }).catch( console.log('something went wrong'))
 	
 	
 },
 	success(){
 	const stage = document.getElementById('formstage')
 	stage.innerHTML = `<h3 class="contact-us__confirmed-title">Email Sent</h3>
-	                   <p class="contact-us__confirmed-text">Thank you for getting in touch we have got you email And will be in touch shortly to answer your enquiry.</p>`
-	                   <p class="contact-us__confirmed-text">In the mean time you might find the anwsers you are looking for in our terms or FAQS sections</p>
+	                   <p class="contact-us__confirmed-text">Thank you for getting in touch we have got you email And will be in touch shortly to answer your enquiry.</p>
+	                   <p class="contact-us__confirmed-text">In the mean time you might find the anwsers you are looking for in our terms or FAQS sections</p>`
 	}
 
 	
