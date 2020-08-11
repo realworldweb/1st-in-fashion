@@ -99,15 +99,15 @@ new Vue({
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{ categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
   created: function (){
-	  Axios.get('https://127.0.01/assets/scripts/vue/vue-data/categories.js').then( response => {
+	  Axios.get('https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/categories.js').then( response => {
 		  
 		 this.categories = response.data
 	  })
-	  	  Axios.get('https://127.0.01/assets/scripts/vue/vue-data/products.js').then( response => {
+	  	  Axios.get('https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/products.js').then( response => {
 			  
 		 this.products = response.data
 	  })
-	  	  Axios.get('https://127.0.01/assets/scripts/vue/vue-data/subcategories.js').then( response => {
+	  	  Axios.get('https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/subcategories.js').then( response => {
 			
 		 this.subcategories = response.data
 		
