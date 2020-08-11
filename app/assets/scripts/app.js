@@ -12,23 +12,23 @@ import VueRouter from 'vue-router'
 import Sitenav from './vue/head.vue'
 import Stage from './vue/stages/index-stage.vue'
 const Sitefoot = () => import( /* webpackChunkName: "SiteFoot" */
-  /* webpackMode: "lazy" */
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */
   './vue/footer.vue')
 const Category = () => import( /* webpackChunkName: "Category" */
-  /* webpackMode: "lazy" */
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */
   './vue/stages/new-category-stage.vue')
 const Subcategory = () => import(/* webpackChunkName: "Subcategory" */
-  /* webpackMode: "lazy" */ './vue/stages/sub-category-stage.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/sub-category-stage.vue')
 const ProductDetails = () => import(/* webpackChunkName: "ProductDetails" */
-  /* webpackMode: "lazy" */ './vue/stages/product-stage.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/product-stage.vue')
 const Contact = () => import(/* webpackChunkName: "Contact" */
-  /* webpackMode: "lazy" */ './vue/stages/contact.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/contact.vue')
 const ContactUs = () => import(/* webpackChunkName: "ContactUs" */
-  /* webpackMode: "lazy" */ './vue/stages/contactus.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/contactus.vue')
 const Faqs = () => import(/* webpackChunkName: "Faqs" */
-  /* webpackMode: "lazy" */ './vue/stages/faqs.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/faqs.vue')
 const Terms = () => import(/* webpackChunkName: "Terms" */
-  /* webpackMode: "lazy" */ './vue/stages/terms.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/terms.vue')
 
 const dataProducts = require('./vue/vue-data/products')
 const dataCategories = require('./vue/vue-data/categories')
