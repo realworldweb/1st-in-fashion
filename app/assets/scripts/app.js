@@ -74,6 +74,7 @@ const routes =[
 
 const router = new VueRouter({
 	mode: 'history',
+	base: 'www.1stinfashion.co.uk',
 	routes
 	
 })
@@ -91,9 +92,7 @@ new Vue({
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{ categories: dataCategories.category, products: dataProducts.product, subcategories: dataSubcategories.subcategory, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
  methods: {
-
-	  
-       finalTotal(){
+	  finalTotal(){
 		  
          
 		

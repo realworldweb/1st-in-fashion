@@ -5,6 +5,7 @@
   <title>1st in fashion kids and babywear</title>
   <meta name="keywords" content="babywear, kidswear, suits, dresses, boys, girls">
   <meta name="description" content="A store dedicated to the latest kids fashion">
+  <base href="/">
 </head>
 <body>
  <div id="app">
@@ -14,7 +15,7 @@
   </header>
   <main id="stage">
 
-<router-view :products="products" :categories="categories" :subcategories="subcategories" :baskettotal="baskettotal" :basketcontents="basketcontents" :paypalitems="paypalitems" @add="addItem" @remove="removeItem"></router-view>
+<router-view  :products="products" :categories="categories" :subcategories="subcategories" :baskettotal="baskettotal" :basketcontents="basketcontents" :paypalitems="paypalitems" @add="addItem" @remove="removeItem"></router-view>
 
  </main>
   
