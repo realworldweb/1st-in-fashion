@@ -4,6 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fse = require('fs-extra')
+const ASSET_PATH = '/'
 
 
 const postCSSPlugins = [
@@ -84,7 +85,8 @@ if (currentTask == "dev"){
 	cssConfig.use.unshift('style-loader')
 	config.output =  {
     filename: 'bundled.js',
-    path: path.resolve(__dirname, 'app')
+    path: path.resolve(__dirname, 'app'),
+	publicPath: ASSET_PATH
   },
   config.devServer = {
     before: function(app, server) {
@@ -133,7 +135,8 @@ if (currentTask == "build"){
 	config.output =  {
     filename: '[name].[chunkhash].js',
 	chunkFilename: '[name].[chunkhash].js',
-    path: path.resolve(__dirname, 'docs')
+    path: path.resolve(__dirname, 'docs'),
+	publicPath: ASSET_PATH
   },
   config.mode = 'production',
   config.optimization = {
