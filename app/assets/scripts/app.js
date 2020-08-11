@@ -12,15 +12,14 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Sitenav from './vue/head.vue'
 import Stage from './vue/stages/index-stage.vue'
-import Contact from './vue/stages/contact.vue'
-import ContactUs from './vue/stages/contactus.vue'
-import Faqs from './vue/stages/faqs.vue'
-import Terms from './vue/stages/terms.vue'
-import Category from './vue/stages/new-category-stage.vue'
-import SubCategory from './vue/stages/sub-category-stage.vue'
-import PageDetails from './vue/stages/product-stage.vue'
 import Sitefoot from './vue/footer.vue'
-
+const Category = () => import('./vue/stages/new-category-stage.vue')
+const Subcategory = () => import('./vue/stages/sub-category-stage.vue')
+const ProductDetails = () => import('./vue/stages/new-category-stage.vue')
+const Contact = () => import('./vue/stages/contact.vue')
+const ContactUs = () => import('./vue/stages/contactus.vue')
+const Faqs = () => import('./vue/stages/faqs.vue')
+const Terms = () => import('./vue/stages/terms.vue')
 
 const dataProducts = require('./vue/vue-data/products')
 const dataCategories = require('./vue/vue-data/categories')
@@ -58,8 +57,8 @@ Vue.use(VueRouter)
 const routes =[
  {path: '/', component: Stage, props: true},
  {path: '/category/:id', component: Category, props: true},
- {path: '/category/:id/:sub', component: SubCategory, props: true},
- {path: '/product/:id', component: PageDetails, props: true},
+ {path: '/category/:id/:sub', component: Subcategory, props: true},
+ {path: '/product/:id', component: ProductDetails, props: true},
  {path: '/info', component: Contact, props: true,
  children:[
  {
@@ -67,7 +66,7 @@ const routes =[
  {
  path: 'Faqs', component: Faqs, props: true},
  { 
- path: 'Terms', component: Terms, props: true
+ path: 'Terms', component: Terms,  props: true
  }
  ]}
  
@@ -89,7 +88,7 @@ Vue.config.productionTip = false
 new Vue({
 	router,
   el: '#app',
-  components: { 'sitenav': Sitenav, 'stage': Stage, 'contact': Contact, 'sitefoot': Sitefoot, 'category': Category, 'PageDetails':PageDetails },
+  components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{ categories: dataCategories.category, products: dataProducts.product, subcategories: dataSubcategories.subcategory, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
  methods: {
 
