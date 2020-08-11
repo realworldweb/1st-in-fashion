@@ -11,14 +11,24 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Sitenav from './vue/head.vue'
 import Stage from './vue/stages/index-stage.vue'
-const Sitefoot = () => import('./vue/footer.vue')
-const Category = () => import('./vue/stages/new-category-stage.vue')
-const Subcategory = () => import('./vue/stages/sub-category-stage.vue')
-const ProductDetails = () => import('./vue/stages/product-stage.vue')
-const Contact = () => import('./vue/stages/contact.vue')
-const ContactUs = () => import('./vue/stages/contactus.vue')
-const Faqs = () => import('./vue/stages/faqs.vue')
-const Terms = () => import('./vue/stages/terms.vue')
+const Sitefoot = () => import( /* webpackChunkName: "SiteFoot" */
+  /* webpackMode: "lazy" */
+  './vue/footer.vue')
+const Category = () => import( /* webpackChunkName: "Category" */
+  /* webpackMode: "lazy" */
+  './vue/stages/new-category-stage.vue')
+const Subcategory = () => import(/* webpackChunkName: "Subcategory" */
+  /* webpackMode: "lazy" */ './vue/stages/sub-category-stage.vue')
+const ProductDetails = () => import(/* webpackChunkName: "ProductDetails" */
+  /* webpackMode: "lazy" */ './vue/stages/product-stage.vue')
+const Contact = () => import(/* webpackChunkName: "Contact" */
+  /* webpackMode: "lazy" */ './vue/stages/contact.vue')
+const ContactUs = () => import(/* webpackChunkName: "ContactUs" */
+  /* webpackMode: "lazy" */ './vue/stages/contactus.vue')
+const Faqs = () => import(/* webpackChunkName: "Faqs" */
+  /* webpackMode: "lazy" */ './vue/stages/faqs.vue')
+const Terms = () => import(/* webpackChunkName: "Terms" */
+  /* webpackMode: "lazy" */ './vue/stages/terms.vue')
 
 const dataProducts = require('./vue/vue-data/products')
 const dataCategories = require('./vue/vue-data/categories')
