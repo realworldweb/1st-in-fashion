@@ -9,7 +9,23 @@
 @import "modules/_jumbo";
 @import "modules/_product-slice";
 @import "modules/_product-tile";
-@import "modules/_product-pane";
 @import "modules/_vue-trans";
+
+
+
+
+/*product details*/
+@import "modules/_product-pane";
+@import "modules/_product-details";
+
+/*contact us*/
+@import "modules/_modal";
+@import "modules/_contactus";
+@import "modules/_faqs";
+@import "modules/_terms";
+
+/*item added to basket*/
 @import "modules/_basket";
+
+/*order confirmed*/
 @import "modules/_order-confirmed";

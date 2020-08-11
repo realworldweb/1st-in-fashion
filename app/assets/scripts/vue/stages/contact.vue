@@ -72,6 +72,3 @@ return this.$route.path
 
 }
 </script>
-<style>
-@import '/assets/styles/contact_us.css'
-</style>
