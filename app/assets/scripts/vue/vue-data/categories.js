@@ -30,12 +30,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "/uploads/baby_dressk001.jpg",
+                    "url": "/uploads/baby_dressk001.webp",
                     "alt": "girls navy white fashion dress 0-3 to 18-24",
                     "caption": "girls navy white fashion dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-03T14:39:51.376Z",
-                "updated_at": "2020-08-04T12:19:34.738Z"
+                "updated_at": "2020-08-11T13:25:47.712Z"
             },
             {
                 "id": 11,
@@ -62,12 +62,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "/uploads/baby_dressk002.jpg",
+                    "url": "/uploads/baby_dressk002.webp",
                     "alt": "girls red navy white fashion dress 0-3 to 18-24",
                     "caption": "girls red navy white fashion dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-03T14:57:49.259Z",
-                "updated_at": "2020-08-04T14:48:37.402Z"
+                "updated_at": "2020-08-11T13:25:28.600Z"
             },
             {
                 "id": 12,
@@ -94,12 +94,12 @@ const category =[
                     }
                 ],
                 "img": {
-                    "url": "/uploads/baby_dressk003.jpg",
+                    "url": "/uploads/baby_dressk003.webp",
                     "alt": "girls navy white polka fashion dress 0-3 to 18-24",
                     "caption": "girls navy white polka fashion dress 0-3 to 18-24"
                 },
                 "created_at": "2020-08-03T15:14:27.132Z",
-                "updated_at": "2020-08-04T14:49:07.264Z"
+                "updated_at": "2020-08-11T13:26:13.356Z"
             },
             {
                 "id": 14,
