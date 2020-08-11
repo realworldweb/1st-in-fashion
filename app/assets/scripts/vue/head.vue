@@ -65,15 +65,6 @@ name: 'Sitenav',
   return { browserHeight: 0, previousScrollY: 0, scrollDirection: null, siteHeader: [], menuContent: [], menuIcon:[], navClasses: [], navLogo: ['svg__logo--dark'], navBtn: ['btn--dark','btn--white'], mobileNav: false, loaded: false }
   
   },
-  created(){
-
- const script = document.createElement('script')
-    script.src =
-      "https://www.paypal.com/sdk/js?client-id=Ab1o3HYYOP8crQG21uyx8EMASXUnQ1sRX6_G3uPcJKxz_3zkIdUag9hOmm1AZV8jLEr3PU0yBWhFSf14&currency=GBP&intent=authorize"
-    document.body.appendChild(script)
-    
-	  
-  },
 props: ['products', 'categories', 'basketcontents', 'baskettotal', 'paypalitems', 'applyhover'],
 watch: {
 '$route' (){
