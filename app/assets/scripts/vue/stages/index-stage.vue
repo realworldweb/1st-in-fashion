@@ -1,7 +1,7 @@
 <template lang="pug">
 <div id="stage" class="stage">
 <div id="jumbo" class="jumbo">
-<img src="/assets/images/baby-clothing.jpg" alt="fashionable childrens clothing" class="jumbo__image"/>
+<img src="/assets/images/baby-clothing.webp" alt="fashionable childrens clothing" class="jumbo__image"/>
 <div class="jumbo__slideshow">
 <div class="jumbo__tagline">
 <p>{{tagline}}</p>
