@@ -1,4 +1,3 @@
-import "lazysizes"
 import '../styles/styles.css'
 
 
@@ -12,7 +11,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Sitenav from './vue/head.vue'
 import Stage from './vue/stages/index-stage.vue'
-import Sitefoot from './vue/footer.vue'
+const Sitefoot = () => import('./vue/footer.vue')
 const Category = () => import('./vue/stages/new-category-stage.vue')
 const Subcategory = () => import('./vue/stages/sub-category-stage.vue')
 const ProductDetails = () => import('./vue/stages/product-stage.vue')

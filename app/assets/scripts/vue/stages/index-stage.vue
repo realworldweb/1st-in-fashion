@@ -22,7 +22,7 @@
 <div class="product-slice__products">
 <div v-for="item in title.products.slice(0-3)"  class="product-slice__slice">
 <router-link tag="a" :to="'/product/'+item.id" class="product-tile">
-<img class="product-tile__img lazyload" :src="'./assets/images'+item.img.url">
+<img class="product-tile__img" :src="'./assets/images'+item.img.url">
 <p class="product-tile__price">&#163;{{item.price}}</p>
 </router-link>
 </div>
