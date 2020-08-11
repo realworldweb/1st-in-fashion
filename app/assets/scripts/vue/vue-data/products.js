@@ -1,5 +1,5 @@
 
-const product = [
+const product =[
     {
         "id": 10,
         "name": "Navy/white Spanish style dress",
@@ -220,12 +220,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk004.jpg",
+            "url": "/uploads/baby_dressk004.webp",
             "alt": "girls navy white fashion dress 0-3 to 18-24",
             "caption": "girls navy white fashion dress 0-3 to 18-24"
         },
         "created_at": "2020-08-03T15:24:31.977Z",
-        "updated_at": "2020-08-04T14:49:32.858Z",
+        "updated_at": "2020-08-11T14:30:53.084Z",
         "sizes": [
             {
                 "id": 10,
@@ -283,12 +283,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_romperk001.jpg",
+            "url": "/uploads/baby_romperk001.webp",
             "alt": "boys white and blue baby romper 0-3 to 18-24",
             "caption": "boys white and blue baby romper 0-3 to 18-24"
         },
         "created_at": "2020-08-03T15:50:27.158Z",
-        "updated_at": "2020-08-04T12:23:42.366Z",
+        "updated_at": "2020-08-11T14:31:20.959Z",
         "sizes": [
             {
                 "id": 1,
@@ -346,12 +346,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk005.jpg",
+            "url": "/uploads/baby_dressk005.webp",
             "alt": "girls summer dress 0-3 to 18-24",
             "caption": "girls summer dress 0-3 to 18-24"
         },
         "created_at": "2020-08-04T12:53:17.172Z",
-        "updated_at": "2020-08-04T14:50:17.315Z",
+        "updated_at": "2020-08-11T14:31:47.735Z",
         "sizes": [
             {
                 "id": 9,
@@ -403,12 +403,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk006.jpg",
+            "url": "/uploads/baby_dressk006.webp",
             "alt": "girls summer dress 0-3 to 18-24",
             "caption": "girls summer dress 0-3 to 18-24"
         },
         "created_at": "2020-08-04T12:57:08.725Z",
-        "updated_at": "2020-08-04T14:50:31.550Z",
+        "updated_at": "2020-08-11T14:32:08.616Z",
         "sizes": [
             {
                 "id": 1,
@@ -460,12 +460,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_romperk002.jpg",
+            "url": "/uploads/baby_romperk002.webp",
             "alt": "boys summer romper 0-3 to 18-24",
             "caption": "boys summer romper 0-3 to 18-24"
         },
         "created_at": "2020-08-04T13:02:00.202Z",
-        "updated_at": "2020-08-04T14:50:47.352Z",
+        "updated_at": "2020-08-11T14:32:25.574Z",
         "sizes": [
             {
                 "id": 2,
@@ -517,12 +517,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_romperk003.jpg",
+            "url": "/uploads/baby_romperk003.webp",
             "alt": "boys summer romper 0-3 to 18-24",
             "caption": "boys summer romper 0-3 to 18-24"
         },
         "created_at": "2020-08-04T13:12:51.698Z",
-        "updated_at": "2020-08-04T14:51:04.384Z",
+        "updated_at": "2020-08-11T14:32:41.408Z",
         "sizes": [
             {
                 "id": 1,
@@ -586,12 +586,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_romperk004.jpg",
+            "url": "/uploads/baby_romperk004.webp",
             "alt": "boys summer romper 0-3 to 18-24",
             "caption": "boys summer romper 0-3 to 18-24"
         },
         "created_at": "2020-08-04T13:17:19.143Z",
-        "updated_at": "2020-08-04T14:51:28.557Z",
+        "updated_at": "2020-08-11T14:32:59.325Z",
         "sizes": [
             {
                 "id": 1,
@@ -655,12 +655,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk007.jpg",
+            "url": "/uploads/baby_dressk007.webp",
             "alt": "girls summer dress 0-3 to 18-24",
             "caption": "girls summer dress 0-3 to 18-24"
         },
         "created_at": "2020-08-04T13:30:25.997Z",
-        "updated_at": "2020-08-04T14:51:58.758Z",
+        "updated_at": "2020-08-11T14:33:24.669Z",
         "sizes": [
             {
                 "id": 8,
@@ -717,12 +717,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk008.jpg",
+            "url": "/uploads/baby_dressk008.webp",
             "alt": "girls summer dress 0-3 to 18-24",
             "caption": "girls summer dress 0-3 to 18-24"
         },
         "created_at": "2020-08-04T13:38:09.797Z",
-        "updated_at": "2020-08-04T14:52:17.945Z",
+        "updated_at": "2020-08-11T14:33:39.733Z",
         "sizes": [
             {
                 "id": 8,
@@ -783,12 +783,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_sailork001.jpg",
+            "url": "/uploads/baby_sailork001.webp",
             "alt": "boys summer sailor 0-3 to 18-24",
             "caption": "boys summer sailor 0-3 to 18-24"
         },
         "created_at": "2020-08-04T14:59:38.406Z",
-        "updated_at": "2020-08-04T14:59:38.406Z",
+        "updated_at": "2020-08-11T14:33:56.422Z",
         "sizes": [
             {
                 "id": 2,
@@ -856,12 +856,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk009.jpg",
+            "url": "/uploads/baby_dressk009.webp",
             "alt": "girls princess dress 0-3 to 18-24",
             "caption": "girls princess dress 0-3 to 18-24"
         },
         "created_at": "2020-08-04T21:42:10.753Z",
-        "updated_at": "2020-08-04T21:42:10.753Z",
+        "updated_at": "2020-08-11T14:34:15.557Z",
         "sizes": [
             {
                 "id": 3,
@@ -919,12 +919,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk010.jpg",
+            "url": "/uploads/baby_dressk010.webp",
             "alt": "girls summer dress 0-3 to 18-24",
             "caption": "girls summer dress 0-3 to 18-24"
         },
         "created_at": "2020-08-04T21:48:34.888Z",
-        "updated_at": "2020-08-04T21:48:34.888Z",
+        "updated_at": "2020-08-11T14:34:38.170Z",
         "sizes": [
             {
                 "id": 10,
@@ -979,12 +979,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dungareek001.jpg",
+            "url": "/uploads/baby_dungareek001.webp",
             "alt": "boys summer dungaree 0-3 to 18-24",
             "caption": "boys summer dungaree 0-3 to 18-24"
         },
         "created_at": "2020-08-04T21:59:42.179Z",
-        "updated_at": "2020-08-04T21:59:42.179Z",
+        "updated_at": "2020-08-11T14:34:54.890Z",
         "sizes": [
             {
                 "id": 2,
@@ -1045,12 +1045,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_shortsetk002.jpg",
+            "url": "/uploads/baby_shortsetk002.webp",
             "alt": "boys summer short set 0-3 to 18-24",
             "caption": "boys summer short set 0-3 to 18-24"
         },
         "created_at": "2020-08-04T22:04:12.889Z",
-        "updated_at": "2020-08-04T22:04:12.889Z",
+        "updated_at": "2020-08-11T14:35:19.052Z",
         "sizes": [
             {
                 "id": 1,
@@ -1117,12 +1117,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_shortsetk001.jpg",
+            "url": "/uploads/baby_shortsetk001.webp",
             "alt": "boys summer short set 0-3 to 18-24",
             "caption": "boys summer short set 0-3 to 18-24"
         },
         "created_at": "2020-08-04T22:27:56.744Z",
-        "updated_at": "2020-08-04T22:29:00.706Z",
+        "updated_at": "2020-08-11T14:35:43.569Z",
         "sizes": [
             {
                 "id": 1,
@@ -1183,12 +1183,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_shortsetk003.jpg",
+            "url": "/uploads/baby_shortsetk003.webp",
             "alt": "boys summer short set 0-3 to 18-24",
             "caption": "boys summer short set 0-3 to 18-24"
         },
         "created_at": "2020-08-04T22:35:44.864Z",
-        "updated_at": "2020-08-04T22:35:44.864Z",
+        "updated_at": "2020-08-11T14:36:01.843Z",
         "sizes": [
             {
                 "id": 1,
@@ -1261,12 +1261,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/baby_dressk011.jpg",
+            "url": "/uploads/baby_dressk011.webp",
             "alt": "girls summer dress 0-3 to 18-24",
             "caption": "girls summer dress 0-3 to 18-24"
         },
         "created_at": "2020-08-04T22:36:55.816Z",
-        "updated_at": "2020-08-04T22:45:50.868Z",
+        "updated_at": "2020-08-11T14:36:27.147Z",
         "sizes": [
             {
                 "id": 2,
@@ -1358,12 +1358,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/boys_formalsuitk001.jpg",
+            "url": "/uploads/boys_formalsuitk001.webp",
             "alt": "boys formal 4pc 2-3 to 5-6",
             "caption": "boys formal 4pc 2-3 to 5-6"
         },
         "created_at": "2020-08-05T09:10:08.933Z",
-        "updated_at": "2020-08-05T14:19:15.857Z",
+        "updated_at": "2020-08-11T14:36:57.063Z",
         "sizes": [
             {
                 "id": 12,
@@ -1438,12 +1438,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/boys_formalsuitk002.jpg",
+            "url": "/uploads/boys_formalsuitk002.webp",
             "alt": "boys 4pc suit 0-3 to 18-24",
             "caption": "boys 4pc suit 0-3 to 18-24"
         },
         "created_at": "2020-08-05T14:02:59.033Z",
-        "updated_at": "2020-08-05T16:45:04.695Z",
+        "updated_at": "2020-08-11T14:37:29.082Z",
         "sizes": [
             {
                 "id": 12,
@@ -1492,12 +1492,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/boys_shortsetk001.jpg",
+            "url": "/uploads/boys_shortsetk001.webp",
             "alt": "boys summer romper 0-3 to 18-24",
             "caption": "boys summer romper 0-3 to 18-24"
         },
         "created_at": "2020-08-05T17:20:46.643Z",
-        "updated_at": "2020-08-05T17:31:36.211Z",
+        "updated_at": "2020-08-11T14:37:45.280Z",
         "sizes": [
             {
                 "id": 14,
@@ -1544,12 +1544,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/girls_dressk001.jpg",
+            "url": "/uploads/girls_dressk001.webp",
             "alt": "boys summer romper 0-3 to 18-24",
             "caption": "boys summer romper 0-3 to 18-24"
         },
         "created_at": "2020-08-05T17:38:51.994Z",
-        "updated_at": "2020-08-05T17:38:51.994Z",
+        "updated_at": "2020-08-11T14:38:05.021Z",
         "sizes": [
             {
                 "id": 11,
@@ -1602,12 +1602,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/girls_dressk002.jpg",
+            "url": "/uploads/girls_dressk002.webp",
             "alt": "girls dress 2-3  to 6-7 ",
             "caption": "girls dress 2-3 to 6-7"
         },
         "created_at": "2020-08-05T17:42:17.539Z",
-        "updated_at": "2020-08-05T17:42:45.790Z",
+        "updated_at": "2020-08-11T14:38:25.495Z",
         "sizes": [
             {
                 "id": 11,
@@ -1662,12 +1662,12 @@ const product = [
             }
         ],
         "img": {
-            "url": "/uploads/girls_dressk004.jpg",
+            "url": "/uploads/girls_dressk004.webp",
             "alt": "girls summer dress 0-3 to 18-24",
             "caption": "girls summer dress 0-3 to 18-24"
         },
         "created_at": "2020-08-10T16:31:09.700Z",
-        "updated_at": "2020-08-10T16:31:09.700Z",
+        "updated_at": "2020-08-11T14:38:55.152Z",
         "sizes": [
             {
                 "id": 1,
