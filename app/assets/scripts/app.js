@@ -1,5 +1,5 @@
 import '../styles/styles.css'
-
+import Axios from 'axios'
 
 
 
@@ -12,10 +12,10 @@ import VueRouter from 'vue-router'
 import Sitenav from './vue/head.vue'
 import Stage from './vue/stages/index-stage.vue'
 const Sitefoot = () => import( /* webpackChunkName: "SiteFoot" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   /* webpackPreload: true */
   './vue/footer.vue')
 const Category = () => import( /* webpackChunkName: "Category" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   /* webpackPreload: true */
   './vue/stages/new-category-stage.vue')
 const Subcategory = () => import(/* webpackChunkName: "Subcategory" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */ './vue/stages/sub-category-stage.vue')
@@ -30,9 +30,7 @@ const Faqs = () => import(/* webpackChunkName: "Faqs" */
 const Terms = () => import(/* webpackChunkName: "Terms" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */ './vue/stages/terms.vue')
 
-const dataProducts = require('./vue/vue-data/products')
-const dataCategories = require('./vue/vue-data/categories')
-const dataSubcategories = require('./vue/vue-data/subcategories')
+
 
 
 
@@ -99,7 +97,24 @@ new Vue({
 	router,
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
-  data:{ categories: dataCategories.category, products: dataProducts.product, subcategories: dataSubcategories.subcategory, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
+  data:{ categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
+  created: function (){
+	  Axios.get('assets/scripts/vue/vue-data/categories.js').then( response => {
+		  
+		 this.categories = response.data
+	  })
+	  	  Axios.get('assets/scripts/vue/vue-data/products.js').then( response => {
+			  
+		 this.products = response.data
+	  })
+	  	  Axios.get('assets/scripts/vue/vue-data/subcategories.js').then( response => {
+			
+		 this.subcategories = response.data
+		
+		 
+	  })
+	  
+  },
  methods: {
 	  finalTotal(){
 		  

@@ -1,4 +1,4 @@
-const subcategory = [
+[
     {
         "id": 1,
         "subCategory": "baby boys formal",
@@ -1117,8 +1117,3 @@ const subcategory = [
         ]
     }
 ]
-
-module.exports = {
-	subcategory : subcategory
-	
-}

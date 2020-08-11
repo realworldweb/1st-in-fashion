@@ -1,4 +1,4 @@
-const category =[
+[
     {
         "id": 1,
         "category": "baby",
@@ -942,9 +942,3 @@ const category =[
     }
 ]
 
-module.exports = {
-	
-	category : category
-
-	
-}

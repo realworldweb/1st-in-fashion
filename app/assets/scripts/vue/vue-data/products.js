@@ -1,5 +1,5 @@
 
-const product =[
+[
     {
         "id": 10,
         "name": "Navy/white Spanish style dress",
@@ -1708,9 +1708,3 @@ const product =[
     }
 ]
 
-module.exports = {
-	
-	product: product
-
-	
-}
