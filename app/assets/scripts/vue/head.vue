@@ -67,13 +67,12 @@ name: 'Sitenav',
   
   },
   created(){
-  if(this.loaded === false){
+
  const script = document.createElement('script')
     script.src =
       "https://www.paypal.com/sdk/js?client-id=Ab1o3HYYOP8crQG21uyx8EMASXUnQ1sRX6_G3uPcJKxz_3zkIdUag9hOmm1AZV8jLEr3PU0yBWhFSf14&currency=GBP&intent=authorize"
-	  script.addEventListener('load', this.setLoaded)
     document.body.appendChild(script)
-    }
+    
 	  
   },
 props: ['products', 'categories', 'basketcontents', 'baskettotal', 'paypalitems', 'applyhover'],
@@ -83,13 +82,18 @@ watch: {
 this.navDisplayClose()
  
 
+},
+'basketcontents' (){
+
+this.setLoaded()
+
 }
 
 },
 
 methods: {
 	setLoaded(){
-  this.loaded = true
+	this.loaded = true
 	  paypal
         .Buttons({
           createOrder: (data, actions) => {
@@ -263,7 +267,8 @@ onShippingChange: (data, actions) => {
           }
         })
         .render(this.$refs.paypal)
-		},  
+	
+	},
 
 navDisplay() {
 if (this.mobileNav === false){

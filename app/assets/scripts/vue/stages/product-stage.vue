@@ -342,6 +342,4 @@ closeorder(e){
   }
 
 </script>
-<style>
-@import '/assets/styles/product_details.css'
-</style>
+
