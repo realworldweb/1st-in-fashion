@@ -4,7 +4,7 @@ const instance = Axios.create({
  headers: {
          
       'Access-Control-Allow-Origin': '*'
-    }
+    },
 })
 
 
