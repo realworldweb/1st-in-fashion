@@ -103,7 +103,7 @@ new Vue({
 		  
 		 this.categories = response.data
 	  })
-	  	  Axios.get('/vue/vue-data/products.js'}).then( response => {
+	  	  Axios.get('/vue/vue-data/products.js').then( response => {
 			  
 		 this.products = response.data
 	  })
