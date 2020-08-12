@@ -104,7 +104,17 @@ new Vue({
  headers: {
    'Access-Control-Allow-Origin' : '*'
 	}}).then( response =>{
-    this.products = response.data})		
+    this.products = response.data})	
+Axios.get('https://competent-boyd-4461dd.netlify.app/categories.js', {
+ headers: {
+   'Access-Control-Allow-Origin' : '*'
+	}}).then( response =>{
+    this.categories = response.data})	
+Axios.get('https://competent-boyd-4461dd.netlify.app/subcategories.js', {
+ headers: {
+   'Access-Control-Allow-Origin' : '*'
+	}}).then( response =>{
+    this.subcategories = response.data})		
 	  
 	  
 	  
