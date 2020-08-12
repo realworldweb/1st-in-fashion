@@ -1,5 +1,5 @@
-# a path:
+
 /*
-  # headers for that path:
+
   Access-Control-Allow-Origin : *
   
