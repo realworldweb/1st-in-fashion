@@ -108,6 +108,12 @@ Axios.get('https://competent-boyd-4461dd.netlify.app/products.js', {
 	}}).then( response =>{
     this.subcategories = response.data})	
   },
+  mounted: function() {
+	  const checkout = document.createElement('script')
+	  checkout.src = 'https://www.paypal.com/sdk/js?client-id=Ab1o3HYYOP8crQG21uyx8EMASXUnQ1sRX6_G3uPcJKxz_3zkIdUag9hOmm1AZV8jLEr3PU0yBWhFSf14&currency=GBP&intent=authorize'
+	  document.body.appendChild(checkout)
+	  
+  },
  methods: {
 	  finalTotal(){
 		  
