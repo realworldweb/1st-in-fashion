@@ -17,7 +17,7 @@
 <nav class="primary-nav primary-nav--pull-right">
 <ul>
 <li><router-link tag="a" to="/" name="kids_home" id="fashion_home">home<span class="caret">&nbsp;</span></router-link></li>
-<li v-for="item in categories"><router-link tag="a" :to="'/category/'+item.category" id="fashion categories" :class="navClasses">{{item.category}}</router-link></li>
+<li v-for="item in categories"><router-link tag="a" :to="'/category/'+item.category" :id=`${{item.category}} fashion clothing` :class="navClasses">{{item.category}}</router-link></li>
 </ul>
 </nav>
 </div>
