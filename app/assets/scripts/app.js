@@ -115,6 +115,8 @@ Axios.get('https://competent-boyd-4461dd.netlify.app/products.js', {
 	  
   },
  methods: {
+	 
+	 
 	  finalTotal(){
 		  
          
