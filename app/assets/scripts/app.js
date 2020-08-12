@@ -5,10 +5,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Axios from 'axios'
 
-const productData = require('./vue/vue-data/products.js')
-const categoriesData = require('./vue/vue-data/categories.js')
-const subcategoriesData = require('./vue/vue-data/subcategories.js')
-
 const Sitenav = () => import( /* webpackChunkName: "Sitenav" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/head.vue')
 const Stage = () => import(/* webpackChunkName: "Stage" */
