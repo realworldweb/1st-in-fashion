@@ -99,32 +99,15 @@ new Vue({
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{  categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
-  created: function (){
-	  Axios.get({ URL: 'assets/scripts/vue/vue-data/categories.js',
-	  headers: {
-         
-      'Access-Control-Allow-Origin': '*'
-	  }}).then( response => {
-		  
-		 this.categories = response.data
-	  })
-	  	 Axios.get({ URL: 'assets/scripts/vue/vue-data/products.js',
-		  headers: {
-         
-      'Access-Control-Allow-Origin': '*'
-		 }}).then( response => {
-			  
-		 this.products = response.data
-	  })
-	  	 Axios.get ({ URL: 'assets/scripts/vue/vue-data/subcategories.js', headers: {
-         
-      'Access-Control-Allow-Origin': '*'
-		 }}).then( response => {
-			
-		 this.subcategories = response.data
-		
-		 
-	  })
+  created: function() {
+	Axios.get('https://competent-boyd-4461dd.netlify.app/products.js', {
+ headers: {
+   'Access-Control-Allow-Origin' : '*'
+	}}).then( response =>{
+    this.products = response.data})		
+	  
+	  
+	  
 	  
   },
  methods: {
