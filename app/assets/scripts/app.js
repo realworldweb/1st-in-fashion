@@ -1,18 +1,13 @@
 import '../styles/styles.css'
-import Axios from 'axios'
 
-
-
-
-
-
-	  
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 const productData = require('./vue/vue-data/products.js')
 const categoriesData = require('./vue/vue-data/categories.js')
 const subcategoriesData = require('./vue/vue-data/subcategories.js')
+
 const Sitenav = () => import( /* webpackChunkName: "Sitenav" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/head.vue')
 const Stage = () => import(/* webpackChunkName: "Stage" */
@@ -35,11 +30,6 @@ const Faqs = () => import(/* webpackChunkName: "Faqs" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/faqs.vue')
 const Terms = () => import(/* webpackChunkName: "Terms" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/terms.vue')
-
-
-console.log(productData)
-
-
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
