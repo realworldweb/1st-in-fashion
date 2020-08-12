@@ -51,7 +51,10 @@ let cssConfig = {
 		  })
 
 let config = {
-	entry: './app/assets/scripts/app.js',
+	entry: {
+	main: './app/assets/scripts/app.js',
+	data: './app/assets/scripts/data.js'
+	},
 	plugins: pages,
 	module: {
     rules: [
@@ -84,7 +87,7 @@ if (currentTask == "dev"){
 	)
 	cssConfig.use.unshift('style-loader')
 	config.output =  {
-    filename: 'bundled.js',
+    filename: '[name].bundled.js',
     path: path.resolve(__dirname, 'app'),
 	publicPath: ASSET_PATH
   },
