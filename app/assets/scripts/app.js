@@ -3,6 +3,7 @@ import '../styles/styles.css'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Axios from 'axios'
 
 const productData = require('./vue/vue-data/products.js')
 const categoriesData = require('./vue/vue-data/categories.js')
