@@ -16,7 +16,7 @@ const Category = () => import( /* webpackChunkName: "Category" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */   
   './vue/stages/new-category-stage.vue')
 const Subcategory = () => import(/* webpackChunkName: "Subcategory" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/sub-category-stage.vue')
+  /* webpackMode: "lazy" */   './vue/stages/sub-category-stage.vue')
 const ProductDetails = () => import(/* webpackChunkName: "ProductDetails" */
   /* webpackMode: "lazy" */  /* webpackPrefetch: true */ './vue/stages/product-stage.vue')
 const Contact = () => import(/* webpackChunkName: "Contact" */
