@@ -1,6 +1,6 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-
+this.$axios.defaults.baseUrl = 'https://localhost:8080/assets/scripts"
 
 
 
@@ -99,15 +99,15 @@ new Vue({
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{ categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
   created: function (){
-	  Axios.get('/vue/vue-data/categories.js', { baseUrl: 'https://127.0.0.1/assets/scripts'}).then( response => {
+	  Axios.get('/vue/vue-data/categories.js').then( response => {
 		  
 		 this.categories = response.data
 	  })
-	  	  Axios.get('/vue/vue-data/products.js', { baseUrl: 'https://127.0.0.1/assets/scripts'}).then( response => {
+	  	  Axios.get('/vue/vue-data/products.js'}).then( response => {
 			  
 		 this.products = response.data
 	  })
-	  	  Axios.get('/vue/vue-data/subcategories.js', { baseUrl: 'https://127.0.0.1/assets/scripts'}).then( response => {
+	  	  Axios.get('/vue/vue-data/subcategories.js').then( response => {
 			
 		 this.subcategories = response.data
 		
