@@ -10,7 +10,7 @@ import Axios from 'axios'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Sitenav = () => import( /* webpackChunkName: "SiteFoot" */
+const Sitenav = () => import( /* webpackChunkName: "SiteFoot" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/head.vue')
 const Stage = () => import(/* webpackChunkName: "SiteFoot" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/stages/index-stage.vue')
