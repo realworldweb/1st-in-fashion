@@ -11,13 +11,21 @@
 </template>
 
 <script>
-const data = require('../vue-data/contactdata')
+
 
 export default {
 
   name: 'Faqs',
   data(){ 
-  return { faqs: data.dataFaqs }
+  return { faqs: [] }
+},
+created() {
+Axios.get('https://competent-boyd-4461dd.netlify.app/faqs.js', {
+ headers: {
+   'Access-Control-Allow-Origin' : '*'
+	}}).then( response =>{
+    this.faqs = response.data})
+
 }
 
 

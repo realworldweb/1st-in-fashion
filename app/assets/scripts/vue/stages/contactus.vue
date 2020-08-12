@@ -41,8 +41,6 @@
 </template>
 
 <script>
-const data = require('../vue-data/contactdata')
-import Axios from 'axios'
 let valid
 let postInfo = {}
 let postJson
@@ -51,7 +49,14 @@ export default {
 
   name: 'ContactUs',
   data(){ 
-  return {emailContact: "", phoneContact: "", emailError: [], phoneError: [], phoneErrorMsg: ['display-none'], emailErrorMsg: ['display-none'], phoneMsg: "", emailMsg: "", contactInfo: data.dataContactInfo }
+  return {emailContact: "", phoneContact: "", emailError: [], phoneError: [], phoneErrorMsg: ['display-none'], emailErrorMsg: ['display-none'], phoneMsg: "", emailMsg: "", contactInfo: [] }
+},
+created() {
+Axios.get('https://competent-boyd-4461dd.netlify.app/contact.js', {
+ headers: {
+   'Access-Control-Allow-Origin' : '*'
+	}}).then( response =>{
+    this.contactInfo = response.data})
 },
 methods: {
 
