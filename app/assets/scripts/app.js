@@ -18,7 +18,7 @@ const Sitefoot = () => import( /* webpackChunkName: "SiteFoot" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */   
   './vue/footer.vue')
 const Category = () => import( /* webpackChunkName: "Category" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   /
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   
   './vue/stages/new-category-stage.vue')
 const Subcategory = () => import(/* webpackChunkName: "Subcategory" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/sub-category-stage.vue')
