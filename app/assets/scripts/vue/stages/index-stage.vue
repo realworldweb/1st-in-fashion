@@ -2,16 +2,13 @@
 <div id="stage" class="stage">
 <div id="jumbo" class="jumbo">
 <picture>
-      
-	  <source srcset="/assets/images/baby-clothing.webp 1300w" media="(min-width: 800px)">
-      <img srcset="/assets/images/baby-clothing--small.webp 500w" alt="fashionable childrens clothing" class="fashionable childrens clothing">
-    </picture>
-<img srcset="" alt="fashionable childrens clothing" class="fashionable childrens clothing"/>
+<source srcset="/assets/images/baby-clothing.webp 1300w" media="(min-width: 800px)">
+<img srcset="/assets/images/baby-clothing--small.webp 500w" alt="fashionable childrens clothing" class="jumbo__image">
+</picture>
 <div class="jumbo__slideshow">
 <div class="jumbo__tagline">
 <p>{{tagline}}</p>
 </div>
-
 <transition-group name="fade" mode="in-out" tag="div" class="jumbo__slide"  appear>
 <router-link tag="a" :to="'/product/'+products[imgid].id" :key="products[imgid].id+'router'">
 <img class="jumbo__slide-img" v-bind:src="'./assets/images'+products[imgid].img.url" :onload="imgslider()" :key="products[imgid].id">
