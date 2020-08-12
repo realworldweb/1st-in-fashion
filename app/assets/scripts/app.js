@@ -1,23 +1,12 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-const products = Axios.create({ URL: '@/assets/scripts/vue/vue-data/products.js',
+const instance = Axios.create({ 
  headers: {
          
       'Access-Control-Allow-Origin': '*'
     }
 })
-const categories = Axios.create({ URL: '@/assets/scripts/vue/vue-data/categories.js',
- headers: {
-         
-      'Access-Control-Allow-Origin': '*'
-    }
-})
-const subcategories = Axios.create({ URL: '@/assets/scripts/vue/vue-data/subcategories.js',
- headers: {
-         
-      'Access-Control-Allow-Origin': '*'
-    }
-})
+
 
 
 
@@ -114,17 +103,17 @@ new Vue({
 	router,
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
-  data:{ categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
+  data:{ publicPath: process.env.BASE_URL, categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
   created: function (){
-	  categories.get().then( response => {
+	  instance.get(URL: `${publicPath}assets/scripts/vue/vue-data/categories.js`).then( response => {
 		  
 		 this.categories = response.data
 	  })
-	  	  products.get().then( response => {
+	  	  instance.get(URL: `${publicPath}assets/scripts/vue/vue-data/products.js`).then( response => {
 			  
 		 this.products = response.data
 	  })
-	  	  subcategories.get().then( response => {
+	  	 instance.get(URL: `${publicPath}assets/scripts/vue/vue-data/subcategories.js`).then( response => {
 			
 		 this.subcategories = response.data
 		
