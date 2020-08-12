@@ -1,6 +1,6 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-const instance = Axios.create({ baseURL: 'https://www.1stinfashion.co.uk',
+const instance = Axios.create({ baseURL: 'https://5f3342d4956d4b000763a86d--eager-colden-d09442.netlify.app',
  headers: {
          
       'Access-Control-Allow-Origin': '*'
