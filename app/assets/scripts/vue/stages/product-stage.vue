@@ -57,6 +57,7 @@ export default {
   created(){
   
   this.loadproduct
+  
  
 	  
   
