@@ -10,7 +10,7 @@ const Sitenav = () => import( /* webpackChunkName: "Sitenav" */
 const Stage = () => import(/* webpackChunkName: "Stage" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/stages/index-stage.vue')
 const Sitefoot = () => import( /* webpackChunkName: "SiteFoot" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   
+  /* webpackMode: "lazy" */   
   './vue/footer.vue')
 const Category = () => import( /* webpackChunkName: "Category" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */   
@@ -20,13 +20,13 @@ const Subcategory = () => import(/* webpackChunkName: "Subcategory" */
 const ProductDetails = () => import(/* webpackChunkName: "ProductDetails" */
   /* webpackMode: "lazy" */  /* webpackPrefetch: true */ './vue/stages/product-stage.vue')
 const Contact = () => import(/* webpackChunkName: "Contact" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/contact.vue')
+  /* webpackMode: "lazy" */ './vue/stages/contact.vue')
 const ContactUs = () => import(/* webpackChunkName: "ContactUs" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/contactus.vue')
+  /* webpackMode: "lazy" */   './vue/stages/contactus.vue')
 const Faqs = () => import(/* webpackChunkName: "Faqs" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/faqs.vue')
+  /* webpackMode: "lazy" */   './vue/stages/faqs.vue')
 const Terms = () => import(/* webpackChunkName: "Terms" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/terms.vue')
+  /* webpackMode: "lazy" */ './vue/stages/terms.vue')
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
