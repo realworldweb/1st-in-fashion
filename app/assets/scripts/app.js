@@ -1,6 +1,6 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-this.$axios.defaults.baseUrl = 'https://localhost:8080/assets/scripts'
+Axios.defaults.baseUrl = 'https://localhost:8080/assets/scripts'
 
 
 
