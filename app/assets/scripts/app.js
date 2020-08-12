@@ -1,6 +1,6 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-const instance = Axios.create({ baseURL: 'https://www.1stinfashion.co.uk',
+const instance = Axios.create({ baseURL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data',
  headers: {
          
       'Access-Control-Allow-Origin': '*'
@@ -104,15 +104,15 @@ new Vue({
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{ categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
   created: function (){
-	  instance.get('/assets/scripts/vue/vue-data/categories.js').then( response => {
+	  instance.get('/categories.js').then( response => {
 		  
 		 this.categories = response.data
 	  })
-	  	  instance.get('/assets/scripts/vue/vue-data/products.js').then( response => {
+	  	  instance.get('/products.js').then( response => {
 			  
 		 this.products = response.data
 	  })
-	  	  instance.get('/assets/scripts/vue/vue-data/subcategories.js').then( response => {
+	  	  instance.get('/subcategories.js').then( response => {
 			
 		 this.subcategories = response.data
 		
