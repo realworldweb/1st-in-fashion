@@ -1,5 +1,4 @@
-
-[
+ export let products = [
     {
         "id": 10,
         "name": "Navy/white Spanish style dress",
@@ -1708,3 +1707,7 @@
     }
 ]
 
+
+
+
+	

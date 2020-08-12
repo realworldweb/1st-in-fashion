@@ -10,9 +10,15 @@ import Axios from 'axios'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-const Sitenav = () => import( /* webpackChunkName: "SiteFoot" */
+const productData = require(/* webpackChunkName: "product" */
+  /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/vue-data/products.js')
+const categoriesData = require(/* webpackChunkName: "categories" */
+  /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/vue-data/categories.js')
+const subcategoriesData = require(/* webpackChunkName: "subcategories" */
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/vue-data/subcategories.js')
+const Sitenav = () => import( /* webpackChunkName: "Sitenav" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/head.vue')
-const Stage = () => import(/* webpackChunkName: "SiteFoot" */
+const Stage = () => import(/* webpackChunkName: "Stage" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/stages/index-stage.vue')
 const Sitefoot = () => import( /* webpackChunkName: "SiteFoot" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */   
@@ -34,7 +40,7 @@ const Terms = () => import(/* webpackChunkName: "Terms" */
   /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/terms.vue')
 
 
-
+console.log(productData)
 
 
 
@@ -100,28 +106,7 @@ new Vue({
 	router,
   el: '#app',
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
-  data:{  categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
-  created: function() {
-	Axios.get('https://competent-boyd-4461dd.netlify.app/products.js', {
- headers: {
-   'Access-Control-Allow-Origin' : '*'
-	}}).then( response =>{
-    this.products = response.data})	
-Axios.get('https://competent-boyd-4461dd.netlify.app/categories.js', {
- headers: {
-   'Access-Control-Allow-Origin' : '*'
-	}}).then( response =>{
-    this.categories = response.data})	
-Axios.get('https://competent-boyd-4461dd.netlify.app/subcategories.js', {
- headers: {
-   'Access-Control-Allow-Origin' : '*'
-	}}).then( response =>{
-    this.subcategories = response.data})		
-	  
-	  
-	  
-	  
-  },
+  data:{  categories: categoriesData.categories, products: productData.products, subcategories: subcategoriesData.subcategories, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
  methods: {
 	  finalTotal(){
 		  

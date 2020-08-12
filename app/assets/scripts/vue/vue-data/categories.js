@@ -1,4 +1,4 @@
-[
+ export let categories = [
     {
         "id": 1,
         "category": "baby",
@@ -942,3 +942,8 @@
     }
 ]
 
+
+
+
+
+	

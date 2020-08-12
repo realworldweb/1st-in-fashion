@@ -1,4 +1,4 @@
-[
+export let subCategories = [
     {
         "id": 1,
         "subCategory": "baby boys formal",
@@ -1117,3 +1117,7 @@
         ]
     }
 ]
+
+
+
+	
