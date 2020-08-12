@@ -1,6 +1,11 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-const instance = Axios.create({baseURL: 'http://1stinfashion.co.uk'});
+const instance = Axios.create({ baseURL: 'https://1stinfashion.co.uk',
+ headers: {
+         
+      'Access-Control-Allow-Origin': '*'
+    }
+});
 
 
 
