@@ -1,18 +1,18 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-const products = Axios.create({ URL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/products.js',
+const products = Axios.create({ URL: 'app/assets/scripts/vue/vue-data/products.js',
  headers: {
          
       'Access-Control-Allow-Origin': '*'
     }
 })
-const categories = Axios.create({ URL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/categories.js',
+const categories = Axios.create({ URL: 'app/assets/scripts/vue/vue-data/categories.js',
  headers: {
          
       'Access-Control-Allow-Origin': '*'
     }
 })
-const subcategories = Axios.create({ URL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/subcategories.js',
+const subcategories = Axios.create({ URL: 'app/assets/scripts/vue/vue-data/subcategories.js',
  headers: {
          
       'Access-Control-Allow-Origin': '*'
