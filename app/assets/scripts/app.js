@@ -1,11 +1,23 @@
 import '../styles/styles.css'
 import Axios from 'axios'
-const instance = Axios.create({ baseURL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data',
+const products = Axios.create({ URL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/products.js',
  headers: {
          
       'Access-Control-Allow-Origin': '*'
     }
-});
+})
+const categories = Axios.create({ URL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/categories.js',
+ headers: {
+         
+      'Access-Control-Allow-Origin': '*'
+    }
+})
+const subcategories = Axios.create({ URL: 'https://www.1stinfashion.co.uk/assets/scripts/vue/vue-data/subcategories.js',
+ headers: {
+         
+      'Access-Control-Allow-Origin': '*'
+    }
+})
 
 
 
@@ -104,15 +116,15 @@ new Vue({
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{ categories: null, products: null, subcategories: null, basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
   created: function (){
-	  instance.get('/categories.js').then( response => {
+	  categories.get().then( response => {
 		  
 		 this.categories = response.data
 	  })
-	  	  instance.get('/products.js').then( response => {
+	  	  products.get().then( response => {
 			  
 		 this.products = response.data
 	  })
-	  	  instance.get('/subcategories.js').then( response => {
+	  	  subcategories.get().then( response => {
 			
 		 this.subcategories = response.data
 		
