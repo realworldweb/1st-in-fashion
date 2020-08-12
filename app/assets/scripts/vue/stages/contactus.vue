@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import Axios from 'axios'
 let valid
 let postInfo = {}
 let postJson
