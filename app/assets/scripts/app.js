@@ -10,26 +10,28 @@ import Axios from 'axios'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Sitenav from './vue/head.vue'
-import Stage from './vue/stages/index-stage.vue'
+import Sitenav = () => import( /* webpackChunkName: "SiteFoot" */
+  /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/head.vue')
+const Stage = () => import(/* webpackChunkName: "SiteFoot" */
+  /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/stages/index-stage.vue')
 const Sitefoot = () => import( /* webpackChunkName: "SiteFoot" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   /* webpackPreload: true */
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   
   './vue/footer.vue')
 const Category = () => import( /* webpackChunkName: "Category" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   /* webpackPreload: true */
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */   /
   './vue/stages/new-category-stage.vue')
 const Subcategory = () => import(/* webpackChunkName: "Subcategory" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */ './vue/stages/sub-category-stage.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/sub-category-stage.vue')
 const ProductDetails = () => import(/* webpackChunkName: "ProductDetails" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */ './vue/stages/product-stage.vue')
+  /* webpackMode: "lazy" */  /* webpackPrefetch: true */ './vue/stages/product-stage.vue')
 const Contact = () => import(/* webpackChunkName: "Contact" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */'./vue/stages/contact.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ './vue/stages/contact.vue')
 const ContactUs = () => import(/* webpackChunkName: "ContactUs" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */ './vue/stages/contactus.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/contactus.vue')
 const Faqs = () => import(/* webpackChunkName: "Faqs" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */ './vue/stages/faqs.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/faqs.vue')
 const Terms = () => import(/* webpackChunkName: "Terms" */
-  /* webpackMode: "lazy" */ /* webpackPrefetch: true */ /* webpackPreload: true */ './vue/stages/terms.vue')
+  /* webpackMode: "lazy" */ /* webpackPrefetch: true */  './vue/stages/terms.vue')
 
 
 
