@@ -143,7 +143,7 @@ compileform(e){
 },
 sendrequest(){
 	console.log(postJson)
-	Axios.post('/.netlify/functions/send-email', postJson ).then(() => {
+	this.$http.post('/.netlify/functions/send-email', postJson ).then(() => {
    this.success()
     }).catch( console.log('something went wrong'))
 	
