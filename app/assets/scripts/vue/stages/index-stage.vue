@@ -10,7 +10,7 @@
 <p>{{tagline}}</p>
 </div>
 <transition-group name="fade" mode="in-out" tag="div" class="jumbo__slide"  appear>
-<router-link tag="a" :to="'/product/'+products[imgid].id" :key="products[imgid].id+'router'">
+<router-link tag="a" name="products[imgid].id+' kids clothing'" :to="'/product/'+products[imgid].id" :key="products[imgid].id+'router'">
 <img class="jumbo__slide-img" v-bind:src="'./assets/images'+products[imgid].img.url" :onload="imgslider()" :key="products[imgid].id" alt="products[imgid].img.alt">
 </router-link>
 <p class="jumbo__slide-price" :key="imgid">&#163;{{products[imgid].price}}</p>
