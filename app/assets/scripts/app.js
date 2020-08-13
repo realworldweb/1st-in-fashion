@@ -4,7 +4,7 @@ import '../styles/styles.css'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Axios from 'axios'
-vue.prototype.$http = Axios
+Vue.prototype.$http = Axios
 
 const Sitenav = () => import( /* webpackChunkName: "Sitenav" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/head.vue')
