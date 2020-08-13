@@ -11,7 +11,7 @@
 </div>
 <transition-group name="fade" mode="in-out" tag="div" class="jumbo__slide"  appear>
 <router-link tag="a" :to="'/product/'+products[imgid].id" :key="products[imgid].id+'router'">
-<img class="jumbo__slide-img" v-bind:src="'./assets/images'+products[imgid].img.url" :onload="imgslider()" :key="products[imgid].id">
+<img class="jumbo__slide-img" v-bind:src="'./assets/images'+products[imgid].img.url" :onload="imgslider()" :key="products[imgid].id" alt="products[imgid].img.alt">
 </router-link>
 <p class="jumbo__slide-price" :key="imgid">&#163;{{products[imgid].price}}</p>
 </transition-group>
@@ -24,7 +24,7 @@
 <div class="product-slice__products">
 <div v-for="item in title.products.slice(0-3)"  class="product-slice__slice">
 <router-link tag="a" :to="'/product/'+item.id" class="product-tile">
-<img class="product-tile__img" :src="'./assets/images'+item.img.url">
+<img class="product-tile__img" :src="'./assets/images'+item.img.url" :alt="item.img.alt">
 <p class="product-tile__price">&#163;{{item.price}}</p>
 </router-link>
 </div>
