@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Axios from 'axios'
+
 
 export default {
 
@@ -20,7 +20,7 @@ export default {
   return { faqs: [] }
 },
 created() {
-Axios.get('https://competent-boyd-4461dd.netlify.app/faqs.js', {
+this.$http.get('https://competent-boyd-4461dd.netlify.app/faqs.js', {
  headers: {
    'Access-Control-Allow-Origin' : '*'
 	}}).then( response =>{

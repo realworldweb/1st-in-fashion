@@ -4,6 +4,7 @@ import '../styles/styles.css'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Axios from 'axios'
+vue.prototype.$http = Axios
 
 const Sitenav = () => import( /* webpackChunkName: "Sitenav" */
   /* webpackMode: "lazy" */ /* webpackPreload: true */ './vue/head.vue')
@@ -92,17 +93,17 @@ new Vue({
   components: { 'sitenav': Sitenav, 'stage': Stage, 'sitefoot': Sitefoot},
   data:{  categories: [], products: [], subcategories: [], basketcontents: [], baskettotal: null, paypalitems: [], applyhover: []},
   created: function() {
-Axios.get('https://competent-boyd-4461dd.netlify.app/products.js', {
+this.$http.get('https://competent-boyd-4461dd.netlify.app/products.js', {
  headers: {
    'Access-Control-Allow-Origin' : '*'
 	}}).then( response =>{
     this.products = response.data})	
-	Axios.get('https://competent-boyd-4461dd.netlify.app/categories.js', {
+	this.$http.get('https://competent-boyd-4461dd.netlify.app/categories.js', {
  headers: {
    'Access-Control-Allow-Origin' : '*'
 	}}).then( response =>{
     this.categories = response.data})	
-	Axios.get('https://competent-boyd-4461dd.netlify.app/subcategories.js', {
+	this.$http.get('https://competent-boyd-4461dd.netlify.app/subcategories.js', {
  headers: {
    'Access-Control-Allow-Origin' : '*'
 	}}).then( response =>{
