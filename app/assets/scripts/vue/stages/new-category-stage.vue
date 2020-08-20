@@ -43,6 +43,10 @@ export default {
   
   
   }
+  else{
+  this.nextstyle = 'product-pane__next product-pane__next--hidden'
+  
+  }
   
   },
   
