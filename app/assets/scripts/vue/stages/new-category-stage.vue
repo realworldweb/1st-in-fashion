@@ -3,6 +3,7 @@
 <div class="product-pane" v-for="item  in categories" v-if="item.category === $route.params.id">
 <p class="product-pane__title">{{$route.params.id}}</p>
 <div class="product-pane__products">
+<input type="hidden" id="total" :value="total = item.products.length" :load="pages(item.products.length)">
 <router-link tag="a" class="product-tile" :key="product.id" v-for="(product, index) in item.products" v-if="index < pagelimit && index >= currentitem" :to="'/product/'+product.id">
 <img class="product-tile__img lazyload" :src="'/./assets/images'+product.img.url">
 <p class="product-tile__price">&#163;{{product.price}}</p>
@@ -30,25 +31,39 @@
 export default {
 
   name: 'SubCategory',
-  data() { return { pagelimit: 12, currentitem: 0, prevstyle: 'product-pane__prev product-pane__prev--hidden' , nextstyle: 'product-pane__next'  }},
+  data() { return { total: 0 , pagelimit: 12, currentitem: 0, prevstyle: 'product-pane__prev product-pane__prev--hidden' , nextstyle: 'product-pane__next product-pane__next--hidden'  }},
   props: ['products', 'categories', 'subcategories'],
+ 
   methods: {
+  pages(count){
+ 
+  if( count > this.pagelimit){
+  
+  this.nextstyle = 'product-pane__next'
+  
+  
+  }
+  
+  },
   
   nextpage(){
-  let total;
+ 
 
   for (const category in this.categories) {
   
   if(this.categories[category].category === this.$route.params.id){
   
   
-  total = this.categories[category].products.length
+  this.total = this.categories[category].products.length
+  
+  
   
   break
  }
  
 
 }
+ 
  
   
   this.currentitem += 12
