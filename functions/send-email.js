@@ -31,6 +31,11 @@ if (event.body) {
   .then(data => {
     console.log('Woohoo! You just sent your first mailing!')
     console.log(data);
+    
+    callback(null,{
+      statusCode: 200,
+      body: JSON.stringify(data)
+    })
   })
   .catch(err => {
     console.log('Whoops! Something went wrong')
